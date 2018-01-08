@@ -22,7 +22,7 @@ public class Request {
         self.body = body
     }
     
-    public func request() -> (URLRequest?, Error?) {
+    public func request() -> (request: URLRequest?, error: Error?) {
         let url = URL(string: self.urlWithParameters())
         if let url = url {
             var request = URLRequest(url: url)

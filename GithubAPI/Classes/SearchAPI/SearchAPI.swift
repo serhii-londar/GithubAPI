@@ -19,6 +19,11 @@ public enum SearchRepositoriesSort: String{
     case updated
 }
 
+public enum SearchCommitsSort: String{
+    case authorDate = "author-date"
+    case committerDate = "committer-date"
+}
+
 public class SearchAPI: GithubAPI {
     
     public override init() {
@@ -27,6 +32,20 @@ public class SearchAPI: GithubAPI {
     
     public func searchRepositories(q: String, page: Int = 1, per_page: Int = 100, sort: SearchRepositoriesSort? = nil, order: SearchOrder = .desc, completion: @escaping (SearchRepositoriesResponse?, Error?) -> Swift.Void) {
         let path = "/search/repositories"
+        var parameters = [String : String]()
+        parameters["q"] = q.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        parameters["order"] = order.rawValue
+        if let sort = sort {
+            parameters["sort"] = sort.rawValue
+        }
+        parameters["page"] = "\(page)"
+        parameters["per_page"] = "\(per_page)"
+        
+        self.get(path: path, parameters: parameters, completion: completion)
+    }
+    
+    public func searchCommits(q: String, page: Int = 1, per_page: Int = 100, sort: SearchCommitsSort? = nil, order: SearchOrder = .desc, completion: @escaping (SearchCommitsResponse?, Error?) -> Swift.Void) {
+        let path = "/search/commits"
         var parameters = [String : String]()
         parameters["q"] = q.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         parameters["order"] = order.rawValue

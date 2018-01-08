@@ -85,7 +85,7 @@ class ViewController: UIViewController {
 //            }
 //        }
         
-        let issue = Issue(title: "Third Issue")
+        let issue = Issue(title: "Third1 Issue")
 //        IssuesAPI(authentication: AccessTokenAuthentication(access_token: "419e3bfd513a63eb38698e2c897441a536adbfc8")).createIssue(owner: "serhii-londar", repository: "GithubIssues", issue: issue) { (response, error) in
 //            if let response = response {
 //

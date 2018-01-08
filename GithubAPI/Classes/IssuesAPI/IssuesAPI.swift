@@ -127,11 +127,6 @@ public class IssuesAPI: GithubAPI {
         self.get(path: path, completion: completion)
     }
     
-//    public func getIssue(owner: String, repository: String, number: Int, completion: @escaping(GetIssueResponse?, Error?) -> Void) {
-//        let path = "/repos/\(owner)/\(repository)/issues/\(number)"
-//        self.get(path: path, completion: completion)
-//    }
-    
     public func createIssue(owner: String, repository: String, issue: Issue, completion: @escaping(GetIssueResponse?, Error?) -> Void) {
         let path = "/repos/\(owner)/\(repository)/issues"
         self.post(path: path, body: try? JSONEncoder().encode(issue), completion: completion)

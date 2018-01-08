@@ -28,7 +28,7 @@ public class Request {
             var request = URLRequest(url: url)
             if let headers = headers {
                 for headerKey in headers.keys {
-                    request.addValue(headerKey, forHTTPHeaderField: headers[headerKey]!)
+                    request.addValue(headers[headerKey]!, forHTTPHeaderField: headerKey)
                 }
             }
             request.httpMethod = method.rawValue

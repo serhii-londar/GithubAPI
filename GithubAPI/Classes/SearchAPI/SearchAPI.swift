@@ -25,7 +25,6 @@ public enum SearchCommitsSort: String{
 }
 
 public class SearchAPI: GithubAPI {
-    
     public override init() {
         super.init()
     }
@@ -45,6 +44,20 @@ public class SearchAPI: GithubAPI {
     }
     
     public func searchCommits(q: String, page: Int = 1, per_page: Int = 100, sort: SearchCommitsSort? = nil, order: SearchOrder = .desc, completion: @escaping (SearchCommitsResponse?, Error?) -> Swift.Void) {
+        let path = "/search/commits"
+        var parameters = [String : String]()
+        parameters["q"] = q.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        parameters["order"] = order.rawValue
+        if let sort = sort {
+            parameters["sort"] = sort.rawValue
+        }
+        parameters["page"] = "\(page)"
+        parameters["per_page"] = "\(per_page)"
+        
+        self.get(path: path, parameters: parameters, completion: completion)
+    }
+    
+    public func searchCode(q: String, page: Int = 1, per_page: Int = 100, sort: SearchCommitsSort? = nil, order: SearchOrder = .desc, completion: @escaping (SearchCommitsResponse?, Error?) -> Swift.Void) {
         let path = "/search/commits"
         var parameters = [String : String]()
         parameters["q"] = q.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!

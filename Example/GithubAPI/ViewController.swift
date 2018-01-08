@@ -85,7 +85,7 @@ class ViewController: UIViewController {
 //            }
 //        }
         
-        let issue = Issue(title: "Third1 Issue")
+//        let issue = Issue(title: "Third1 Issue")
 //        IssuesAPI(authentication: AccessTokenAuthentication(access_token: "419e3bfd513a63eb38698e2c897441a536adbfc8")).createIssue(owner: "serhii-londar", repository: "GithubIssues", issue: issue) { (response, error) in
 //            if let response = response {
 //
@@ -93,14 +93,20 @@ class ViewController: UIViewController {
 //                print(error ?? "")
 //            }
 //        }
-        IssuesAPI(authentication: AccessTokenAuthentication(access_token: "419e3bfd513a63eb38698e2c897441a536adbfc8")).updateIssue(owner: "serhii-londar", repository: "GithubIssues", number: 3, issue: issue) { (response, error) in
+//        IssuesAPI(authentication: AccessTokenAuthentication(access_token: "419e3bfd513a63eb38698e2c897441a536adbfc8")).updateIssue(owner: "serhii-londar", repository: "GithubIssues", number: 3, issue: issue) { (response, error) in
+//            if let response = response {
+//                
+//            } else {
+//                print(error ?? "")
+//            }
+//        }
+        UserAPI(authentication: TokenAuthentication(token: "419e3bfd513a63eb38698e2c897441a536adbfc8")).getUser { (response, error) in
             if let response = response {
                 
             } else {
                 print(error ?? "")
             }
         }
-        
     }
 
     func search() {

@@ -35,6 +35,11 @@
 		87D087285C915F3341D14BB66B0AB794 /* OtherUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35146B5B813E04F179D649FC2931F191 /* OtherUserResponse.swift */; };
 		8BF1ED500111B5754C9F3717E93914AD /* SearchCommitsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FE3D4CF5AD79401126543690710842 /* SearchCommitsRepository.swift */; };
 		8E290C001CA56155B7B44C413AECFB93 /* GetIssueResponseMilestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07D0C6F06159CF9605C3EEC495E8503 /* GetIssueResponseMilestone.swift */; };
+		9216FEFB2004354A00ADD102 /* NotificationsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9216FEFA2004354A00ADD102 /* NotificationsAPI.swift */; };
+		9216FF012004374000ADD102 /* NotificationsSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9216FEFD2004374000ADD102 /* NotificationsSubject.swift */; };
+		9216FF022004374000ADD102 /* NotificationsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9216FEFE2004374000ADD102 /* NotificationsRepository.swift */; };
+		9216FF032004374000ADD102 /* NotificationsOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9216FEFF2004374000ADD102 /* NotificationsOwner.swift */; };
+		9216FF042004374000ADD102 /* NotificationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9216FF002004374000ADD102 /* NotificationsResponse.swift */; };
 		92A030592003DCBB00275F6B /* SearchCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A030552003DCBB00275F6B /* SearchCodeRepository.swift */; };
 		92A0305A2003DCBB00275F6B /* SearchCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A030562003DCBB00275F6B /* SearchCodeResponse.swift */; };
 		92A0305B2003DCBB00275F6B /* SearchCodeOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A030572003DCBB00275F6B /* SearchCodeOwner.swift */; };
@@ -152,6 +157,11 @@
 		82AC04E1C286CF9EF102552B0495ADDF /* RepositoriesPermission.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RepositoriesPermission.swift; sourceTree = "<group>"; };
 		87F6D8BA668A731FE2FE6AE5F2592CAF /* GithubAPI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GithubAPI-prefix.pch"; sourceTree = "<group>"; };
 		88ABAD74F1ACB6E47DDC367B548C2D00 /* GetIssueResponseRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetIssueResponseRepository.swift; sourceTree = "<group>"; };
+		9216FEFA2004354A00ADD102 /* NotificationsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsAPI.swift; sourceTree = "<group>"; };
+		9216FEFD2004374000ADD102 /* NotificationsSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsSubject.swift; sourceTree = "<group>"; };
+		9216FEFE2004374000ADD102 /* NotificationsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsRepository.swift; sourceTree = "<group>"; };
+		9216FEFF2004374000ADD102 /* NotificationsOwner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsOwner.swift; sourceTree = "<group>"; };
+		9216FF002004374000ADD102 /* NotificationsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsResponse.swift; sourceTree = "<group>"; };
 		92A030552003DCBB00275F6B /* SearchCodeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCodeRepository.swift; sourceTree = "<group>"; };
 		92A030562003DCBB00275F6B /* SearchCodeResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCodeResponse.swift; sourceTree = "<group>"; };
 		92A030572003DCBB00275F6B /* SearchCodeOwner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCodeOwner.swift; sourceTree = "<group>"; };
@@ -398,6 +408,7 @@
 			children = (
 				E5C90211549F74CD3C049D2E45CECD37 /* Authentication.swift */,
 				A53F2591F7E2F2EB90640BF9C3E916FE /* GithubAPI.swift */,
+				9216FEF92004354300ADD102 /* NotificationsAPI */,
 				91C24B2C6428952D6545A65DE84B1748 /* IssuesAPI */,
 				328C89578CAEF55F9C16E0F0ECB13ACD /* RepositoriesAPI */,
 				2FB73B191DBFD3E102D3343E3C495BD3 /* SearchAPI */,
@@ -447,6 +458,27 @@
 			);
 			name = IssuesAPI;
 			path = GithubAPI/Classes/IssuesAPI;
+			sourceTree = "<group>";
+		};
+		9216FEF92004354300ADD102 /* NotificationsAPI */ = {
+			isa = PBXGroup;
+			children = (
+				9216FEFC2004356800ADD102 /* Models */,
+				9216FEFA2004354A00ADD102 /* NotificationsAPI.swift */,
+			);
+			name = NotificationsAPI;
+			path = GithubAPI/Classes/NotificationsAPI;
+			sourceTree = "<group>";
+		};
+		9216FEFC2004356800ADD102 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9216FEFF2004374000ADD102 /* NotificationsOwner.swift */,
+				9216FEFE2004374000ADD102 /* NotificationsRepository.swift */,
+				9216FF002004374000ADD102 /* NotificationsResponse.swift */,
+				9216FEFD2004374000ADD102 /* NotificationsSubject.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		92939EE8557161242DC635B37D6B188D /* Repositories */ = {
@@ -755,12 +787,14 @@
 				C760B85030038757009FD401DAB4E8F1 /* GetIssueResponseAssignee.swift in Sources */,
 				92A030632003DE6500275F6B /* SearchIssuesItem.swift in Sources */,
 				92A030642003DE6500275F6B /* SearchIssuesUser.swift in Sources */,
+				9216FF032004374000ADD102 /* NotificationsOwner.swift in Sources */,
 				D473085E2E78DC4023BBD85C75921901 /* GetIssueResponseLabel.swift in Sources */,
 				8E290C001CA56155B7B44C413AECFB93 /* GetIssueResponseMilestone.swift in Sources */,
 				C219DD1F63D1206AE16E6FA86F2068C1 /* GetIssueResponsePermission.swift in Sources */,
 				761D3B4010CC180CFC17E5A38468DEEE /* GetIssueResponsePullRequest.swift in Sources */,
 				086E3E5062A6C95FB1B758F31D5FC9BB /* GetIssueResponseRepository.swift in Sources */,
 				5DFAEBAEB0E82AB1072C72B7F8860449 /* GithubAPI-dummy.m in Sources */,
+				9216FF012004374000ADD102 /* NotificationsSubject.swift in Sources */,
 				E1D8D9A056288807473055F952E36A3E /* GithubAPI.swift in Sources */,
 				92A18F3A2003E4F500886ECA /* SearchIssuesMilestoneCreator.swift in Sources */,
 				92A030662003DE6500275F6B /* SearchIssuesLabel.swift in Sources */,
@@ -770,6 +804,7 @@
 				95F4A8183922C436C11D100069F5CC3A /* IssuesAPI.swift in Sources */,
 				D1F1876D7D764CD0BC1FE409FEB8B6C8 /* Repositories.swift in Sources */,
 				65BA82980FDCE8314DCE8D108FD4C80C /* RepositoriesLicense.swift in Sources */,
+				9216FF042004374000ADD102 /* NotificationsResponse.swift in Sources */,
 				92A030652003DE6500275F6B /* SearchIssuesResponse.swift in Sources */,
 				0C38E0F69E6D3AE76A77684333204F21 /* RepositoriesOwner.swift in Sources */,
 				92A0305A2003DCBB00275F6B /* SearchCodeResponse.swift in Sources */,
@@ -778,6 +813,7 @@
 				87D087285C915F3341D14BB66B0AB794 /* OtherUserResponse.swift in Sources */,
 				E5017E8C5A94BC75F1290CAB29B8BAD3 /* RepositoriesAPI.swift in Sources */,
 				D3D3E73E38E94AED5711C0E8726F2CF0 /* SearchAPI.swift in Sources */,
+				9216FEFB2004354A00ADD102 /* NotificationsAPI.swift in Sources */,
 				3872F265F43AFB4659FE32FD145E7447 /* SearchCommitsAuthor.swift in Sources */,
 				977FC9E1EB83F1EEE38289FD13A05885 /* SearchCommitsCommit.swift in Sources */,
 				993ADCC05415CE7FAA05320CF817BE4B /* SearchCommitsCommitter.swift in Sources */,
@@ -787,6 +823,7 @@
 				8BF1ED500111B5754C9F3717E93914AD /* SearchCommitsRepository.swift in Sources */,
 				92A030592003DCBB00275F6B /* SearchCodeRepository.swift in Sources */,
 				DB84FFF4F23906CCD82D69B28B2D5C55 /* SearchCommitsResponse.swift in Sources */,
+				9216FF022004374000ADD102 /* NotificationsRepository.swift in Sources */,
 				33538A4CBC8F17E853131EB64DC2707A /* SearchCommitsTree.swift in Sources */,
 				F3B4C22EB0C1CF4EBFFBFAE543A8683A /* SearchRepositoriesItem.swift in Sources */,
 				92A030672003DE6500275F6B /* SearchIssuesPullRequest.swift in Sources */,

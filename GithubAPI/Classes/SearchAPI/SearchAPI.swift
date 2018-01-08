@@ -24,11 +24,13 @@ public enum SearchCommitsSort: String{
     case committerDate = "committer-date"
 }
 
-public class SearchAPI: GithubAPI {
-    public override init() {
-        super.init()
-    }
-    
+public enum SearchCodeSort: String{
+    case bestMatch = "best-match"
+    case recentlyIndexed = "recently-indexed"
+    case leastRecentlyIndexed = "least-recently-indexed"
+}
+
+public class SearchAPI: GithubAPI {    
     public func searchRepositories(q: String, page: Int = 1, per_page: Int = 100, sort: SearchRepositoriesSort? = nil, order: SearchOrder = .desc, completion: @escaping (SearchRepositoriesResponse?, Error?) -> Swift.Void) {
         let path = "/search/repositories"
         var parameters = [String : String]()
@@ -57,8 +59,8 @@ public class SearchAPI: GithubAPI {
         self.get(path: path, parameters: parameters, completion: completion)
     }
     
-    public func searchCode(q: String, page: Int = 1, per_page: Int = 100, sort: SearchCommitsSort? = nil, order: SearchOrder = .desc, completion: @escaping (SearchCommitsResponse?, Error?) -> Swift.Void) {
-        let path = "/search/commits"
+    public func searchCode(q: String, page: Int = 1, per_page: Int = 100, sort: SearchCodeSort? = nil, order: SearchOrder = .desc, completion: @escaping (SearchCodeResponse?, Error?) -> Swift.Void) {
+        let path = "/search/code"
         var parameters = [String : String]()
         parameters["q"] = q.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         parameters["order"] = order.rawValue

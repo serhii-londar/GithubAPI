@@ -110,12 +110,13 @@ class ViewController: UIViewController {
 //        }
         
         
-        SearchAPI(authentication: TokenAuthentication(token: "419e3bfd513a63eb38698e2c897441a536adbfc8")).searchCode(q: "asd") { (response, error) in
+        SearchAPI(authentication: TokenAuthentication(token: "419e3bfd513a63eb38698e2c897441a536adbfc8")).searchIssues(q: "asd") { (response, error) in
             if let response = response {
                 
             } else {
                 print(error ?? "")
             }
+            
         }
     }
 

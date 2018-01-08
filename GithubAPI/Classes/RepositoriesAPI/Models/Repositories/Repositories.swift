@@ -1,5 +1,5 @@
 //
-//	ListUserRepositories.swift
+//	Repositories.swift
 //
 //	Create by Serhii Londar on 2/1/2018
 //	Copyright © 2018 Techmagic. All rights reserved.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct ListUserRepositoriesResponse : Codable {
+public struct Repositories : Codable {
 	public let allowMergeCommit : Bool?
 	public let allowRebaseMerge : Bool?
 	public let allowSquashMerge : Bool?
@@ -52,7 +52,7 @@ public struct ListUserRepositoriesResponse : Codable {
 	public let labelsUrl : String?
 	public let language : String?
 	public let languagesUrl : String?
-	public let license : ListUserRepositoriesLicense?
+	public let license : RepositoriesLicense?
 	public let mergesUrl : String?
 	public let milestonesUrl : String?
 	public let mirrorUrl : String?
@@ -60,8 +60,8 @@ public struct ListUserRepositoriesResponse : Codable {
 	public let networkCount : Int?
 	public let notificationsUrl : String?
 	public let openIssuesCount : Int?
-	public let owner : ListUserRepositoriesOwner?
-	public let permissions : ListUserRepositoriesPermission?
+	public let owner : RepositoriesOwner?
+	public let permissions : RepositoriesPermission?
 	public let privateField : Bool?
 	public let pullsUrl : String?
 	public let pushedAt : String?
@@ -206,7 +206,7 @@ public struct ListUserRepositoriesResponse : Codable {
 		labelsUrl = try values.decodeIfPresent(String.self, forKey: .labelsUrl)
 		language = try values.decodeIfPresent(String.self, forKey: .language)
 		languagesUrl = try values.decodeIfPresent(String.self, forKey: .languagesUrl)
-        license = try values.decodeIfPresent(ListUserRepositoriesLicense.self, forKey: .license)
+        license = try values.decodeIfPresent(RepositoriesLicense.self, forKey: .license)
 		mergesUrl = try values.decodeIfPresent(String.self, forKey: .mergesUrl)
 		milestonesUrl = try values.decodeIfPresent(String.self, forKey: .milestonesUrl)
 		mirrorUrl = try values.decodeIfPresent(String.self, forKey: .mirrorUrl)
@@ -214,8 +214,8 @@ public struct ListUserRepositoriesResponse : Codable {
 		networkCount = try values.decodeIfPresent(Int.self, forKey: .networkCount)
 		notificationsUrl = try values.decodeIfPresent(String.self, forKey: .notificationsUrl)
 		openIssuesCount = try values.decodeIfPresent(Int.self, forKey: .openIssuesCount)
-		owner = try values.decodeIfPresent(ListUserRepositoriesOwner.self, forKey: .owner)
-		permissions = try values.decodeIfPresent(ListUserRepositoriesPermission.self, forKey: .permissions)
+		owner = try values.decodeIfPresent(RepositoriesOwner.self, forKey: .owner)
+		permissions = try values.decodeIfPresent(RepositoriesPermission.self, forKey: .permissions)
         privateField = try values.decodeIfPresent(Bool.self, forKey: .privateField)
 		pullsUrl = try values.decodeIfPresent(String.self, forKey: .pullsUrl)
 		pushedAt = try values.decodeIfPresent(String.self, forKey: .pushedAt)

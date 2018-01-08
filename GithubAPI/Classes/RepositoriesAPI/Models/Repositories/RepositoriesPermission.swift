@@ -1,5 +1,5 @@
 //
-//	ListUserRepositoriesPermission.swift
+//	RepositoriesPermission.swift
 //
 //	Create by Serhii Londar on 2/1/2018
 //	Copyright © 2018 Techmagic. All rights reserved.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct ListUserRepositoriesPermission : Codable {
+public struct RepositoriesPermission : Codable {
 	public let admin : Bool?
 	public let pull : Bool?
 	public let push : Bool?

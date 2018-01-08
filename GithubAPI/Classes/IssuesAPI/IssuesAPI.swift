@@ -5,7 +5,7 @@
 //  Created by Serhii Londar on 1/8/18.
 //
 
-import UIKit
+import Foundation
 
 public enum IssueFilter: String {
     case assigned

@@ -1,5 +1,5 @@
 //
-//	ListUserRepositoriesLicense.swift
+//	RepositoriesLicense.swift
 //
 //	Create by Serhii Londar on 2/1/2018
 //	Copyright © 2018 Techmagic. All rights reserved.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct ListUserRepositoriesLicense : Codable {
+public struct RepositoriesLicense : Codable {
 	public let htmlUrl : String?
 	public let key : String?
 	public let name : String?

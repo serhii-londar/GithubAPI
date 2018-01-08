@@ -1,5 +1,5 @@
 //
-//	ListUserRepositoriesOwner.swift
+//	RepositoriesOwner.swift
 //
 //	Create by Serhii Londar on 2/1/2018
 //	Copyright © 2018 Techmagic. All rights reserved.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct ListUserRepositoriesOwner : Codable {
+public struct RepositoriesOwner : Codable {
 	public let avatarUrl : String?
 	public let eventsUrl : String?
 	public let followersUrl : String?

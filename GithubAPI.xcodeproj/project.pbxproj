@@ -1,0 +1,847 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		OBJ_105 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* Package.swift */; };
+		OBJ_111 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* Authentication.swift */; };
+		OBJ_112 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* GithubAPI.swift */; };
+		OBJ_113 /* IssuesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* IssuesAPI.swift */; };
+		OBJ_114 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Issue.swift */; };
+		OBJ_115 /* GetIssueResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* GetIssueResponse.swift */; };
+		OBJ_116 /* GetIssueResponseAssignee.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* GetIssueResponseAssignee.swift */; };
+		OBJ_117 /* GetIssueResponseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* GetIssueResponseLabel.swift */; };
+		OBJ_118 /* GetIssueResponseMilestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* GetIssueResponseMilestone.swift */; };
+		OBJ_119 /* GetIssueResponsePermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* GetIssueResponsePermission.swift */; };
+		OBJ_120 /* GetIssueResponsePullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* GetIssueResponsePullRequest.swift */; };
+		OBJ_121 /* GetIssueResponseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* GetIssueResponseRepository.swift */; };
+		OBJ_122 /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Repositories.swift */; };
+		OBJ_123 /* RepositoriesLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* RepositoriesLicense.swift */; };
+		OBJ_124 /* RepositoriesOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* RepositoriesOwner.swift */; };
+		OBJ_125 /* RepositoriesPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* RepositoriesPermission.swift */; };
+		OBJ_126 /* RepositoriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* RepositoriesAPI.swift */; };
+		OBJ_127 /* SearchCodeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* SearchCodeItem.swift */; };
+		OBJ_128 /* SearchCodeOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* SearchCodeOwner.swift */; };
+		OBJ_129 /* SearchCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* SearchCodeRepository.swift */; };
+		OBJ_130 /* SearchCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* SearchCodeResponse.swift */; };
+		OBJ_131 /* SearchCommitsAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* SearchCommitsAuthor.swift */; };
+		OBJ_132 /* SearchCommitsCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* SearchCommitsCommit.swift */; };
+		OBJ_133 /* SearchCommitsCommitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* SearchCommitsCommitter.swift */; };
+		OBJ_134 /* SearchCommitsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* SearchCommitsItem.swift */; };
+		OBJ_135 /* SearchCommitsOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* SearchCommitsOwner.swift */; };
+		OBJ_136 /* SearchCommitsParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* SearchCommitsParent.swift */; };
+		OBJ_137 /* SearchCommitsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* SearchCommitsRepository.swift */; };
+		OBJ_138 /* SearchCommitsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* SearchCommitsResponse.swift */; };
+		OBJ_139 /* SearchCommitsTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* SearchCommitsTree.swift */; };
+		OBJ_140 /* SearchIssuesAssignee.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* SearchIssuesAssignee.swift */; };
+		OBJ_141 /* SearchIssuesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* SearchIssuesItem.swift */; };
+		OBJ_142 /* SearchIssuesLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* SearchIssuesLabel.swift */; };
+		OBJ_143 /* SearchIssuesMilestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* SearchIssuesMilestone.swift */; };
+		OBJ_144 /* SearchIssuesMilestoneCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* SearchIssuesMilestoneCreator.swift */; };
+		OBJ_145 /* SearchIssuesPullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* SearchIssuesPullRequest.swift */; };
+		OBJ_146 /* SearchIssuesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* SearchIssuesResponse.swift */; };
+		OBJ_147 /* SearchIssuesUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* SearchIssuesUser.swift */; };
+		OBJ_148 /* SearchRepositoriesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* SearchRepositoriesItem.swift */; };
+		OBJ_149 /* SearchRepositoriesOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* SearchRepositoriesOwner.swift */; };
+		OBJ_150 /* SearchRepositoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* SearchRepositoriesResponse.swift */; };
+		OBJ_151 /* SearchUsersItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* SearchUsersItem.swift */; };
+		OBJ_152 /* SearchUsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* SearchUsersResponse.swift */; };
+		OBJ_153 /* SearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* SearchAPI.swift */; };
+		OBJ_154 /* AllUsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* AllUsersResponse.swift */; };
+		OBJ_155 /* OtherUserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* OtherUserError.swift */; };
+		OBJ_156 /* OtherUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* OtherUserResponse.swift */; };
+		OBJ_157 /* UserPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* UserPlan.swift */; };
+		OBJ_158 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* UserResponse.swift */; };
+		OBJ_159 /* UpdateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* UpdateUser.swift */; };
+		OBJ_160 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* UserAPI.swift */; };
+		OBJ_162 /* BaseAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "BaseAPI::BaseAPI::Product" /* BaseAPI.framework */; };
+		OBJ_169 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* BaseAPI.swift */; };
+		OBJ_170 /* CharacterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* CharacterSet.swift */; };
+		OBJ_171 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* Request.swift */; };
+		OBJ_172 /* RequestHeaderFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* RequestHeaderFields.swift */; };
+		OBJ_173 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_88 /* RequestMethod.swift */; };
+		OBJ_174 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_89 /* String.swift */; };
+		OBJ_175 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_90 /* URLSession.swift */; };
+		OBJ_99 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92A18F48200433F200886ECA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "BaseAPI::BaseAPI";
+			remoteInfo = BaseAPI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		"BaseAPI::BaseAPI::Product" /* BaseAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BaseAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"GithubAPI::GithubAPI::Product" /* GithubAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GithubAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_11 /* IssuesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesAPI.swift; sourceTree = "<group>"; };
+		OBJ_14 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		OBJ_16 /* GetIssueResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetIssueResponse.swift; sourceTree = "<group>"; };
+		OBJ_17 /* GetIssueResponseAssignee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetIssueResponseAssignee.swift; sourceTree = "<group>"; };
+		OBJ_18 /* GetIssueResponseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetIssueResponseLabel.swift; sourceTree = "<group>"; };
+		OBJ_19 /* GetIssueResponseMilestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetIssueResponseMilestone.swift; sourceTree = "<group>"; };
+		OBJ_20 /* GetIssueResponsePermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetIssueResponsePermission.swift; sourceTree = "<group>"; };
+		OBJ_21 /* GetIssueResponsePullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetIssueResponsePullRequest.swift; sourceTree = "<group>"; };
+		OBJ_22 /* GetIssueResponseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetIssueResponseRepository.swift; sourceTree = "<group>"; };
+		OBJ_26 /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
+		OBJ_27 /* RepositoriesLicense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesLicense.swift; sourceTree = "<group>"; };
+		OBJ_28 /* RepositoriesOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesOwner.swift; sourceTree = "<group>"; };
+		OBJ_29 /* RepositoriesPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesPermission.swift; sourceTree = "<group>"; };
+		OBJ_30 /* RepositoriesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAPI.swift; sourceTree = "<group>"; };
+		OBJ_34 /* SearchCodeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCodeItem.swift; sourceTree = "<group>"; };
+		OBJ_35 /* SearchCodeOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCodeOwner.swift; sourceTree = "<group>"; };
+		OBJ_36 /* SearchCodeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCodeRepository.swift; sourceTree = "<group>"; };
+		OBJ_37 /* SearchCodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCodeResponse.swift; sourceTree = "<group>"; };
+		OBJ_39 /* SearchCommitsAuthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommitsAuthor.swift; sourceTree = "<group>"; };
+		OBJ_40 /* SearchCommitsCommit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommitsCommit.swift; sourceTree = "<group>"; };
+		OBJ_41 /* SearchCommitsCommitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommitsCommitter.swift; sourceTree = "<group>"; };
+		OBJ_42 /* SearchCommitsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommitsItem.swift; sourceTree = "<group>"; };
+		OBJ_43 /* SearchCommitsOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommitsOwner.swift; sourceTree = "<group>"; };
+		OBJ_44 /* SearchCommitsParent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommitsParent.swift; sourceTree = "<group>"; };
+		OBJ_45 /* SearchCommitsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommitsRepository.swift; sourceTree = "<group>"; };
+		OBJ_46 /* SearchCommitsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommitsResponse.swift; sourceTree = "<group>"; };
+		OBJ_47 /* SearchCommitsTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommitsTree.swift; sourceTree = "<group>"; };
+		OBJ_49 /* SearchIssuesAssignee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIssuesAssignee.swift; sourceTree = "<group>"; };
+		OBJ_50 /* SearchIssuesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIssuesItem.swift; sourceTree = "<group>"; };
+		OBJ_51 /* SearchIssuesLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIssuesLabel.swift; sourceTree = "<group>"; };
+		OBJ_52 /* SearchIssuesMilestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIssuesMilestone.swift; sourceTree = "<group>"; };
+		OBJ_53 /* SearchIssuesMilestoneCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIssuesMilestoneCreator.swift; sourceTree = "<group>"; };
+		OBJ_54 /* SearchIssuesPullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIssuesPullRequest.swift; sourceTree = "<group>"; };
+		OBJ_55 /* SearchIssuesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIssuesResponse.swift; sourceTree = "<group>"; };
+		OBJ_56 /* SearchIssuesUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIssuesUser.swift; sourceTree = "<group>"; };
+		OBJ_58 /* SearchRepositoriesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesItem.swift; sourceTree = "<group>"; };
+		OBJ_59 /* SearchRepositoriesOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesOwner.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_60 /* SearchRepositoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesResponse.swift; sourceTree = "<group>"; };
+		OBJ_62 /* SearchUsersItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersItem.swift; sourceTree = "<group>"; };
+		OBJ_63 /* SearchUsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersResponse.swift; sourceTree = "<group>"; };
+		OBJ_64 /* SearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
+		OBJ_68 /* AllUsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersResponse.swift; sourceTree = "<group>"; };
+		OBJ_70 /* OtherUserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherUserError.swift; sourceTree = "<group>"; };
+		OBJ_71 /* OtherUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherUserResponse.swift; sourceTree = "<group>"; };
+		OBJ_73 /* UserPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPlan.swift; sourceTree = "<group>"; };
+		OBJ_74 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		OBJ_76 /* UpdateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUser.swift; sourceTree = "<group>"; };
+		OBJ_77 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		OBJ_79 /* GithubAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GithubAPI; sourceTree = SOURCE_ROOT; };
+		OBJ_8 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		OBJ_80 /* Example */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Example; sourceTree = SOURCE_ROOT; };
+		OBJ_83 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/serhiilondar/Documents/GitHub/GithubAPI/.build/checkouts/BaseAPI.git--1208346857401590500/Package.swift"; sourceTree = "<group>"; };
+		OBJ_84 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		OBJ_85 /* CharacterSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSet.swift; sourceTree = "<group>"; };
+		OBJ_86 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		OBJ_87 /* RequestHeaderFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHeaderFields.swift; sourceTree = "<group>"; };
+		OBJ_88 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
+		OBJ_89 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		OBJ_9 /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
+		OBJ_90 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_161 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_162 /* BaseAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_176 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_10 /* IssuesAPI */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_11 /* IssuesAPI.swift */,
+				OBJ_12 /* Models */,
+			);
+			path = IssuesAPI;
+			sourceTree = "<group>";
+		};
+		OBJ_12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_13 /* CreateIssue */,
+				OBJ_15 /* GetIssueResponse */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		OBJ_13 /* CreateIssue */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_14 /* Issue.swift */,
+			);
+			path = CreateIssue;
+			sourceTree = "<group>";
+		};
+		OBJ_15 /* GetIssueResponse */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_16 /* GetIssueResponse.swift */,
+				OBJ_17 /* GetIssueResponseAssignee.swift */,
+				OBJ_18 /* GetIssueResponseLabel.swift */,
+				OBJ_19 /* GetIssueResponseMilestone.swift */,
+				OBJ_20 /* GetIssueResponsePermission.swift */,
+				OBJ_21 /* GetIssueResponsePullRequest.swift */,
+				OBJ_22 /* GetIssueResponseRepository.swift */,
+			);
+			path = GetIssueResponse;
+			sourceTree = "<group>";
+		};
+		OBJ_23 /* RepositoriesAPI */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_24 /* Models */,
+				OBJ_30 /* RepositoriesAPI.swift */,
+			);
+			path = RepositoriesAPI;
+			sourceTree = "<group>";
+		};
+		OBJ_24 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_25 /* Repositories */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		OBJ_25 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_26 /* Repositories.swift */,
+				OBJ_27 /* RepositoriesLicense.swift */,
+				OBJ_28 /* RepositoriesOwner.swift */,
+				OBJ_29 /* RepositoriesPermission.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		OBJ_31 /* SearchAPI */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_32 /* Models */,
+				OBJ_64 /* SearchAPI.swift */,
+			);
+			path = SearchAPI;
+			sourceTree = "<group>";
+		};
+		OBJ_32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_33 /* Code */,
+				OBJ_38 /* Commits */,
+				OBJ_48 /* Issues */,
+				OBJ_57 /* Repositories */,
+				OBJ_61 /* Users */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		OBJ_33 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_34 /* SearchCodeItem.swift */,
+				OBJ_35 /* SearchCodeOwner.swift */,
+				OBJ_36 /* SearchCodeRepository.swift */,
+				OBJ_37 /* SearchCodeResponse.swift */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		OBJ_38 /* Commits */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_39 /* SearchCommitsAuthor.swift */,
+				OBJ_40 /* SearchCommitsCommit.swift */,
+				OBJ_41 /* SearchCommitsCommitter.swift */,
+				OBJ_42 /* SearchCommitsItem.swift */,
+				OBJ_43 /* SearchCommitsOwner.swift */,
+				OBJ_44 /* SearchCommitsParent.swift */,
+				OBJ_45 /* SearchCommitsRepository.swift */,
+				OBJ_46 /* SearchCommitsResponse.swift */,
+				OBJ_47 /* SearchCommitsTree.swift */,
+			);
+			path = Commits;
+			sourceTree = "<group>";
+		};
+		OBJ_48 /* Issues */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_49 /* SearchIssuesAssignee.swift */,
+				OBJ_50 /* SearchIssuesItem.swift */,
+				OBJ_51 /* SearchIssuesLabel.swift */,
+				OBJ_52 /* SearchIssuesMilestone.swift */,
+				OBJ_53 /* SearchIssuesMilestoneCreator.swift */,
+				OBJ_54 /* SearchIssuesPullRequest.swift */,
+				OBJ_55 /* SearchIssuesResponse.swift */,
+				OBJ_56 /* SearchIssuesUser.swift */,
+			);
+			path = Issues;
+			sourceTree = "<group>";
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_78 /* Tests */,
+				OBJ_79 /* GithubAPI */,
+				OBJ_80 /* Example */,
+				OBJ_81 /* Dependencies */,
+				OBJ_91 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_57 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_58 /* SearchRepositoriesItem.swift */,
+				OBJ_59 /* SearchRepositoriesOwner.swift */,
+				OBJ_60 /* SearchRepositoriesResponse.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		OBJ_61 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_62 /* SearchUsersItem.swift */,
+				OBJ_63 /* SearchUsersResponse.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		OBJ_65 /* UserAPI */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_66 /* Models */,
+				OBJ_77 /* UserAPI.swift */,
+			);
+			path = UserAPI;
+			sourceTree = "<group>";
+		};
+		OBJ_66 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_67 /* GetAllUsers */,
+				OBJ_69 /* GetOtherUser */,
+				OBJ_72 /* GetUser */,
+				OBJ_75 /* UpdateUser */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		OBJ_67 /* GetAllUsers */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_68 /* AllUsersResponse.swift */,
+			);
+			path = GetAllUsers;
+			sourceTree = "<group>";
+		};
+		OBJ_69 /* GetOtherUser */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_70 /* OtherUserError.swift */,
+				OBJ_71 /* OtherUserResponse.swift */,
+			);
+			path = GetOtherUser;
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* Authentication.swift */,
+				OBJ_9 /* GithubAPI.swift */,
+				OBJ_10 /* IssuesAPI */,
+				OBJ_23 /* RepositoriesAPI */,
+				OBJ_31 /* SearchAPI */,
+				OBJ_65 /* UserAPI */,
+			);
+			name = Sources;
+			path = GithubAPI/Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_72 /* GetUser */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_73 /* UserPlan.swift */,
+				OBJ_74 /* UserResponse.swift */,
+			);
+			path = GetUser;
+			sourceTree = "<group>";
+		};
+		OBJ_75 /* UpdateUser */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_76 /* UpdateUser.swift */,
+			);
+			path = UpdateUser;
+			sourceTree = "<group>";
+		};
+		OBJ_78 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_81 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_82 /* BaseAPI 0.1.2 */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_82 /* BaseAPI 0.1.2 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_83 /* Package.swift */,
+				OBJ_84 /* BaseAPI.swift */,
+				OBJ_85 /* CharacterSet.swift */,
+				OBJ_86 /* Request.swift */,
+				OBJ_87 /* RequestHeaderFields.swift */,
+				OBJ_88 /* RequestMethod.swift */,
+				OBJ_89 /* String.swift */,
+				OBJ_90 /* URLSession.swift */,
+			);
+			name = "BaseAPI 0.1.2";
+			path = ".build/checkouts/BaseAPI.git--1208346857401590500/BaseAPI/Classes";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"GithubAPI::GithubAPI::Product" /* GithubAPI.framework */,
+				"BaseAPI::BaseAPI::Product" /* BaseAPI.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"BaseAPI::BaseAPI" /* BaseAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_165 /* Build configuration list for PBXNativeTarget "BaseAPI" */;
+			buildPhases = (
+				OBJ_168 /* Sources */,
+				OBJ_176 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BaseAPI;
+			productName = BaseAPI;
+			productReference = "BaseAPI::BaseAPI::Product" /* BaseAPI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"BaseAPI::SwiftPMPackageDescription" /* BaseAPIPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_101 /* Build configuration list for PBXNativeTarget "BaseAPIPackageDescription" */;
+			buildPhases = (
+				OBJ_104 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BaseAPIPackageDescription;
+			productName = BaseAPIPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"GithubAPI::GithubAPI" /* GithubAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_107 /* Build configuration list for PBXNativeTarget "GithubAPI" */;
+			buildPhases = (
+				OBJ_110 /* Sources */,
+				OBJ_161 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_163 /* PBXTargetDependency */,
+			);
+			name = GithubAPI;
+			productName = GithubAPI;
+			productReference = "GithubAPI::GithubAPI::Product" /* GithubAPI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"GithubAPI::SwiftPMPackageDescription" /* GithubAPIPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_95 /* Build configuration list for PBXNativeTarget "GithubAPIPackageDescription" */;
+			buildPhases = (
+				OBJ_98 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GithubAPIPackageDescription;
+			productName = GithubAPIPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "GithubAPI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"GithubAPI::SwiftPMPackageDescription" /* GithubAPIPackageDescription */,
+				"BaseAPI::SwiftPMPackageDescription" /* BaseAPIPackageDescription */,
+				"GithubAPI::GithubAPI" /* GithubAPI */,
+				"BaseAPI::BaseAPI" /* BaseAPI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_104 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_105 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_110 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_111 /* Authentication.swift in Sources */,
+				OBJ_112 /* GithubAPI.swift in Sources */,
+				OBJ_113 /* IssuesAPI.swift in Sources */,
+				OBJ_114 /* Issue.swift in Sources */,
+				OBJ_115 /* GetIssueResponse.swift in Sources */,
+				OBJ_116 /* GetIssueResponseAssignee.swift in Sources */,
+				OBJ_117 /* GetIssueResponseLabel.swift in Sources */,
+				OBJ_118 /* GetIssueResponseMilestone.swift in Sources */,
+				OBJ_119 /* GetIssueResponsePermission.swift in Sources */,
+				OBJ_120 /* GetIssueResponsePullRequest.swift in Sources */,
+				OBJ_121 /* GetIssueResponseRepository.swift in Sources */,
+				OBJ_122 /* Repositories.swift in Sources */,
+				OBJ_123 /* RepositoriesLicense.swift in Sources */,
+				OBJ_124 /* RepositoriesOwner.swift in Sources */,
+				OBJ_125 /* RepositoriesPermission.swift in Sources */,
+				OBJ_126 /* RepositoriesAPI.swift in Sources */,
+				OBJ_127 /* SearchCodeItem.swift in Sources */,
+				OBJ_128 /* SearchCodeOwner.swift in Sources */,
+				OBJ_129 /* SearchCodeRepository.swift in Sources */,
+				OBJ_130 /* SearchCodeResponse.swift in Sources */,
+				OBJ_131 /* SearchCommitsAuthor.swift in Sources */,
+				OBJ_132 /* SearchCommitsCommit.swift in Sources */,
+				OBJ_133 /* SearchCommitsCommitter.swift in Sources */,
+				OBJ_134 /* SearchCommitsItem.swift in Sources */,
+				OBJ_135 /* SearchCommitsOwner.swift in Sources */,
+				OBJ_136 /* SearchCommitsParent.swift in Sources */,
+				OBJ_137 /* SearchCommitsRepository.swift in Sources */,
+				OBJ_138 /* SearchCommitsResponse.swift in Sources */,
+				OBJ_139 /* SearchCommitsTree.swift in Sources */,
+				OBJ_140 /* SearchIssuesAssignee.swift in Sources */,
+				OBJ_141 /* SearchIssuesItem.swift in Sources */,
+				OBJ_142 /* SearchIssuesLabel.swift in Sources */,
+				OBJ_143 /* SearchIssuesMilestone.swift in Sources */,
+				OBJ_144 /* SearchIssuesMilestoneCreator.swift in Sources */,
+				OBJ_145 /* SearchIssuesPullRequest.swift in Sources */,
+				OBJ_146 /* SearchIssuesResponse.swift in Sources */,
+				OBJ_147 /* SearchIssuesUser.swift in Sources */,
+				OBJ_148 /* SearchRepositoriesItem.swift in Sources */,
+				OBJ_149 /* SearchRepositoriesOwner.swift in Sources */,
+				OBJ_150 /* SearchRepositoriesResponse.swift in Sources */,
+				OBJ_151 /* SearchUsersItem.swift in Sources */,
+				OBJ_152 /* SearchUsersResponse.swift in Sources */,
+				OBJ_153 /* SearchAPI.swift in Sources */,
+				OBJ_154 /* AllUsersResponse.swift in Sources */,
+				OBJ_155 /* OtherUserError.swift in Sources */,
+				OBJ_156 /* OtherUserResponse.swift in Sources */,
+				OBJ_157 /* UserPlan.swift in Sources */,
+				OBJ_158 /* UserResponse.swift in Sources */,
+				OBJ_159 /* UpdateUser.swift in Sources */,
+				OBJ_160 /* UserAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_168 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_169 /* BaseAPI.swift in Sources */,
+				OBJ_170 /* CharacterSet.swift in Sources */,
+				OBJ_171 /* Request.swift in Sources */,
+				OBJ_172 /* RequestHeaderFields.swift in Sources */,
+				OBJ_173 /* RequestMethod.swift in Sources */,
+				OBJ_174 /* String.swift in Sources */,
+				OBJ_175 /* URLSession.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_99 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_163 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "BaseAPI::BaseAPI" /* BaseAPI */;
+			targetProxy = 92A18F48200433F200886ECA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_103 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_108 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GithubAPI.xcodeproj/GithubAPI_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = GithubAPI;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = GithubAPI;
+			};
+			name = Debug;
+		};
+		OBJ_109 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GithubAPI.xcodeproj/GithubAPI_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = GithubAPI;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = GithubAPI;
+			};
+			name = Release;
+		};
+		OBJ_166 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GithubAPI.xcodeproj/BaseAPI_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = BaseAPI;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = BaseAPI;
+			};
+			name = Debug;
+		};
+		OBJ_167 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GithubAPI.xcodeproj/BaseAPI_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = BaseAPI;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = BaseAPI;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_101 /* Build configuration list for PBXNativeTarget "BaseAPIPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_102 /* Debug */,
+				OBJ_103 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_107 /* Build configuration list for PBXNativeTarget "GithubAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_108 /* Debug */,
+				OBJ_109 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_165 /* Build configuration list for PBXNativeTarget "BaseAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_166 /* Debug */,
+				OBJ_167 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "GithubAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_95 /* Build configuration list for PBXNativeTarget "GithubAPIPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_96 /* Debug */,
+				OBJ_97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}

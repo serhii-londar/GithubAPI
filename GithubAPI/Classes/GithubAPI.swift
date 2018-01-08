@@ -1,0 +1,119 @@
+//
+//  GithubAPI.swift
+//  GithubAPI
+//
+//  Created by Serhii Londar on 1/2/18.
+//  Copyright © 2018 slon. All rights reserved.
+//
+
+import Foundation
+import BaseAPI
+
+public class GithubAPI: BaseAPI {
+    var authentication: Authentication? = nil
+    
+    var defaultHeaders = [
+        "Accept" : "application/vnd.github.v3+json",
+        RequestHeaderFields.acceptEncoding.rawValue : "gzip",
+        "Content-Type" : "application/json; charset=utf-8"
+    ]
+    
+    public init(authentication: Authentication) {
+        self.authentication = authentication
+        super.init()
+    }
+    
+    public override init() {
+        super.init()
+    }
+    
+    let baseUrl = "https://api.github.com"
+    
+    public func get<T:Decodable>(path: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, completion: @escaping (T?, Error?) -> Swift.Void) {
+        let (newHeaders, newParameters) = self.addAuthenticationIfNeeded(headers, parameters: parameters)
+        self.get(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders) { (data, response, error) in
+            if let data = data {
+                do {
+                    let model = try JSONDecoder().decode(T.self, from: data)
+                    completion(model, error)
+                } catch {
+                    completion(nil, error)
+                }
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+    
+    public func post<T:Decodable>(path: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, body: Data?, completion: @escaping (T?, Error?) -> Swift.Void) {
+        let (newHeaders, newParameters) = self.addAuthenticationIfNeeded(headers, parameters: parameters)
+        self.post(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders, body: body) { (data, response, error) in
+            if let data = data {
+                do {
+                    let model = try JSONDecoder().decode(T.self, from: data)
+                    completion(model, error)
+                } catch {
+                    completion(nil, error)
+                }
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+    
+    public func patch<T:Decodable>(path: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, body: Data?, completion: @escaping (T?, Error?) -> Swift.Void) {
+        let (newHeaders, newParameters) = self.addAuthenticationIfNeeded(headers, parameters: parameters)
+        self.patch(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders, body: body) { (data, response, error) in
+            if let data = data {
+                do {
+                    let model = try JSONDecoder().decode(T.self, from: data)
+                    let error = try JSONDecoder().decode(OtherUserError.self, from: data)
+                    completion(model, error)
+                } catch {
+                    completion(nil, error)
+                }
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+    
+    func addAuthenticationIfNeeded(_ headers: [String : String]?, parameters: [String : String]?) -> (headers: [String : String]?, parameters: [String : String]?) {
+        var newHeaders = headers
+        var newParameters = parameters
+        if let authentication = self.authentication {
+            if authentication.type == .headers {
+                if var newHeaders = newHeaders {
+                    newHeaders[authentication.key] = authentication.value
+                    return (newHeaders, newParameters)
+                } else {
+                    newHeaders = [String : String]()
+                    newHeaders![authentication.key] = authentication.value
+                    return (newHeaders, newParameters)
+                }
+            } else if authentication.type == .parameters {
+                if var newParameters = newParameters {
+                    newParameters[authentication.key] = authentication.value
+                    return (newHeaders, newParameters)
+                } else {
+                    newParameters = [String : String]()
+                    newParameters![authentication.key] = authentication.value
+                    return (newHeaders, newParameters)
+                }
+            }
+        }
+        return (newHeaders, newParameters)
+    }
+    
+    func addDefaultHeaders(_ headers: [String : String]?) -> [String : String]? {
+        var newHeaders = headers
+        if newHeaders == nil {
+            newHeaders = [String : String]()
+        }
+        for header in defaultHeaders {
+            newHeaders![header.key] = header.value
+        }
+        return newHeaders
+    }
+    
+}

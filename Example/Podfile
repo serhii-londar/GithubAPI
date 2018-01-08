@@ -5,7 +5,5 @@ target 'GithubAPI_Example' do
 
   target 'GithubAPI_Tests' do
     inherit! :search_paths
-
-    
   end
 end

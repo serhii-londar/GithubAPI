@@ -1,0 +1,1158 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		049740A1EB1DEA8EFE72D651FBCFAB41 /* SearchRepositoriesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6CC5EDBD159CA726FA42265230C209 /* SearchRepositoriesItem.swift */; };
+		07E826EEF0E87C2F6EB8E3DC25F7B0CE /* OtherUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB4048E6F371DD4A67E6EE7AC7FAD9 /* OtherUserResponse.swift */; };
+		0A0C1CB058F7129035C291FF1834BDC6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F658182AE91232D261FF36430B46C7 /* String.swift */; };
+		14E9DE28DEAB3579C747F7953A1549C2 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C599433F2146A6B728E21C19277546 /* BaseAPI.swift */; };
+		1709BC15C574C3503157080021CD6514 /* ListUserRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4A539339C33BE7203A157705658B73 /* ListUserRepositories.swift */; };
+		183E6F39AB89FC747E0C31F70C8BDA1C /* ListUserRepositoriesOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88E44654665D185C4DD7DCF989189C /* ListUserRepositoriesOwner.swift */; };
+		224DF576FB8419A40AB45C46DA07C6A1 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A814637717D3BB529BDF266BC6992C2D /* UserResponse.swift */; };
+		30595B0F0EB916DCF7119EA8CD7BAB55 /* UserPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E0E36FEB092B7E8B4D928CC974AAB4 /* UserPlan.swift */; };
+		345EA156A67A3B22634B6F2B7B6AB105 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149A51F3DE1A34C79D0E44ED56E3A962 /* Foundation.framework */; };
+		3836A7E1B57B3612190E6368830FE1B6 /* Pods-GithubAPI_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CF8EF9CF24C13245FC87FB0F38D9B8 /* Pods-GithubAPI_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A2DD1C20E4D81688AB689870EF0C792 /* BaseAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 45F6EC92D4B1ED1C73BD547BC32DF02B /* BaseAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4282EAC6EAE6F2DA7C73F214C4114E82 /* SearchRepositoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670BE89D8382F40263F5129D21571B35 /* SearchRepositoriesResponse.swift */; };
+		475970712FA2650724C7DF102A25785B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149A51F3DE1A34C79D0E44ED56E3A962 /* Foundation.framework */; };
+		5F2C1B1FAAE4460473519186A400F36E /* RequestHeaderFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C0709D57DFEA75B059A0317D96CD1 /* RequestHeaderFields.swift */; };
+		75500E4AA3B10BA5141F591B3E73959D /* Pods-GithubAPI_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE05B1994B8C16E3D9C61BD61A64B5E1 /* Pods-GithubAPI_Tests-dummy.m */; };
+		7BE91B271C25D0DCAD6A7169BA5BEADA /* Pods-GithubAPI_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678B8747357608882316C7C0A85269A /* Pods-GithubAPI_Example-dummy.m */; };
+		7C24239ECC769CF06BF4F8E0AE8A26F2 /* ListUserRepositoriesLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572C8CFB8A833A6A1FDE4DF576AAAFF4 /* ListUserRepositoriesLicense.swift */; };
+		8F0A886AF3B6258D1803EDBC5652C6D9 /* OtherUserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B884142B9E91F6CC90493EEE0D30E7 /* OtherUserError.swift */; };
+		9242F6C820022E65006F6FDC /* AllUsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242F6C720022E65006F6FDC /* AllUsersResponse.swift */; };
+		92A0301A20039A4200275F6B /* IssuesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0301920039A4200275F6B /* IssuesAPI.swift */; };
+		92A030322003AE5800275F6B /* GetIssueResponseAssignee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0302B2003AE5800275F6B /* GetIssueResponseAssignee.swift */; };
+		92A030332003AE5800275F6B /* GetIssueResponsePermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0302C2003AE5800275F6B /* GetIssueResponsePermission.swift */; };
+		92A030342003AE5800275F6B /* GetIssueResponseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0302D2003AE5800275F6B /* GetIssueResponseLabel.swift */; };
+		92A030352003AE5800275F6B /* GetIssueResponsePullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0302E2003AE5800275F6B /* GetIssueResponsePullRequest.swift */; };
+		92A030362003AE5800275F6B /* GetIssueResponseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0302F2003AE5800275F6B /* GetIssueResponseRepository.swift */; };
+		92A030372003AE5800275F6B /* GetIssueResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A030302003AE5800275F6B /* GetIssueResponse.swift */; };
+		92A030382003AE5800275F6B /* GetIssueResponseMilestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A030312003AE5800275F6B /* GetIssueResponseMilestone.swift */; };
+		92A0303B2003B71300275F6B /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0303A2003B71300275F6B /* Issue.swift */; };
+		96768F14E8357121D76673CE9EA6B9D9 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2510AE6C568B87183E5C94476393D92 /* Authentication.swift */; };
+		9C5ECB1CA128EC0855E35FA0D47C96D8 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5396626F2CB53F746418F1A5E2F59D /* RequestMethod.swift */; };
+		9E73C57C165AA735E8EB14A8EA49E9B4 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F355382F7A2D222AE49EDAA865F5D475 /* GithubAPI.swift */; };
+		B29A692F177383F55B926E20DBDA29B0 /* BaseAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ECFD468FFBC6FDC89B3AABDB88726AE /* BaseAPI.framework */; };
+		B3A04F22456ED6123805DFB531AB7C51 /* GithubAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D411BD1A856ABFE2EF2845A1F0FB55CD /* GithubAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B630BBE4BDAAF98077217AE46922BFCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149A51F3DE1A34C79D0E44ED56E3A962 /* Foundation.framework */; };
+		BAE395D240652A3207614D695B8C0888 /* Pods-GithubAPI_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D22045EBA822A877C293610DB25629F7 /* Pods-GithubAPI_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF57DEFBC5817BB19C1218445F228E77 /* BaseAPI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D628EB9BA16A811AB48FFD6942AAECA /* BaseAPI-dummy.m */; };
+		D507E6C907B4ADA50D4DFC9B57FAE984 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EDBC7D9F7C6159A6A0AB784797E095 /* UserAPI.swift */; };
+		D75445FBFDA66FA280C5E7A65F8FE9F6 /* RepositoriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C812802244CDB30871F117F524BEE4E /* RepositoriesAPI.swift */; };
+		D836FB550A9C84C6C96B064416021838 /* SearchRepositoriesOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D69D50ADF902FBE3955092516B17114 /* SearchRepositoriesOwner.swift */; };
+		DBFEC710DF39065DEA69C62AA908C271 /* SearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB134D30A1C26056B452138A5ABF585C /* SearchAPI.swift */; };
+		DDC7E3AD417884187DC34E8F63BA9A28 /* CharacterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49658BCE4172B3111FC804D4A180EDC1 /* CharacterSet.swift */; };
+		E6F7728F22BA21908EB58205DBE8772C /* ListUserRepositoriesPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06280FD36B19CD9D3B09A2830488B48D /* ListUserRepositoriesPermission.swift */; };
+		EBB9FF4B30288E26077A590FE95A4CEC /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFBABB74B39DAC8052E1685B3680C0F /* Request.swift */; };
+		EE54B4C8D95D815ABBECE8B3C3DCB076 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149A51F3DE1A34C79D0E44ED56E3A962 /* Foundation.framework */; };
+		F607AD1B3859C8702CBB1D262D0FC63E /* GithubAPI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9DD298D266AA75C7CA13EE2C3F3A47 /* GithubAPI-dummy.m */; };
+		FEDD065B636D91EF8D9DF643F1EDFF99 /* UpdateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A157516A61FDF68F3F3BAEE34112CCD9 /* UpdateUser.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		12FBA04031CDB5D512321887CB4780B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C81352CEE1773A412CF25A823BFA133A;
+			remoteInfo = GithubAPI;
+		};
+		6595B9416093FD6240F969C40B8ADF2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DC4B26FBB466CEBF77F103AEA69C74C;
+			remoteInfo = BaseAPI;
+		};
+		F568063087ECEC2511D47FE234A44BD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DC4B26FBB466CEBF77F103AEA69C74C;
+			remoteInfo = BaseAPI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02B4B170EAD696684BC7D3EFC33D8492 /* GithubAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GithubAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06280FD36B19CD9D3B09A2830488B48D /* ListUserRepositoriesPermission.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ListUserRepositoriesPermission.swift; sourceTree = "<group>"; };
+		0ECFD468FFBC6FDC89B3AABDB88726AE /* BaseAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1022EA9DF3325D558491C34900B08EF1 /* Pods-GithubAPI_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GithubAPI_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		149A51F3DE1A34C79D0E44ED56E3A962 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		18B27F9182632263CF0A73DB4010F901 /* Pods-GithubAPI_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GithubAPI_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1D69D50ADF902FBE3955092516B17114 /* SearchRepositoriesOwner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesOwner.swift; sourceTree = "<group>"; };
+		1E0DB6F37781B7F16D94E5A7656DEACF /* BaseAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22CF8EF9CF24C13245FC87FB0F38D9B8 /* Pods-GithubAPI_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GithubAPI_Tests-umbrella.h"; sourceTree = "<group>"; };
+		24A33C67D3B7400926BDD0D9B6CD1BAD /* Pods-GithubAPI_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GithubAPI_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		24C599433F2146A6B728E21C19277546 /* BaseAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseAPI.swift; path = BaseAPI/Classes/BaseAPI.swift; sourceTree = "<group>"; };
+		29F02D8155DD827F327A358680DE1FA2 /* Pods_GithubAPI_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubAPI_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45F6EC92D4B1ED1C73BD547BC32DF02B /* BaseAPI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BaseAPI-umbrella.h"; sourceTree = "<group>"; };
+		462AA59F845A1833EA9BEE6EFE0C0689 /* Pods-GithubAPI_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GithubAPI_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		47B884142B9E91F6CC90493EEE0D30E7 /* OtherUserError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtherUserError.swift; sourceTree = "<group>"; };
+		49658BCE4172B3111FC804D4A180EDC1 /* CharacterSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CharacterSet.swift; path = BaseAPI/Classes/CharacterSet.swift; sourceTree = "<group>"; };
+		4A5396626F2CB53F746418F1A5E2F59D /* RequestMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestMethod.swift; path = BaseAPI/Classes/RequestMethod.swift; sourceTree = "<group>"; };
+		4D586AD4EF6BB27B6E8618B70A25B81F /* Pods-GithubAPI_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GithubAPI_Example-frameworks.sh"; sourceTree = "<group>"; };
+		506158F3E7A1922D9B4838395D48076B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5226ACE9B73AC809F4A6399D284A7690 /* Pods-GithubAPI_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GithubAPI_Tests.modulemap"; sourceTree = "<group>"; };
+		572C8CFB8A833A6A1FDE4DF576AAAFF4 /* ListUserRepositoriesLicense.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ListUserRepositoriesLicense.swift; sourceTree = "<group>"; };
+		5CD458620CE4726A5E1330707FB137CC /* Pods-GithubAPI_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GithubAPI_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		5D628EB9BA16A811AB48FFD6942AAECA /* BaseAPI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BaseAPI-dummy.m"; sourceTree = "<group>"; };
+		5F6CC5EDBD159CA726FA42265230C209 /* SearchRepositoriesItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesItem.swift; sourceTree = "<group>"; };
+		62083FCC98F65DC7CA69A2A472CCD874 /* Pods-GithubAPI_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GithubAPI_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		65F658182AE91232D261FF36430B46C7 /* String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = String.swift; path = BaseAPI/Classes/String.swift; sourceTree = "<group>"; };
+		670BE89D8382F40263F5129D21571B35 /* SearchRepositoriesResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesResponse.swift; sourceTree = "<group>"; };
+		6A79D1784C34988A1AD15B1FF8CA5C7F /* Pods-GithubAPI_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GithubAPI_Example.release.xcconfig"; sourceTree = "<group>"; };
+		6C812802244CDB30871F117F524BEE4E /* RepositoriesAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RepositoriesAPI.swift; sourceTree = "<group>"; };
+		6F8EBC752113084B3566B854A06DCB58 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73E0A687ECACB831A888EAD7DB9BCAD0 /* Pods-GithubAPI_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GithubAPI_Example-resources.sh"; sourceTree = "<group>"; };
+		7678B8747357608882316C7C0A85269A /* Pods-GithubAPI_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GithubAPI_Example-dummy.m"; sourceTree = "<group>"; };
+		7B8CC58DD6734EFA024A5DCEA5F42AC7 /* GithubAPI.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GithubAPI.xcconfig; sourceTree = "<group>"; };
+		7DD48E12B11A21BC297A64AA4643D389 /* BaseAPI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BaseAPI-prefix.pch"; sourceTree = "<group>"; };
+		7E6C0709D57DFEA75B059A0317D96CD1 /* RequestHeaderFields.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestHeaderFields.swift; path = BaseAPI/Classes/RequestHeaderFields.swift; sourceTree = "<group>"; };
+		8E39BE7E717C89A63C5BA9258F11096A /* GithubAPI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GithubAPI-prefix.pch"; sourceTree = "<group>"; };
+		9242F6C720022E65006F6FDC /* AllUsersResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllUsersResponse.swift; sourceTree = "<group>"; };
+		92A0301920039A4200275F6B /* IssuesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesAPI.swift; sourceTree = "<group>"; };
+		92A0302B2003AE5800275F6B /* GetIssueResponseAssignee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetIssueResponseAssignee.swift; sourceTree = "<group>"; };
+		92A0302C2003AE5800275F6B /* GetIssueResponsePermission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetIssueResponsePermission.swift; sourceTree = "<group>"; };
+		92A0302D2003AE5800275F6B /* GetIssueResponseLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetIssueResponseLabel.swift; sourceTree = "<group>"; };
+		92A0302E2003AE5800275F6B /* GetIssueResponsePullRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetIssueResponsePullRequest.swift; sourceTree = "<group>"; };
+		92A0302F2003AE5800275F6B /* GetIssueResponseRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetIssueResponseRepository.swift; sourceTree = "<group>"; };
+		92A030302003AE5800275F6B /* GetIssueResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetIssueResponse.swift; sourceTree = "<group>"; };
+		92A030312003AE5800275F6B /* GetIssueResponseMilestone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetIssueResponseMilestone.swift; sourceTree = "<group>"; };
+		92A0303A2003B71300275F6B /* Issue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		92C6D88D52EE5F98A5A594CFBC15907F /* Pods-GithubAPI_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GithubAPI_Tests-resources.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94DB4048E6F371DD4A67E6EE7AC7FAD9 /* OtherUserResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OtherUserResponse.swift; sourceTree = "<group>"; };
+		95627248B6D5CA91E7FC057F479BC0CC /* BaseAPI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = BaseAPI.modulemap; sourceTree = "<group>"; };
+		97E0E36FEB092B7E8B4D928CC974AAB4 /* UserPlan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserPlan.swift; sourceTree = "<group>"; };
+		9B8A16A94ACDD8A4817C98382CC562A8 /* Pods-GithubAPI_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GithubAPI_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9F4A539339C33BE7203A157705658B73 /* ListUserRepositories.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ListUserRepositories.swift; sourceTree = "<group>"; };
+		A157516A61FDF68F3F3BAEE34112CCD9 /* UpdateUser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UpdateUser.swift; sourceTree = "<group>"; };
+		A814637717D3BB529BDF266BC6992C2D /* UserResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		AE9DD298D266AA75C7CA13EE2C3F3A47 /* GithubAPI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GithubAPI-dummy.m"; sourceTree = "<group>"; };
+		B8EDBC7D9F7C6159A6A0AB784797E095 /* UserAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		BCC03E301199A90607E5662B98F33847 /* GithubAPI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = GithubAPI.modulemap; sourceTree = "<group>"; };
+		BDFBABB74B39DAC8052E1685B3680C0F /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = BaseAPI/Classes/Request.swift; sourceTree = "<group>"; };
+		BE05B1994B8C16E3D9C61BD61A64B5E1 /* Pods-GithubAPI_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GithubAPI_Tests-dummy.m"; sourceTree = "<group>"; };
+		C1C9FDC600E00E52B85FB6BF8EBE55C7 /* BaseAPI.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BaseAPI.xcconfig; sourceTree = "<group>"; };
+		C23E39D960FC6AF2D7B726293FB8C984 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D22045EBA822A877C293610DB25629F7 /* Pods-GithubAPI_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GithubAPI_Example-umbrella.h"; sourceTree = "<group>"; };
+		D2510AE6C568B87183E5C94476393D92 /* Authentication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Authentication.swift; path = GithubAPI/Classes/Authentication.swift; sourceTree = "<group>"; };
+		D411BD1A856ABFE2EF2845A1F0FB55CD /* GithubAPI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GithubAPI-umbrella.h"; sourceTree = "<group>"; };
+		D74F0A913D4235108CA7A01C04C21C21 /* Pods-GithubAPI_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GithubAPI_Example.modulemap"; sourceTree = "<group>"; };
+		EB134D30A1C26056B452138A5ABF585C /* SearchAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
+		EC88E44654665D185C4DD7DCF989189C /* ListUserRepositoriesOwner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ListUserRepositoriesOwner.swift; sourceTree = "<group>"; };
+		F355382F7A2D222AE49EDAA865F5D475 /* GithubAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GithubAPI.swift; path = GithubAPI/Classes/GithubAPI.swift; sourceTree = "<group>"; };
+		F3B78C79D0ED803695F926CABAE2BC49 /* Pods-GithubAPI_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GithubAPI_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		F57508E3A21C96EC86D41E22220A07A1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFA263237E625FF8A9158D2BD303CD82 /* Pods_GithubAPI_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubAPI_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21F2756E8D9126C63F5F41F3691B3437 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B630BBE4BDAAF98077217AE46922BFCA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A3ECDC7843C9F4347201172C5F27246 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				475970712FA2650724C7DF102A25785B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF968DEDD9714F3A3FF065AE383D7CF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29A692F177383F55B926E20DBDA29B0 /* BaseAPI.framework in Frameworks */,
+				345EA156A67A3B22634B6F2B7B6AB105 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8B3C3C967C08C26602251B4C864BB30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE54B4C8D95D815ABBECE8B3C3DCB076 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0287F3FC756229EA7A8ACD2846D96F4F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BCC03E301199A90607E5662B98F33847 /* GithubAPI.modulemap */,
+				7B8CC58DD6734EFA024A5DCEA5F42AC7 /* GithubAPI.xcconfig */,
+				AE9DD298D266AA75C7CA13EE2C3F3A47 /* GithubAPI-dummy.m */,
+				8E39BE7E717C89A63C5BA9258F11096A /* GithubAPI-prefix.pch */,
+				D411BD1A856ABFE2EF2845A1F0FB55CD /* GithubAPI-umbrella.h */,
+				F57508E3A21C96EC86D41E22220A07A1 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/GithubAPI";
+			sourceTree = "<group>";
+		};
+		0706166A36303E784103FB0902439223 /* SearchAPI */ = {
+			isa = PBXGroup;
+			children = (
+				EB134D30A1C26056B452138A5ABF585C /* SearchAPI.swift */,
+				56F43DE1A8321562DFF5690BBC7CBC66 /* Models */,
+			);
+			name = SearchAPI;
+			path = GithubAPI/Classes/SearchAPI;
+			sourceTree = "<group>";
+		};
+		38AC4AC113BE615B6A997809574057E5 /* Pods-GithubAPI_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6F8EBC752113084B3566B854A06DCB58 /* Info.plist */,
+				5226ACE9B73AC809F4A6399D284A7690 /* Pods-GithubAPI_Tests.modulemap */,
+				9B8A16A94ACDD8A4817C98382CC562A8 /* Pods-GithubAPI_Tests-acknowledgements.markdown */,
+				462AA59F845A1833EA9BEE6EFE0C0689 /* Pods-GithubAPI_Tests-acknowledgements.plist */,
+				BE05B1994B8C16E3D9C61BD61A64B5E1 /* Pods-GithubAPI_Tests-dummy.m */,
+				1022EA9DF3325D558491C34900B08EF1 /* Pods-GithubAPI_Tests-frameworks.sh */,
+				92C6D88D52EE5F98A5A594CFBC15907F /* Pods-GithubAPI_Tests-resources.sh */,
+				22CF8EF9CF24C13245FC87FB0F38D9B8 /* Pods-GithubAPI_Tests-umbrella.h */,
+				24A33C67D3B7400926BDD0D9B6CD1BAD /* Pods-GithubAPI_Tests.debug.xcconfig */,
+				F3B78C79D0ED803695F926CABAE2BC49 /* Pods-GithubAPI_Tests.release.xcconfig */,
+			);
+			name = "Pods-GithubAPI_Tests";
+			path = "Target Support Files/Pods-GithubAPI_Tests";
+			sourceTree = "<group>";
+		};
+		51E3DDE4655D83F608F2279A80A32FCF /* Pods-GithubAPI_Example */ = {
+			isa = PBXGroup;
+			children = (
+				506158F3E7A1922D9B4838395D48076B /* Info.plist */,
+				D74F0A913D4235108CA7A01C04C21C21 /* Pods-GithubAPI_Example.modulemap */,
+				18B27F9182632263CF0A73DB4010F901 /* Pods-GithubAPI_Example-acknowledgements.markdown */,
+				5CD458620CE4726A5E1330707FB137CC /* Pods-GithubAPI_Example-acknowledgements.plist */,
+				7678B8747357608882316C7C0A85269A /* Pods-GithubAPI_Example-dummy.m */,
+				4D586AD4EF6BB27B6E8618B70A25B81F /* Pods-GithubAPI_Example-frameworks.sh */,
+				73E0A687ECACB831A888EAD7DB9BCAD0 /* Pods-GithubAPI_Example-resources.sh */,
+				D22045EBA822A877C293610DB25629F7 /* Pods-GithubAPI_Example-umbrella.h */,
+				62083FCC98F65DC7CA69A2A472CCD874 /* Pods-GithubAPI_Example.debug.xcconfig */,
+				6A79D1784C34988A1AD15B1FF8CA5C7F /* Pods-GithubAPI_Example.release.xcconfig */,
+			);
+			name = "Pods-GithubAPI_Example";
+			path = "Target Support Files/Pods-GithubAPI_Example";
+			sourceTree = "<group>";
+		};
+		52B859280CC34A0B6DF7CFFED51F908C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				95627248B6D5CA91E7FC057F479BC0CC /* BaseAPI.modulemap */,
+				C1C9FDC600E00E52B85FB6BF8EBE55C7 /* BaseAPI.xcconfig */,
+				5D628EB9BA16A811AB48FFD6942AAECA /* BaseAPI-dummy.m */,
+				7DD48E12B11A21BC297A64AA4643D389 /* BaseAPI-prefix.pch */,
+				45F6EC92D4B1ED1C73BD547BC32DF02B /* BaseAPI-umbrella.h */,
+				C23E39D960FC6AF2D7B726293FB8C984 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BaseAPI";
+			sourceTree = "<group>";
+		};
+		53502D61F25A742B78670E9390BEFC0C /* ListUserRepositories */ = {
+			isa = PBXGroup;
+			children = (
+				9F4A539339C33BE7203A157705658B73 /* ListUserRepositories.swift */,
+				572C8CFB8A833A6A1FDE4DF576AAAFF4 /* ListUserRepositoriesLicense.swift */,
+				EC88E44654665D185C4DD7DCF989189C /* ListUserRepositoriesOwner.swift */,
+				06280FD36B19CD9D3B09A2830488B48D /* ListUserRepositoriesPermission.swift */,
+			);
+			path = ListUserRepositories;
+			sourceTree = "<group>";
+		};
+		56F43DE1A8321562DFF5690BBC7CBC66 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B9843966F0E15F0124AE7F4B7274A37 /* Repositories */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5BB3873A0324D3ACE55C12339A6B4653 /* GithubAPI */ = {
+			isa = PBXGroup;
+			children = (
+				D2510AE6C568B87183E5C94476393D92 /* Authentication.swift */,
+				F355382F7A2D222AE49EDAA865F5D475 /* GithubAPI.swift */,
+				92A03018200399A000275F6B /* IssuesAPI */,
+				B4BE0BAF20EB0ED60680B8B305859388 /* RepositoriesAPI */,
+				0706166A36303E784103FB0902439223 /* SearchAPI */,
+				0287F3FC756229EA7A8ACD2846D96F4F /* Support Files */,
+				704DA82C61C8D20ECD132F51B0A5AE28 /* UserAPI */,
+			);
+			name = GithubAPI;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		5DE5A6B1869716D5DC97D6E2E5E2AFDE /* UpdateUser */ = {
+			isa = PBXGroup;
+			children = (
+				A157516A61FDF68F3F3BAEE34112CCD9 /* UpdateUser.swift */,
+			);
+			path = UpdateUser;
+			sourceTree = "<group>";
+		};
+		5E4863BA71B219A0DD9C17D1E245898E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				149A51F3DE1A34C79D0E44ED56E3A962 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		704DA82C61C8D20ECD132F51B0A5AE28 /* UserAPI */ = {
+			isa = PBXGroup;
+			children = (
+				B8EDBC7D9F7C6159A6A0AB784797E095 /* UserAPI.swift */,
+				909F5C8F4315E5E91BE320D299E7BAB8 /* Models */,
+			);
+			name = UserAPI;
+			path = GithubAPI/Classes/UserAPI;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				F8A8B1BC7FDFE5EDEBDD1856B84E2BD2 /* Development Pods */,
+				BC8AB48D25EADB4DA606B4C26FBA9ABC /* Frameworks */,
+				E21E6C60C4BAE453D1D66D0E80C9EDDE /* Pods */,
+				AC341BC7100EC54ADB41706C2D87A2BC /* Products */,
+				FD953AFEA956EECE56E59EA37C61F20D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8B9843966F0E15F0124AE7F4B7274A37 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5F6CC5EDBD159CA726FA42265230C209 /* SearchRepositoriesItem.swift */,
+				1D69D50ADF902FBE3955092516B17114 /* SearchRepositoriesOwner.swift */,
+				670BE89D8382F40263F5129D21571B35 /* SearchRepositoriesResponse.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		909F5C8F4315E5E91BE320D299E7BAB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9242F6C620022E65006F6FDC /* GetAllUsers */,
+				F7F278884EA7657F70447ADC080B9F83 /* GetOtherUser */,
+				9D31E6A6C025362DA436091657A5A867 /* GetUser */,
+				5DE5A6B1869716D5DC97D6E2E5E2AFDE /* UpdateUser */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9242F6C620022E65006F6FDC /* GetAllUsers */ = {
+			isa = PBXGroup;
+			children = (
+				9242F6C720022E65006F6FDC /* AllUsersResponse.swift */,
+			);
+			path = GetAllUsers;
+			sourceTree = "<group>";
+		};
+		92A03018200399A000275F6B /* IssuesAPI */ = {
+			isa = PBXGroup;
+			children = (
+				92A0301B2003A5E000275F6B /* Models */,
+				92A0301920039A4200275F6B /* IssuesAPI.swift */,
+			);
+			name = IssuesAPI;
+			path = GithubAPI/Classes/IssuesAPI;
+			sourceTree = "<group>";
+		};
+		92A0301B2003A5E000275F6B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				92A030392003B71300275F6B /* CreateIssue */,
+				92A0302A2003AE5800275F6B /* GetIssueResponse */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		92A0302A2003AE5800275F6B /* GetIssueResponse */ = {
+			isa = PBXGroup;
+			children = (
+				92A0302B2003AE5800275F6B /* GetIssueResponseAssignee.swift */,
+				92A0302C2003AE5800275F6B /* GetIssueResponsePermission.swift */,
+				92A0302D2003AE5800275F6B /* GetIssueResponseLabel.swift */,
+				92A0302E2003AE5800275F6B /* GetIssueResponsePullRequest.swift */,
+				92A0302F2003AE5800275F6B /* GetIssueResponseRepository.swift */,
+				92A030302003AE5800275F6B /* GetIssueResponse.swift */,
+				92A030312003AE5800275F6B /* GetIssueResponseMilestone.swift */,
+			);
+			path = GetIssueResponse;
+			sourceTree = "<group>";
+		};
+		92A030392003B71300275F6B /* CreateIssue */ = {
+			isa = PBXGroup;
+			children = (
+				92A0303A2003B71300275F6B /* Issue.swift */,
+			);
+			path = CreateIssue;
+			sourceTree = "<group>";
+		};
+		9D31E6A6C025362DA436091657A5A867 /* GetUser */ = {
+			isa = PBXGroup;
+			children = (
+				97E0E36FEB092B7E8B4D928CC974AAB4 /* UserPlan.swift */,
+				A814637717D3BB529BDF266BC6992C2D /* UserResponse.swift */,
+			);
+			path = GetUser;
+			sourceTree = "<group>";
+		};
+		AC341BC7100EC54ADB41706C2D87A2BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E0DB6F37781B7F16D94E5A7656DEACF /* BaseAPI.framework */,
+				02B4B170EAD696684BC7D3EFC33D8492 /* GithubAPI.framework */,
+				29F02D8155DD827F327A358680DE1FA2 /* Pods_GithubAPI_Example.framework */,
+				FFA263237E625FF8A9158D2BD303CD82 /* Pods_GithubAPI_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4BE0BAF20EB0ED60680B8B305859388 /* RepositoriesAPI */ = {
+			isa = PBXGroup;
+			children = (
+				6C812802244CDB30871F117F524BEE4E /* RepositoriesAPI.swift */,
+				DCF6D5ADC3C600AE7E94109F8AF2921E /* Models */,
+			);
+			name = RepositoriesAPI;
+			path = GithubAPI/Classes/RepositoriesAPI;
+			sourceTree = "<group>";
+		};
+		BC8AB48D25EADB4DA606B4C26FBA9ABC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0ECFD468FFBC6FDC89B3AABDB88726AE /* BaseAPI.framework */,
+				5E4863BA71B219A0DD9C17D1E245898E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD3D49C484F2D3518EEDA21BFC34372D /* BaseAPI */ = {
+			isa = PBXGroup;
+			children = (
+				24C599433F2146A6B728E21C19277546 /* BaseAPI.swift */,
+				49658BCE4172B3111FC804D4A180EDC1 /* CharacterSet.swift */,
+				BDFBABB74B39DAC8052E1685B3680C0F /* Request.swift */,
+				7E6C0709D57DFEA75B059A0317D96CD1 /* RequestHeaderFields.swift */,
+				4A5396626F2CB53F746418F1A5E2F59D /* RequestMethod.swift */,
+				65F658182AE91232D261FF36430B46C7 /* String.swift */,
+				52B859280CC34A0B6DF7CFFED51F908C /* Support Files */,
+			);
+			path = BaseAPI;
+			sourceTree = "<group>";
+		};
+		DCF6D5ADC3C600AE7E94109F8AF2921E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				53502D61F25A742B78670E9390BEFC0C /* ListUserRepositories */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E21E6C60C4BAE453D1D66D0E80C9EDDE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD3D49C484F2D3518EEDA21BFC34372D /* BaseAPI */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F7F278884EA7657F70447ADC080B9F83 /* GetOtherUser */ = {
+			isa = PBXGroup;
+			children = (
+				47B884142B9E91F6CC90493EEE0D30E7 /* OtherUserError.swift */,
+				94DB4048E6F371DD4A67E6EE7AC7FAD9 /* OtherUserResponse.swift */,
+			);
+			path = GetOtherUser;
+			sourceTree = "<group>";
+		};
+		F8A8B1BC7FDFE5EDEBDD1856B84E2BD2 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5BB3873A0324D3ACE55C12339A6B4653 /* GithubAPI */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		FD953AFEA956EECE56E59EA37C61F20D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				51E3DDE4655D83F608F2279A80A32FCF /* Pods-GithubAPI_Example */,
+				38AC4AC113BE615B6A997809574057E5 /* Pods-GithubAPI_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7D6B947B6329879710D030525F3C60E9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3836A7E1B57B3612190E6368830FE1B6 /* Pods-GithubAPI_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEB1BDE7D1013D665975ED7750128730 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2DD1C20E4D81688AB689870EF0C792 /* BaseAPI-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C78AD2DB7B1FC9025FCE70EE6104B351 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3A04F22456ED6123805DFB531AB7C51 /* GithubAPI-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE851033EB6A5FBE90EEBC5B07EF6070 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE395D240652A3207614D695B8C0888 /* Pods-GithubAPI_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1DC4B26FBB466CEBF77F103AEA69C74C /* BaseAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E94B89FD58B023B7DB34A7DD9E2484C /* Build configuration list for PBXNativeTarget "BaseAPI" */;
+			buildPhases = (
+				1E1E7E1220C9CDD88941EDF7153F4FC6 /* Sources */,
+				B8B3C3C967C08C26602251B4C864BB30 /* Frameworks */,
+				AEB1BDE7D1013D665975ED7750128730 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BaseAPI;
+			productName = BaseAPI;
+			productReference = 1E0DB6F37781B7F16D94E5A7656DEACF /* BaseAPI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6ADAA96856BC7926AFA3E2F7BAC19F1E /* Pods-GithubAPI_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC51B861D39DBCA16BEE0E829C58674A /* Build configuration list for PBXNativeTarget "Pods-GithubAPI_Tests" */;
+			buildPhases = (
+				A7F93A67CD8DC38B89912E4A857A5380 /* Sources */,
+				21F2756E8D9126C63F5F41F3691B3437 /* Frameworks */,
+				7D6B947B6329879710D030525F3C60E9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-GithubAPI_Tests";
+			productName = "Pods-GithubAPI_Tests";
+			productReference = FFA263237E625FF8A9158D2BD303CD82 /* Pods_GithubAPI_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8AAB82032E3AED15F83C5B16548ADEC2 /* Pods-GithubAPI_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D661DB632BF9C88D502D22FC61AEB87B /* Build configuration list for PBXNativeTarget "Pods-GithubAPI_Example" */;
+			buildPhases = (
+				7F9F758CFCCB781132E9FF2D7D2B0A09 /* Sources */,
+				3A3ECDC7843C9F4347201172C5F27246 /* Frameworks */,
+				DE851033EB6A5FBE90EEBC5B07EF6070 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B92E64608DF1422A4085A151CC0F1B6F /* PBXTargetDependency */,
+				10F3283E5ADED8AB8DA2803FC0794761 /* PBXTargetDependency */,
+			);
+			name = "Pods-GithubAPI_Example";
+			productName = "Pods-GithubAPI_Example";
+			productReference = 29F02D8155DD827F327A358680DE1FA2 /* Pods_GithubAPI_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C81352CEE1773A412CF25A823BFA133A /* GithubAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51DA3BDBCDCE0A89FAA079FA80CAD0A7 /* Build configuration list for PBXNativeTarget "GithubAPI" */;
+			buildPhases = (
+				F89CDE74171BC6E93E37DF619C559D27 /* Sources */,
+				AF968DEDD9714F3A3FF065AE383D7CF4 /* Frameworks */,
+				C78AD2DB7B1FC9025FCE70EE6104B351 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A476B1351DAEE9DEE0EC0D6A728040A7 /* PBXTargetDependency */,
+			);
+			name = GithubAPI;
+			productName = GithubAPI;
+			productReference = 02B4B170EAD696684BC7D3EFC33D8492 /* GithubAPI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = AC341BC7100EC54ADB41706C2D87A2BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DC4B26FBB466CEBF77F103AEA69C74C /* BaseAPI */,
+				C81352CEE1773A412CF25A823BFA133A /* GithubAPI */,
+				8AAB82032E3AED15F83C5B16548ADEC2 /* Pods-GithubAPI_Example */,
+				6ADAA96856BC7926AFA3E2F7BAC19F1E /* Pods-GithubAPI_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E1E7E1220C9CDD88941EDF7153F4FC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF57DEFBC5817BB19C1218445F228E77 /* BaseAPI-dummy.m in Sources */,
+				14E9DE28DEAB3579C747F7953A1549C2 /* BaseAPI.swift in Sources */,
+				DDC7E3AD417884187DC34E8F63BA9A28 /* CharacterSet.swift in Sources */,
+				EBB9FF4B30288E26077A590FE95A4CEC /* Request.swift in Sources */,
+				5F2C1B1FAAE4460473519186A400F36E /* RequestHeaderFields.swift in Sources */,
+				9C5ECB1CA128EC0855E35FA0D47C96D8 /* RequestMethod.swift in Sources */,
+				0A0C1CB058F7129035C291FF1834BDC6 /* String.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F9F758CFCCB781132E9FF2D7D2B0A09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BE91B271C25D0DCAD6A7169BA5BEADA /* Pods-GithubAPI_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F93A67CD8DC38B89912E4A857A5380 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75500E4AA3B10BA5141F591B3E73959D /* Pods-GithubAPI_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F89CDE74171BC6E93E37DF619C559D27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96768F14E8357121D76673CE9EA6B9D9 /* Authentication.swift in Sources */,
+				F607AD1B3859C8702CBB1D262D0FC63E /* GithubAPI-dummy.m in Sources */,
+				92A030322003AE5800275F6B /* GetIssueResponseAssignee.swift in Sources */,
+				9242F6C820022E65006F6FDC /* AllUsersResponse.swift in Sources */,
+				92A030362003AE5800275F6B /* GetIssueResponseRepository.swift in Sources */,
+				9E73C57C165AA735E8EB14A8EA49E9B4 /* GithubAPI.swift in Sources */,
+				1709BC15C574C3503157080021CD6514 /* ListUserRepositories.swift in Sources */,
+				92A030342003AE5800275F6B /* GetIssueResponseLabel.swift in Sources */,
+				92A030382003AE5800275F6B /* GetIssueResponseMilestone.swift in Sources */,
+				7C24239ECC769CF06BF4F8E0AE8A26F2 /* ListUserRepositoriesLicense.swift in Sources */,
+				183E6F39AB89FC747E0C31F70C8BDA1C /* ListUserRepositoriesOwner.swift in Sources */,
+				E6F7728F22BA21908EB58205DBE8772C /* ListUserRepositoriesPermission.swift in Sources */,
+				92A0301A20039A4200275F6B /* IssuesAPI.swift in Sources */,
+				92A030372003AE5800275F6B /* GetIssueResponse.swift in Sources */,
+				8F0A886AF3B6258D1803EDBC5652C6D9 /* OtherUserError.swift in Sources */,
+				92A0303B2003B71300275F6B /* Issue.swift in Sources */,
+				07E826EEF0E87C2F6EB8E3DC25F7B0CE /* OtherUserResponse.swift in Sources */,
+				D75445FBFDA66FA280C5E7A65F8FE9F6 /* RepositoriesAPI.swift in Sources */,
+				92A030332003AE5800275F6B /* GetIssueResponsePermission.swift in Sources */,
+				DBFEC710DF39065DEA69C62AA908C271 /* SearchAPI.swift in Sources */,
+				049740A1EB1DEA8EFE72D651FBCFAB41 /* SearchRepositoriesItem.swift in Sources */,
+				D836FB550A9C84C6C96B064416021838 /* SearchRepositoriesOwner.swift in Sources */,
+				92A030352003AE5800275F6B /* GetIssueResponsePullRequest.swift in Sources */,
+				4282EAC6EAE6F2DA7C73F214C4114E82 /* SearchRepositoriesResponse.swift in Sources */,
+				FEDD065B636D91EF8D9DF643F1EDFF99 /* UpdateUser.swift in Sources */,
+				D507E6C907B4ADA50D4DFC9B57FAE984 /* UserAPI.swift in Sources */,
+				30595B0F0EB916DCF7119EA8CD7BAB55 /* UserPlan.swift in Sources */,
+				224DF576FB8419A40AB45C46DA07C6A1 /* UserResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10F3283E5ADED8AB8DA2803FC0794761 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GithubAPI;
+			target = C81352CEE1773A412CF25A823BFA133A /* GithubAPI */;
+			targetProxy = 12FBA04031CDB5D512321887CB4780B2 /* PBXContainerItemProxy */;
+		};
+		A476B1351DAEE9DEE0EC0D6A728040A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BaseAPI;
+			target = 1DC4B26FBB466CEBF77F103AEA69C74C /* BaseAPI */;
+			targetProxy = F568063087ECEC2511D47FE234A44BD1 /* PBXContainerItemProxy */;
+		};
+		B92E64608DF1422A4085A151CC0F1B6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BaseAPI;
+			target = 1DC4B26FBB466CEBF77F103AEA69C74C /* BaseAPI */;
+			targetProxy = 6595B9416093FD6240F969C40B8ADF2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0E17F3C712428F4BB22BEF638E829E10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B8CC58DD6734EFA024A5DCEA5F42AC7 /* GithubAPI.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GithubAPI/GithubAPI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GithubAPI/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GithubAPI/GithubAPI.modulemap";
+				PRODUCT_NAME = GithubAPI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5DFB2DBE03D2DC3B97A7BAC8DF955BF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B8CC58DD6734EFA024A5DCEA5F42AC7 /* GithubAPI.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GithubAPI/GithubAPI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GithubAPI/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GithubAPI/GithubAPI.modulemap";
+				PRODUCT_NAME = GithubAPI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		731DC216E1A58545B559F6E0A2418060 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A89D03C2313BBE594BDE682C42836E9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24A33C67D3B7400926BDD0D9B6CD1BAD /* Pods-GithubAPI_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GithubAPI_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GithubAPI_Tests/Pods-GithubAPI_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GithubAPI_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A93979CE55B1D4009F3A2B9A13545861 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1C9FDC600E00E52B85FB6BF8EBE55C7 /* BaseAPI.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BaseAPI/BaseAPI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BaseAPI/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BaseAPI/BaseAPI.modulemap";
+				PRODUCT_NAME = BaseAPI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BEEE1DDF38B16478046A21199D09CFA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62083FCC98F65DC7CA69A2A472CCD874 /* Pods-GithubAPI_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GithubAPI_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GithubAPI_Example/Pods-GithubAPI_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GithubAPI_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DCCCD7445E54D8EAE65A044093F379D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1C9FDC600E00E52B85FB6BF8EBE55C7 /* BaseAPI.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BaseAPI/BaseAPI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BaseAPI/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BaseAPI/BaseAPI.modulemap";
+				PRODUCT_NAME = BaseAPI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EA0D93B203AF0327123C629B835B91CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A79D1784C34988A1AD15B1FF8CA5C7F /* Pods-GithubAPI_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GithubAPI_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GithubAPI_Example/Pods-GithubAPI_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GithubAPI_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F6C3B2C9D081AEA06D42ECD554684F92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3B78C79D0ED803695F926CABAE2BC49 /* Pods-GithubAPI_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GithubAPI_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GithubAPI_Tests/Pods-GithubAPI_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GithubAPI_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */,
+				731DC216E1A58545B559F6E0A2418060 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51DA3BDBCDCE0A89FAA079FA80CAD0A7 /* Build configuration list for PBXNativeTarget "GithubAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E17F3C712428F4BB22BEF638E829E10 /* Debug */,
+				5DFB2DBE03D2DC3B97A7BAC8DF955BF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E94B89FD58B023B7DB34A7DD9E2484C /* Build configuration list for PBXNativeTarget "BaseAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A93979CE55B1D4009F3A2B9A13545861 /* Debug */,
+				DCCCD7445E54D8EAE65A044093F379D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC51B861D39DBCA16BEE0E829C58674A /* Build configuration list for PBXNativeTarget "Pods-GithubAPI_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A89D03C2313BBE594BDE682C42836E9F /* Debug */,
+				F6C3B2C9D081AEA06D42ECD554684F92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D661DB632BF9C88D502D22FC61AEB87B /* Build configuration list for PBXNativeTarget "Pods-GithubAPI_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEEE1DDF38B16478046A21199D09CFA0 /* Debug */,
+				EA0D93B203AF0327123C629B835B91CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

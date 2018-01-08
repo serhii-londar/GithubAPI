@@ -47,6 +47,8 @@
 		92A18F362003E42000886ECA /* SearchIssuesAssignee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A18F352003E42000886ECA /* SearchIssuesAssignee.swift */; };
 		92A18F392003E4F500886ECA /* SearchIssuesMilestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A18F372003E4F500886ECA /* SearchIssuesMilestone.swift */; };
 		92A18F3A2003E4F500886ECA /* SearchIssuesMilestoneCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A18F382003E4F500886ECA /* SearchIssuesMilestoneCreator.swift */; };
+		92A18F3E2003EA8B00886ECA /* SearchUsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A18F3C2003EA8B00886ECA /* SearchUsersResponse.swift */; };
+		92A18F3F2003EA8B00886ECA /* SearchUsersItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A18F3D2003EA8B00886ECA /* SearchUsersItem.swift */; };
 		930F1DDD587529A19048F41E8B5AC4C8 /* GithubAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 45A8731305AF102EF21966E26350043E /* GithubAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		95F4A8183922C436C11D100069F5CC3A /* IssuesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D081C679A5F1219DC2DA1F7526B167 /* IssuesAPI.swift */; };
 		977FC9E1EB83F1EEE38289FD13A05885 /* SearchCommitsCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D9016EEA06770290E931E402CB46AD /* SearchCommitsCommit.swift */; };
@@ -162,6 +164,8 @@
 		92A18F352003E42000886ECA /* SearchIssuesAssignee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchIssuesAssignee.swift; sourceTree = "<group>"; };
 		92A18F372003E4F500886ECA /* SearchIssuesMilestone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchIssuesMilestone.swift; sourceTree = "<group>"; };
 		92A18F382003E4F500886ECA /* SearchIssuesMilestoneCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchIssuesMilestoneCreator.swift; sourceTree = "<group>"; };
+		92A18F3C2003EA8B00886ECA /* SearchUsersResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUsersResponse.swift; sourceTree = "<group>"; };
+		92A18F3D2003EA8B00886ECA /* SearchUsersItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUsersItem.swift; sourceTree = "<group>"; };
 		92C6D88D52EE5F98A5A594CFBC15907F /* Pods-GithubAPI_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GithubAPI_Tests-resources.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95F033357D0C5F90A7B7A51BA9F0FFD3 /* BaseAPI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BaseAPI-dummy.m"; sourceTree = "<group>"; };
@@ -266,6 +270,7 @@
 		1131B0B329A532B77D26F83DA9C354E4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				92A18F3B2003EA8B00886ECA /* Users */,
 				92A0305D2003DE6500275F6B /* Issues */,
 				92A030542003DCBB00275F6B /* Code */,
 				9B807318B88CCF286CCDA4C43DD46134 /* Commits */,
@@ -478,6 +483,15 @@
 				92A030622003DE6500275F6B /* SearchIssuesPullRequest.swift */,
 			);
 			path = Issues;
+			sourceTree = "<group>";
+		};
+		92A18F3B2003EA8B00886ECA /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				92A18F3C2003EA8B00886ECA /* SearchUsersResponse.swift */,
+				92A18F3D2003EA8B00886ECA /* SearchUsersItem.swift */,
+			);
+			path = Users;
 			sourceTree = "<group>";
 		};
 		99BFA8E03243E9020E903CB74558E6F9 /* GetOtherUser */ = {
@@ -776,6 +790,7 @@
 				33538A4CBC8F17E853131EB64DC2707A /* SearchCommitsTree.swift in Sources */,
 				F3B4C22EB0C1CF4EBFFBFAE543A8683A /* SearchRepositoriesItem.swift in Sources */,
 				92A030672003DE6500275F6B /* SearchIssuesPullRequest.swift in Sources */,
+				92A18F3F2003EA8B00886ECA /* SearchUsersItem.swift in Sources */,
 				92A18F392003E4F500886ECA /* SearchIssuesMilestone.swift in Sources */,
 				48DC41E55ABC7FBCC30AA43782453087 /* SearchRepositoriesOwner.swift in Sources */,
 				A87E9F27D069901D5D05C2A96B3F3EDE /* SearchRepositoriesResponse.swift in Sources */,
@@ -784,6 +799,7 @@
 				4EBF8B2853AE1FED64EE59EFC8BF2D40 /* UserAPI.swift in Sources */,
 				FAB178D45D2EC21344D50EE96EE178B1 /* UserPlan.swift in Sources */,
 				7989591F9704C433619892DFAFEB712A /* UserResponse.swift in Sources */,
+				92A18F3E2003EA8B00886ECA /* SearchUsersResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

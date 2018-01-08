@@ -36,6 +36,11 @@ public enum SearchIssuesSort: String{
     case updated
 }
 
+public enum SearchUsersSort: String{
+    case followers
+    case repositories
+    case joined
+}
 
 public class SearchAPI: GithubAPI {    
     public func searchRepositories(q: String, page: Int = 1, per_page: Int = 100, sort: SearchRepositoriesSort? = nil, order: SearchOrder = .desc, completion: @escaping (SearchRepositoriesResponse?, Error?) -> Swift.Void) {
@@ -82,6 +87,20 @@ public class SearchAPI: GithubAPI {
     
     public func searchIssues(q: String, page: Int = 1, per_page: Int = 100, sort: SearchIssuesSort? = nil, order: SearchOrder = .desc, completion: @escaping (SearchIssuesResponse?, Error?) -> Swift.Void) {
         let path = "/search/issues"
+        var parameters = [String : String]()
+        parameters["q"] = q.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        parameters["order"] = order.rawValue
+        if let sort = sort {
+            parameters["sort"] = sort.rawValue
+        }
+        parameters["page"] = "\(page)"
+        parameters["per_page"] = "\(per_page)"
+        
+        self.get(path: path, parameters: parameters, completion: completion)
+    }
+    
+    public func searchUsers(q: String, page: Int = 1, per_page: Int = 100, sort: SearchUsersSort? = nil, order: SearchOrder = .desc, completion: @escaping (SearchUsersResponse?, Error?) -> Swift.Void) {
+        let path = "/search/users"
         var parameters = [String : String]()
         parameters["q"] = q.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         parameters["order"] = order.rawValue

@@ -30,7 +30,7 @@ public struct NotificationsRepository : Codable {
 	public let gitTagsUrl : String?
 	public let hooksUrl : String?
 	public let htmlUrl : String?
-	public let id : String?
+	public let id : Float?
 	public let issueCommentUrl : String?
 	public let issueEventsUrl : String?
 	public let issuesUrl : String?
@@ -126,7 +126,7 @@ public struct NotificationsRepository : Codable {
 		gitTagsUrl = try values.decodeIfPresent(String.self, forKey: .gitTagsUrl)
 		hooksUrl = try values.decodeIfPresent(String.self, forKey: .hooksUrl)
 		htmlUrl = try values.decodeIfPresent(String.self, forKey: .htmlUrl)
-		id = try values.decodeIfPresent(String.self, forKey: .id)
+		id = try values.decodeIfPresent(Float.self, forKey: .id)
 		issueCommentUrl = try values.decodeIfPresent(String.self, forKey: .issueCommentUrl)
 		issueEventsUrl = try values.decodeIfPresent(String.self, forKey: .issueEventsUrl)
 		issuesUrl = try values.decodeIfPresent(String.self, forKey: .issuesUrl)

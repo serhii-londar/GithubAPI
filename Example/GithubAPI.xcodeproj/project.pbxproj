@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -19,6 +18,8 @@
 		92582638200520FE0081FE6B /* Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92582634200520FE0081FE6B /* Basic.swift */; };
 		92582639200520FE0081FE6B /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92582635200520FE0081FE6B /* Token.swift */; };
 		9258263B200527C40081FE6B /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = 9258263A200527C40081FE6B /* credentials.json */; };
+		9258263F200528EE0081FE6B /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9258263E200528EE0081FE6B /* NotificationsVC.swift */; };
+		925826412005292D0081FE6B /* NotificationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925826402005292D0081FE6B /* NotificationsCell.swift */; };
 		92A18F4220041FCF00886ECA /* Examples.md in Resources */ = {isa = PBXBuildFile; fileRef = 92A18F4120041FCF00886ECA /* Examples.md */; };
 		954A656EF99DF6EBCAFE53C9 /* Pods_GithubAPI_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EC39DB6F04B0CBA4B60D81 /* Pods_GithubAPI_Example.framework */; };
 /* End PBXBuildFile section */
@@ -40,7 +41,6 @@
 		607FACD01AFB9204008FA782 /* GithubAPI_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubAPI_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -54,6 +54,8 @@
 		92582634200520FE0081FE6B /* Basic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Basic.swift; sourceTree = "<group>"; };
 		92582635200520FE0081FE6B /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		9258263A200527C40081FE6B /* credentials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = credentials.json; sourceTree = "<group>"; };
+		9258263E200528EE0081FE6B /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
+		925826402005292D0081FE6B /* NotificationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsCell.swift; sourceTree = "<group>"; };
 		92A18F4120041FCF00886ECA /* Examples.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Examples.md; path = ../Examples.md; sourceTree = "<group>"; };
 		AA5887F7D8A1497CE1C2CFCF /* Pods-GithubAPI_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubAPI_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GithubAPI_Tests/Pods-GithubAPI_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFBC700F3C2CFAF2E8904B8C /* Pods_GithubAPI_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubAPI_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,7 +119,6 @@
 				9258263A200527C40081FE6B /* credentials.json */,
 				92582630200520FE0081FE6B /* SourceCode */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -166,6 +167,7 @@
 		92582630200520FE0081FE6B /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				9258263C2005288B0081FE6B /* Presentation */,
 				92582631200520FE0081FE6B /* Authentification */,
 			);
 			path = SourceCode;
@@ -180,6 +182,23 @@
 				92582635200520FE0081FE6B /* Token.swift */,
 			);
 			path = Authentification;
+			sourceTree = "<group>";
+		};
+		9258263C2005288B0081FE6B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				9258263D200528E20081FE6B /* NotificationsVC */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		9258263D200528E20081FE6B /* NotificationsVC */ = {
+			isa = PBXGroup;
+			children = (
+				9258263E200528EE0081FE6B /* NotificationsVC.swift */,
+				925826402005292D0081FE6B /* NotificationsCell.swift */,
+			);
+			path = NotificationsVC;
 			sourceTree = "<group>";
 		};
 		AEFACF7A657771AA29EB84C7 /* Pods */ = {
@@ -409,10 +428,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				92582637200520FE0081FE6B /* Credentials.swift in Sources */,
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				92582639200520FE0081FE6B /* Token.swift in Sources */,
+				925826412005292D0081FE6B /* NotificationsCell.swift in Sources */,
 				92582638200520FE0081FE6B /* Basic.swift in Sources */,
+				9258263F200528EE0081FE6B /* NotificationsVC.swift in Sources */,
 				92582636200520FE0081FE6B /* AccessToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -3,7 +3,7 @@
 //  GithubAPI
 //
 //  Created by Serhii Londar on 1/2/18.
-//  Copyright © 2018 slon. All rights reserved.
+//  Copyright © 2018 Serhii Londar. All rights reserved.
 //
 
 import Foundation

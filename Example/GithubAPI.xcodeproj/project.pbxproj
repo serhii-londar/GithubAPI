@@ -14,7 +14,6 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		6C0C783624B81991DD0F59CC /* Pods_GithubAPI_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFBC700F3C2CFAF2E8904B8C /* Pods_GithubAPI_Tests.framework */; };
-		9258262F20051FC20081FE6B /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = 9258262E20051FC20081FE6B /* credentials.json */; };
 		92582636200520FE0081FE6B /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92582632200520FE0081FE6B /* AccessToken.swift */; };
 		92582637200520FE0081FE6B /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92582633200520FE0081FE6B /* Credentials.swift */; };
 		92582638200520FE0081FE6B /* Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92582634200520FE0081FE6B /* Basic.swift */; };
@@ -49,7 +48,6 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		66EC39DB6F04B0CBA4B60D81 /* Pods_GithubAPI_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubAPI_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		673CCA35F0F38A098D7A415A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		9258262E20051FC20081FE6B /* credentials.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = credentials.json; sourceTree = "<group>"; };
 		92582632200520FE0081FE6B /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 		92582633200520FE0081FE6B /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		92582634200520FE0081FE6B /* Basic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Basic.swift; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
-				9258262E20051FC20081FE6B /* credentials.json */,
 			);
 			name = "Example for GithubAPI";
 			path = GithubAPI;
@@ -285,7 +282,6 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				92A18F4220041FCF00886ECA /* Examples.md in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				9258262F20051FC20081FE6B /* credentials.json in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,11 +8,11 @@
 import Foundation
 
 public struct Issue : Codable {
-	public let assignees : [String]?
-	public let body : String?
-	public let labels : [String]?
-	public let milestone : Int?
-	public let title : String?
+	public var assignees : [String]?
+	public var body : String?
+	public var labels : [String]?
+	public var milestone : Int?
+	public var title : String?
 
 	enum CodingKeys: String, CodingKey {
 		case assignees = "assignees"

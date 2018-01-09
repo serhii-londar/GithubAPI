@@ -2,7 +2,7 @@
 //	NotificationsRepository.swift
 //
 //	Create by Serhii Londar on 9/1/2018
-//	Copyright © 2018 Techmagic. All rights reserved.
+//	Copyright © 2018 Serhii Londar. All rights reserved.
 //	Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 import Foundation

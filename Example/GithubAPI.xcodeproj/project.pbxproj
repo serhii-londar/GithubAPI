@@ -14,6 +14,11 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		6C0C783624B81991DD0F59CC /* Pods_GithubAPI_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFBC700F3C2CFAF2E8904B8C /* Pods_GithubAPI_Tests.framework */; };
+		9258262F20051FC20081FE6B /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = 9258262E20051FC20081FE6B /* credentials.json */; };
+		92582636200520FE0081FE6B /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92582632200520FE0081FE6B /* AccessToken.swift */; };
+		92582637200520FE0081FE6B /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92582633200520FE0081FE6B /* Credentials.swift */; };
+		92582638200520FE0081FE6B /* Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92582634200520FE0081FE6B /* Basic.swift */; };
+		92582639200520FE0081FE6B /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92582635200520FE0081FE6B /* Token.swift */; };
 		92A18F4220041FCF00886ECA /* Examples.md in Resources */ = {isa = PBXBuildFile; fileRef = 92A18F4120041FCF00886ECA /* Examples.md */; };
 		954A656EF99DF6EBCAFE53C9 /* Pods_GithubAPI_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EC39DB6F04B0CBA4B60D81 /* Pods_GithubAPI_Example.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +49,11 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		66EC39DB6F04B0CBA4B60D81 /* Pods_GithubAPI_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubAPI_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		673CCA35F0F38A098D7A415A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		9258262E20051FC20081FE6B /* credentials.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = credentials.json; sourceTree = "<group>"; };
+		92582632200520FE0081FE6B /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
+		92582633200520FE0081FE6B /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		92582634200520FE0081FE6B /* Basic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Basic.swift; sourceTree = "<group>"; };
+		92582635200520FE0081FE6B /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		92A18F4120041FCF00886ECA /* Examples.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Examples.md; path = ../Examples.md; sourceTree = "<group>"; };
 		AA5887F7D8A1497CE1C2CFCF /* Pods-GithubAPI_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubAPI_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GithubAPI_Tests/Pods-GithubAPI_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFBC700F3C2CFAF2E8904B8C /* Pods_GithubAPI_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubAPI_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,12 +114,14 @@
 		607FACD21AFB9204008FA782 /* Example for GithubAPI */ = {
 			isa = PBXGroup;
 			children = (
+				92582630200520FE0081FE6B /* SourceCode */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				9258262E20051FC20081FE6B /* credentials.json */,
 			);
 			name = "Example for GithubAPI";
 			path = GithubAPI;
@@ -149,6 +161,25 @@
 				92A18F4120041FCF00886ECA /* Examples.md */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		92582630200520FE0081FE6B /* SourceCode */ = {
+			isa = PBXGroup;
+			children = (
+				92582631200520FE0081FE6B /* Authentification */,
+			);
+			path = SourceCode;
+			sourceTree = "<group>";
+		};
+		92582631200520FE0081FE6B /* Authentification */ = {
+			isa = PBXGroup;
+			children = (
+				92582632200520FE0081FE6B /* AccessToken.swift */,
+				92582633200520FE0081FE6B /* Credentials.swift */,
+				92582634200520FE0081FE6B /* Basic.swift */,
+				92582635200520FE0081FE6B /* Token.swift */,
+			);
+			path = Authentification;
 			sourceTree = "<group>";
 		};
 		AEFACF7A657771AA29EB84C7 /* Pods */ = {
@@ -254,6 +285,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				92A18F4220041FCF00886ECA /* Examples.md in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				9258262F20051FC20081FE6B /* credentials.json in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,8 +408,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92582637200520FE0081FE6B /* Credentials.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				92582639200520FE0081FE6B /* Token.swift in Sources */,
+				92582638200520FE0081FE6B /* Basic.swift in Sources */,
+				92582636200520FE0081FE6B /* AccessToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

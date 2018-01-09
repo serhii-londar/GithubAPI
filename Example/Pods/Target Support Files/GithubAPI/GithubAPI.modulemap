@@ -1,6 +1,0 @@
-framework module GithubAPI {
-  umbrella header "GithubAPI-umbrella.h"
-
-  export *
-  module * { export * }
-}

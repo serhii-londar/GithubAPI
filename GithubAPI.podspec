@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'GithubAPI'
   s.version          = '0.0.1'
-  s.summary          = 'A short description of GithubAPI.'
+  s.summary          = 'Swift implementation of Github REST api v3'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,21 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Swift implementation of Github REST api v3. Library support swift 4.0. Work is in progress. Currently supported: Issues, Notification, Repositories, Search, and User API's.
                        DESC
 
   s.homepage         = 'https://github.com/serhii-londar/GithubAPI'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'serhii-londar' => 'serhii.londar@gmail.com' }
+  s.author           = { 'Serhii Londar' => 'serhii.londar@gmail.com' }
   s.source           = { :git => 'https://github.com/serhii-londar/GithubAPI.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/serhii_londar'
 
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'GithubAPI/Classes/**/*'
 
-  # s.resource_bundles = {
-  #   'GithubAPI' => ['GithubAPI/Assets/*.png']
-  # }
+  s.frameworks = 'Foundation'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'BaseAPI'
 end

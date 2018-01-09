@@ -24,6 +24,8 @@ class NotificationsVC: UIViewController {
         let data = try? Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "credentials", ofType: "json")!))
         self.authentication = try? JSONDecoder().decode(Credentials.self, from: data!)
         
+        
+        
         NotificationsAPI(authentication: TokenAuthentication(token: (self.authentication.token?.token)!)).notifications(all: true) { (response, error) in
             if let response = response {
                 self.notifications = response

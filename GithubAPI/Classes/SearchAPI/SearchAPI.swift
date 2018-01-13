@@ -46,7 +46,7 @@ public class SearchAPI: GithubAPI {
     public func searchRepositories(q: String, page: Int = 1, per_page: Int = 100, sort: SearchRepositoriesSort? = nil, order: SearchOrder = .desc, completion: @escaping (SearchRepositoriesResponse?, Error?) -> Swift.Void) {
         let path = "/search/repositories"
         var parameters = [String : String]()
-        parameters["q"] = q.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        parameters["q"] = q
         parameters["order"] = order.rawValue
         if let sort = sort {
             parameters["sort"] = sort.rawValue
@@ -60,7 +60,7 @@ public class SearchAPI: GithubAPI {
     public func searchCommits(q: String, page: Int = 1, per_page: Int = 100, sort: SearchCommitsSort? = nil, order: SearchOrder = .desc, completion: @escaping (SearchCommitsResponse?, Error?) -> Swift.Void) {
         let path = "/search/commits"
         var parameters = [String : String]()
-        parameters["q"] = q.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        parameters["q"] = q
         parameters["order"] = order.rawValue
         if let sort = sort {
             parameters["sort"] = sort.rawValue
@@ -74,7 +74,7 @@ public class SearchAPI: GithubAPI {
     public func searchCode(q: String, page: Int = 1, per_page: Int = 100, sort: SearchCodeSort? = nil, order: SearchOrder = .desc, completion: @escaping (SearchCodeResponse?, Error?) -> Swift.Void) {
         let path = "/search/code"
         var parameters = [String : String]()
-        parameters["q"] = q.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        parameters["q"] = q
         parameters["order"] = order.rawValue
         if let sort = sort {
             parameters["sort"] = sort.rawValue
@@ -88,7 +88,7 @@ public class SearchAPI: GithubAPI {
     public func searchIssues(q: String, page: Int = 1, per_page: Int = 100, sort: SearchIssuesSort? = nil, order: SearchOrder = .desc, completion: @escaping (SearchIssuesResponse?, Error?) -> Swift.Void) {
         let path = "/search/issues"
         var parameters = [String : String]()
-        parameters["q"] = q.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        parameters["q"] = q
         parameters["order"] = order.rawValue
         if let sort = sort {
             parameters["sort"] = sort.rawValue
@@ -102,7 +102,7 @@ public class SearchAPI: GithubAPI {
     public func searchUsers(q: String, page: Int = 1, per_page: Int = 100, sort: SearchUsersSort? = nil, order: SearchOrder = .desc, completion: @escaping (SearchUsersResponse?, Error?) -> Swift.Void) {
         let path = "/search/users"
         var parameters = [String : String]()
-        parameters["q"] = q.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        parameters["q"] = q
         parameters["order"] = order.rawValue
         if let sort = sort {
             parameters["sort"] = sort.rawValue

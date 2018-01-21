@@ -1,13 +1,13 @@
 //
-//	Repositories.swift
+//	RepositoryParent.swift
 //
-//	Create by Serhii Londar on 2/1/2018
-//	Copyright © 2018 Serhii Londar. All rights reserved.
+//	Create by Serhii Londar on 21/1/2018
+//	Copyright © 2018 Techmagic. All rights reserved.
 //	Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 import Foundation
 
-public struct Repositories : Codable {
+public struct RepositoryParent : Codable {
 	public let allowMergeCommit : Bool?
 	public let allowRebaseMerge : Bool?
 	public let allowSquashMerge : Bool?
@@ -52,7 +52,6 @@ public struct Repositories : Codable {
 	public let labelsUrl : String?
 	public let language : String?
 	public let languagesUrl : String?
-	public let license : RepositoriesLicense?
 	public let mergesUrl : String?
 	public let milestonesUrl : String?
 	public let mirrorUrl : String?
@@ -60,8 +59,8 @@ public struct Repositories : Codable {
 	public let networkCount : Int?
 	public let notificationsUrl : String?
 	public let openIssuesCount : Int?
-	public let owner : RepositoriesOwner?
-	public let permissions : RepositoriesPermission?
+	public let owner : RepositoryOrganization?
+	public let permissions : RepositoryPermission?
 	public let privateField : Bool?
 	public let pullsUrl : String?
 	public let pushedAt : String?
@@ -82,7 +81,7 @@ public struct Repositories : Codable {
 	public let updatedAt : String?
 	public let url : String?
 	public let watchersCount : Int?
-    
+
 	enum CodingKeys: String, CodingKey {
 		case allowMergeCommit = "allow_merge_commit"
 		case allowRebaseMerge = "allow_rebase_merge"
@@ -128,7 +127,6 @@ public struct Repositories : Codable {
 		case labelsUrl = "labels_url"
 		case language = "language"
 		case languagesUrl = "languages_url"
-		case license
 		case mergesUrl = "merges_url"
 		case milestonesUrl = "milestones_url"
 		case mirrorUrl = "mirror_url"
@@ -206,7 +204,6 @@ public struct Repositories : Codable {
 		labelsUrl = try values.decodeIfPresent(String.self, forKey: .labelsUrl)
 		language = try values.decodeIfPresent(String.self, forKey: .language)
 		languagesUrl = try values.decodeIfPresent(String.self, forKey: .languagesUrl)
-        license = try values.decodeIfPresent(RepositoriesLicense.self, forKey: .license)
 		mergesUrl = try values.decodeIfPresent(String.self, forKey: .mergesUrl)
 		milestonesUrl = try values.decodeIfPresent(String.self, forKey: .milestonesUrl)
 		mirrorUrl = try values.decodeIfPresent(String.self, forKey: .mirrorUrl)
@@ -214,9 +211,9 @@ public struct Repositories : Codable {
 		networkCount = try values.decodeIfPresent(Int.self, forKey: .networkCount)
 		notificationsUrl = try values.decodeIfPresent(String.self, forKey: .notificationsUrl)
 		openIssuesCount = try values.decodeIfPresent(Int.self, forKey: .openIssuesCount)
-		owner = try values.decodeIfPresent(RepositoriesOwner.self, forKey: .owner)
-		permissions = try values.decodeIfPresent(RepositoriesPermission.self, forKey: .permissions)
-        privateField = try values.decodeIfPresent(Bool.self, forKey: .privateField)
+		owner = try RepositoryOrganization(from: decoder)
+		permissions = try RepositoryPermission(from: decoder)
+		privateField = try values.decodeIfPresent(Bool.self, forKey: .privateField)
 		pullsUrl = try values.decodeIfPresent(String.self, forKey: .pullsUrl)
 		pushedAt = try values.decodeIfPresent(String.self, forKey: .pushedAt)
 		releasesUrl = try values.decodeIfPresent(String.self, forKey: .releasesUrl)

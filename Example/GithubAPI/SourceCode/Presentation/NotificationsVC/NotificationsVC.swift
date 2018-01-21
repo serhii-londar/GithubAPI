@@ -25,13 +25,21 @@ class NotificationsVC: UIViewController {
         let data = try? Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "credentials", ofType: "json")!))
         self.authentication = try? JSONDecoder().decode(Credentials.self, from: data!)
         
-        SearchAPI(authentication: TokenAuthentication(token: (self.authentication.token?.token)!)).searchRepositories(q: "macOS app language:Swift") { (response, error) in
+        RepositoriesAPI(authentication: TokenAuthentication(token: (self.authentication.token?.token)!)).get(owner: "serhii-londar", repo: "open-source-mac-os-apps") { (response, error) in
             if let response = response {
                 
             } else {
                 print(error)
             }
         }
+        
+//        SearchAPI(authentication: TokenAuthentication(token: (self.authentication.token?.token)!)).searchRepositories(q: "macOS app language:Swift") { (response, error) in
+//            if let response = response {
+//                
+//            } else {
+//                print(error)
+//            }
+//        }
         
         NotificationsAPI(authentication: TokenAuthentication(token: (self.authentication.token?.token)!)).notifications(all: true) { (response, error) in
             if let response = response {

@@ -51,7 +51,7 @@ public enum RepositoriesDirection: String {
 }
 
 public class RepositoriesAPI: GithubAPI {
-    public func repositories(visibility: RepositoriesVisibility? = nil, affiliation: [RepositoriesAffiliation]? = nil, type: RepositoriesType? = nil, sort: RepositoriesSort? = nil, direction: RepositoriesDirection? = nil, completion: @escaping([Repositories]?, Error?) -> Void) {
+    public func repositories(visibility: RepositoriesVisibility? = nil, affiliation: [RepositoriesAffiliation]? = nil, type: RepositoriesType? = nil, sort: RepositoriesSort? = nil, direction: RepositoriesDirection? = nil, completion: @escaping([RepositoryResponse]?, Error?) -> Void) {
         let path = "/user/repos"
         var parameters = [String : String]()
         if let visibility = visibility {
@@ -81,7 +81,7 @@ public class RepositoriesAPI: GithubAPI {
     }
     
     
-    public func repositories(user: String, type: RepositoriesType? = nil, sort: RepositoriesSort? = nil, direction: RepositoriesDirection? = nil, completion: @escaping([Repositories]?, Error?) -> Void) {
+    public func repositories(user: String, type: RepositoriesType? = nil, sort: RepositoriesSort? = nil, direction: RepositoriesDirection? = nil, completion: @escaping([RepositoryResponse]?, Error?) -> Void) {
         let path = "/users/\(user)/repos"
         var parameters = [String : String]()
         if let type = type {
@@ -97,7 +97,7 @@ public class RepositoriesAPI: GithubAPI {
         self.get(path: path, parameters: parameters, completion: completion)
     }
     
-    public func repositories(organization: String, type: OrganizationRepositoriesType? = nil, completion: @escaping([Repositories]?, Error?) -> Void) {
+    public func repositories(organization: String, type: OrganizationRepositoriesType? = nil, completion: @escaping([RepositoryResponse]?, Error?) -> Void) {
         let path = "/orgs/\(organization)/repos"
         var parameters = [String : String]()
         if let type = type {
@@ -106,10 +106,15 @@ public class RepositoriesAPI: GithubAPI {
         self.get(path: path, parameters: parameters, completion: completion)
     }
     
-    public func listRepositories(since: String, completion: @escaping([Repositories]?, Error?) -> Void) {
+    public func listRepositories(since: String, completion: @escaping([RepositoryResponse]?, Error?) -> Void) {
         let path = "/repositories"
         var parameters = [String : String]()
         parameters["since"] = since
         self.get(path: path, parameters: parameters, completion: completion)
+    }
+    
+    public func get(owner: String, repo: String, completion: @escaping(RepositoryResponse?, Error?) -> Void) {
+        let path = "/repos/\(owner)/\(repo)"
+        self.get(path: path, completion: completion)
     }
 }

@@ -1,13 +1,13 @@
 //
-//	RepositoriesLicense.swift
+//	RepositoryLicense.swift
 //
-//	Create by Serhii Londar on 2/1/2018
-//	Copyright © 2018 Serhii Londar. All rights reserved.
+//	Create by Serhii Londar on 21/1/2018
+//	Copyright © 2018 Techmagic. All rights reserved.
 //	Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 import Foundation
 
-public struct RepositoriesLicense : Codable {
+public struct RepositoryLicense : Codable {
 	public let htmlUrl : String?
 	public let key : String?
 	public let name : String?

@@ -9,6 +9,39 @@
 import UIKit
 import GithubAPI
 
+extension String {
+    func fromBase64(options: Data.Base64DecodingOptions) -> String? {
+        guard let data = Data(base64Encoded: self, options: options) else {
+            return nil
+        }
+        
+        return String(data: data as Data, encoding: String.Encoding.utf8)
+    }
+    func fromBase64() -> String? {
+        guard let data = Data(base64Encoded: self, options: Data.Base64DecodingOptions.ignoreUnknownCharacters) else {
+            return nil
+        }
+        
+        return String(data: data as Data, encoding: String.Encoding.utf8)
+    }
+    
+    func toBase64() -> String? {
+        guard let data = self.data(using: String.Encoding.utf8) else {
+            return nil
+        }
+        
+        return data.base64EncodedString()
+    }
+    
+    func toBase64(options: Data.Base64EncodingOptions) -> String? {
+        guard let data = self.data(using: String.Encoding.utf8) else {
+            return nil
+        }
+        
+        return data.base64EncodedString(options: options)
+    }
+}
+
 class NotificationsVC: UIViewController {
     var authentication: Credentials! = nil
     @IBOutlet weak var tableView: UITableView! = nil
@@ -25,21 +58,37 @@ class NotificationsVC: UIViewController {
         let data = try? Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "credentials", ofType: "json")!))
         self.authentication = try? JSONDecoder().decode(Credentials.self, from: data!)
         
-        RepositoriesAPI(authentication: TokenAuthentication(token: (self.authentication.token?.token)!)).get(owner: "serhii-londar", repo: "open-source-mac-os-apps") { (response, error) in
+        let authentication = TokenAuthentication(token: (self.authentication.token?.token)!)
+        RepositoriesContentsAPI(authentication: authentication).getReadme(owner: "serhii-londar", repo: "open-source-mac-os-apps", ref: "new_apps") { (response, error) in
             if let response = response {
-                
+                if let contentString = response.content?.fromBase64(options: Data.Base64DecodingOptions(rawValue: 1)) {
+                    
+                    let contentStringBase64 = contentString.toBase64(options: Data.Base64EncodingOptions(rawValue: 1))
+                    if contentStringBase64 == response.content {
+                        print("equal")
+                    }
+                    
+                }
             } else {
-                print(error)
+                print(error ?? "error")
             }
         }
         
-//        SearchAPI(authentication: TokenAuthentication(token: (self.authentication.token?.token)!)).searchRepositories(q: "macOS app language:Swift") { (response, error) in
-//            if let response = response {
-//                
-//            } else {
-//                print(error)
-//            }
-//        }
+        //        RepositoriesAPI(authentication: ).get(owner: "serhii-londar", repo: "open-source-mac-os-apps") { (response, error) in
+        //            if let response = response {
+        //
+        //            } else {
+        //                print(error)
+        //            }
+        //        }
+        
+        //        SearchAPI(authentication: TokenAuthentication(token: (self.authentication.token?.token)!)).searchRepositories(q: "macOS app language:Swift") { (response, error) in
+        //            if let response = response {
+        //
+        //            } else {
+        //                print(error)
+        //            }
+        //        }
         
         NotificationsAPI(authentication: TokenAuthentication(token: (self.authentication.token?.token)!)).notifications(all: true) { (response, error) in
             if let response = response {

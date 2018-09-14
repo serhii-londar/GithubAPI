@@ -45,6 +45,21 @@ public class GithubAPI: BaseAPI {
         }
     }
     
+    public func getSync<T:Decodable>(path: String, parameters: [String : String]? = nil, headers: [String: String]? = nil) -> (response: T?, error: Error?) {
+        let (newHeaders, newParameters) = self.addAuthenticationIfNeeded(headers, parameters: parameters)
+        let response = self.get(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders)
+        if let data = response.data {
+            do {
+                let model = try JSONDecoder().decode(T.self, from: data)
+                return (model, response.error)
+            } catch {
+                return (nil, error)
+            }
+        } else {
+            return (nil, response.error)
+        }
+    }
+    
     public func put<T:Decodable>(path: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, body: Data?, completion: @escaping (T?, Error?) -> Swift.Void) {
         let (newHeaders, newParameters) = self.addAuthenticationIfNeeded(headers, parameters: parameters)
         self.put(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders, body: body) { (data, response, error) in
@@ -58,6 +73,21 @@ public class GithubAPI: BaseAPI {
             } else {
                 completion(nil, error)
             }
+        }
+    }
+    
+    public func putSync<T:Decodable>(path: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, body: Data?) -> (response: T?, error: Error?) {
+        let (newHeaders, newParameters) = self.addAuthenticationIfNeeded(headers, parameters: parameters)
+        let response = self.put(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders, body: body)
+        if let data = response.data {
+            do {
+                let model = try JSONDecoder().decode(T.self, from: data)
+                return (model, response.error)
+            } catch {
+                return (nil, error)
+            }
+        } else {
+            return (nil, response.error)
         }
     }
     
@@ -77,6 +107,21 @@ public class GithubAPI: BaseAPI {
         }
     }
     
+    public func postSync<T:Decodable>(path: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, body: Data?) -> (response: T?, error: Error?) {
+        let (newHeaders, newParameters) = self.addAuthenticationIfNeeded(headers, parameters: parameters)
+        let response = self.post(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders, body: body)
+        if let data = response.data {
+            do {
+                let model = try JSONDecoder().decode(T.self, from: data)
+                return (model, response.error)
+            } catch {
+                return (nil, error)
+            }
+        } else {
+            return (nil, response.error)
+        }
+    }
+    
     public func patch<T:Decodable>(path: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, body: Data?, completion: @escaping (T?, Error?) -> Swift.Void) {
         let (newHeaders, newParameters) = self.addAuthenticationIfNeeded(headers, parameters: parameters)
         self.patch(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders, body: body) { (data, response, error) in
@@ -93,6 +138,22 @@ public class GithubAPI: BaseAPI {
             }
         }
     }
+    
+    public func patchSync<T:Decodable>(path: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, body: Data?) -> (response: T?, error: Error?) {
+        let (newHeaders, newParameters) = self.addAuthenticationIfNeeded(headers, parameters: parameters)
+        let response = self.patch(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders, body: body)
+        if let data = response.data {
+            do {
+                let model = try JSONDecoder().decode(T.self, from: data)
+                return (model, response.error)
+            } catch {
+                return (nil, error)
+            }
+        } else {
+            return (nil, response.error)
+        }
+    }
+    
     
     func addAuthenticationIfNeeded(_ headers: [String : String]?, parameters: [String : String]?) -> (headers: [String : String]?, parameters: [String : String]?) {
         var newHeaders = headers

@@ -10,3 +10,5 @@ before_install:
   - gem install cocoapods
   - cd Example
   - pod install
+script:
+  - set -o pipefail && xcodebuild -workspace GithubAPI.xcworkspace -scheme GithubAPI_Example build | xcpretty

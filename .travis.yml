@@ -11,4 +11,4 @@ before_install:
   - cd Example
   - pod install
 script:
-  - set -o pipefail && xcodebuild -workspace GithubAPI.xcworkspace -scheme GithubAPI_Example build | xcpretty
+  - set -o pipefail && xcodebuild -workspace GithubAPI.xcworkspace -scheme GithubAPI_Example -sdk iphonesimulator12.0 build | xcpretty

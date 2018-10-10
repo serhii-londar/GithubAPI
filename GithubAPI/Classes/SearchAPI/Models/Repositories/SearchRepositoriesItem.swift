@@ -71,7 +71,7 @@ public struct SearchRepositoriesItem : Codable {
 		masterBranch = try values.decodeIfPresent(String.self, forKey: .masterBranch)
 		name = try values.decodeIfPresent(String.self, forKey: .name)
 		openIssuesCount = try values.decodeIfPresent(Int.self, forKey: .openIssuesCount)
-		owner = try SearchRepositoriesOwner(from: decoder)
+		owner = try values.decodeIfPresent(SearchRepositoriesOwner.self, forKey: .owner)
 		privateField = try values.decodeIfPresent(Bool.self, forKey: .privateField)
 		pushedAt = try values.decodeIfPresent(String.self, forKey: .pushedAt)
 		score = try values.decodeIfPresent(Float.self, forKey: .score)

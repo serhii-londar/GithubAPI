@@ -34,7 +34,7 @@ public struct SearchCodeItem : Codable {
 		htmlUrl = try values.decodeIfPresent(String.self, forKey: .htmlUrl)
 		name = try values.decodeIfPresent(String.self, forKey: .name)
 		path = try values.decodeIfPresent(String.self, forKey: .path)
-		repository = try SearchCodeRepository(from: decoder)
+		repository = try values.decodeIfPresent(SearchCodeRepository.self, forKey: .repository)
 		score = try values.decodeIfPresent(Float.self, forKey: .score)
 		sha = try values.decodeIfPresent(String.self, forKey: .sha)
 		url = try values.decodeIfPresent(String.self, forKey: .url)

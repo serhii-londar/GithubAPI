@@ -34,7 +34,7 @@ public struct SearchCommitsItem : Codable {
     
 	public init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
-		author = try SearchCommitsAuthor(from: decoder)
+		author = try values.decodeIfPresent(SearchCommitsAuthor.self, forKey: .author)
 		commentsUrl = try values.decodeIfPresent(String.self, forKey: .commentsUrl)
 		commit = try values.decodeIfPresent(SearchCommitsCommit.self, forKey: .commit)
 		committer = try values.decodeIfPresent(SearchCommitsCommitter.self, forKey: .committer)

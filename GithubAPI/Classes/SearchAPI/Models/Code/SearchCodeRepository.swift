@@ -132,7 +132,7 @@ public struct SearchCodeRepository : Codable {
 		milestonesUrl = try values.decodeIfPresent(String.self, forKey: .milestonesUrl)
 		name = try values.decodeIfPresent(String.self, forKey: .name)
 		notificationsUrl = try values.decodeIfPresent(String.self, forKey: .notificationsUrl)
-		owner = try SearchCodeOwner(from: decoder)
+		owner = try values.decodeIfPresent(SearchCodeOwner.self, forKey: .owner)
 		privateField = try values.decodeIfPresent(Bool.self, forKey: .privateField)
 		pullsUrl = try values.decodeIfPresent(String.self, forKey: .pullsUrl)
 		stargazersUrl = try values.decodeIfPresent(String.self, forKey: .stargazersUrl)

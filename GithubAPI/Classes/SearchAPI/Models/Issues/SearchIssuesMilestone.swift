@@ -47,7 +47,7 @@ public struct SearchIssuesMilestone : Codable {
 		closedAt = try values.decodeIfPresent(String.self, forKey: .closedAt)
 		closedIssues = try values.decodeIfPresent(Int.self, forKey: .closedIssues)
 		createdAt = try values.decodeIfPresent(String.self, forKey: .createdAt)
-		creator = try SearchIssuesMilestoneCreator(from: decoder)
+		creator = try values.decodeIfPresent(SearchIssuesMilestoneCreator.self, forKey: .creator)
 		descriptionField = try values.decodeIfPresent(String.self, forKey: .descriptionField)
 		dueOn = try values.decodeIfPresent(String.self, forKey: .dueOn)
 		htmlUrl = try values.decodeIfPresent(String.self, forKey: .htmlUrl)

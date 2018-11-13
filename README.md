@@ -5,19 +5,19 @@
 [![License](https://img.shields.io/cocoapods/l/GithubAPI.svg?style=flat)](http://cocoapods.org/pods/GithubAPI)
 [![Platform](https://img.shields.io/cocoapods/p/GithubAPI.svg?style=flat)](http://cocoapods.org/pods/GithubAPI)
 
-Swift implementation of Github REST api v3. Library support swift 4.0. Work is in progress. 
+Swift implementation of Github REST api v3. Library support swift 4.2. Work is in progress. 
 
 Currently supported: 
 
 - [x] [Issues API](https://developer.github.com/v3/issues/).
-- [x] [Activity API(Notification)](https://developer.github.com/v3/activity/notifications/).
+- [x] [Activity API(Feeds, Notification)](https://developer.github.com/v3/activity/notifications/).
 - [x] [Repositories API](https://developer.github.com/v3/repos/).
 - [x] [Search API](https://developer.github.com/v3/search/).
 - [x] [User API](https://developer.github.com/v3/users/).
 
 TODO:
 
-- [ ] [Activity API (Events, Feeds, Starring, Watching)](https://developer.github.com/v3/activity/).
+- [ ] [Activity API (Events, Starring, Watching)](https://developer.github.com/v3/activity/).
 - [ ] [Organizations API](https://developer.github.com/v3/orgs/).
 - [ ] [Projects API](https://developer.github.com/v3/projects/).
 - [ ] [Pull Requests API](https://developer.github.com/v3/pulls/). 

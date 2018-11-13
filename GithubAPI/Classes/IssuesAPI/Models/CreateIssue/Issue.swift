@@ -15,11 +15,11 @@ public struct Issue : Codable {
 	public var title : String?
 
 	enum CodingKeys: String, CodingKey {
-		case assignees = "assignees"
-		case body = "body"
-		case labels = "labels"
-		case milestone = "milestone"
-		case title = "title"
+		case assignees
+		case body
+		case labels
+		case milestone
+		case title
 	}
     
     public init(title: String) {

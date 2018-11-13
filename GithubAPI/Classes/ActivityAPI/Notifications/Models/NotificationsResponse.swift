@@ -19,15 +19,15 @@ public struct NotificationsResponse : Codable {
 	public let url : String?
 
 	enum CodingKeys: String, CodingKey {
-		case id = "id"
+		case id
 		case lastReadAt = "last_read_at"
-		case reason = "reason"
+		case reason
 		case repository
 		case subject
 		case subscriptionUrl = "subscription_url"
-		case unread = "unread"
+		case unread
 		case updatedAt = "updated_at"
-		case url = "url"
+		case url
 	}
     
 	public init(from decoder: Decoder) throws {

@@ -70,7 +70,7 @@ public struct SearchCommitsRepository : Codable {
 		case descriptionField = "description"
 		case downloadsUrl = "downloads_url"
 		case eventsUrl = "events_url"
-		case fork = "fork"
+		case fork
 		case forksUrl = "forks_url"
 		case fullName = "full_name"
 		case gitCommitsUrl = "git_commits_url"
@@ -78,7 +78,7 @@ public struct SearchCommitsRepository : Codable {
 		case gitTagsUrl = "git_tags_url"
 		case hooksUrl = "hooks_url"
 		case htmlUrl = "html_url"
-		case id = "id"
+		case id
 		case issueCommentUrl = "issue_comment_url"
 		case issueEventsUrl = "issue_events_url"
 		case issuesUrl = "issues_url"
@@ -87,7 +87,7 @@ public struct SearchCommitsRepository : Codable {
 		case languagesUrl = "languages_url"
 		case mergesUrl = "merges_url"
 		case milestonesUrl = "milestones_url"
-		case name = "name"
+		case name
 		case notificationsUrl = "notifications_url"
 		case owner
 		case privateField = "private"
@@ -100,7 +100,7 @@ public struct SearchCommitsRepository : Codable {
 		case tagsUrl = "tags_url"
 		case teamsUrl = "teams_url"
 		case treesUrl = "trees_url"
-		case url = "url"
+		case url
 	}
     
 	public init(from decoder: Decoder) throws {

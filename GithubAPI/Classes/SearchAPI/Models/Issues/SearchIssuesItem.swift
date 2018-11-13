@@ -32,27 +32,27 @@ public struct SearchIssuesItem : Codable {
 	public let user : SearchIssuesUser?
 
 	enum CodingKeys: String, CodingKey {
-		case assignee = "assignee"
-        case assignees = "assignees"
-		case body = "body"
+		case assignee
+        case assignees
+		case body
 		case closedAt = "closed_at"
-		case comments = "comments"
+		case comments
 		case commentsUrl = "comments_url"
 		case createdAt = "created_at"
 		case eventsUrl = "events_url"
 		case htmlUrl = "html_url"
-		case id = "id"
-		case labels = "labels"
+		case id
+		case labels
 		case labelsUrl = "labels_url"
-		case milestone = "milestone"
-		case number = "number"
-		case pullRequest
+		case milestone
+		case number
+		case pullRequest = "pull_request"
 		case repositoryUrl = "repository_url"
-		case score = "score"
-		case state = "state"
-		case title = "title"
+		case score
+		case state
+		case title
 		case updatedAt = "updated_at"
-		case url = "url"
+		case url
 		case user
 	}
     

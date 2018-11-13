@@ -41,7 +41,7 @@ public class IssuesAPI: GithubAPI {
         var parameters = [String : String]()
         parameters["filter"] = filter.rawValue
         parameters["state"] = state.rawValue
-        if labels.count > 0 {
+        if !labels.isEmpty {
             var labelsString = ""
             for label in labels {
                 labelsString += label + ","
@@ -62,7 +62,7 @@ public class IssuesAPI: GithubAPI {
         var parameters = [String : String]()
         parameters["filter"] = filter.rawValue
         parameters["state"] = state.rawValue
-        if labels.count > 0 {
+        if !labels.isEmpty {
             var labelsString = ""
             for label in labels {
                 labelsString += label + ","
@@ -80,7 +80,7 @@ public class IssuesAPI: GithubAPI {
         var parameters = [String : String]()
         parameters["filter"] = filter.rawValue
         parameters["state"] = state.rawValue
-        if labels.count > 0 {
+        if !labels.isEmpty {
             var labelsString = ""
             for label in labels {
                 labelsString += label + ","
@@ -109,7 +109,7 @@ public class IssuesAPI: GithubAPI {
         if let mentioned = mentioned {
             parameters["mentioned"] = mentioned
         }
-        if labels.count > 0 {
+        if !labels.isEmpty {
             var labelsString = ""
             for label in labels {
                 labelsString += label + ","

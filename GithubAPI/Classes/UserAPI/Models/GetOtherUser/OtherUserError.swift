@@ -13,7 +13,7 @@ public struct OtherUserError : Error, Codable {
 
 	enum CodingKeys: String, CodingKey {
 		case documentationUrl = "documentation_url"
-		case message = "message"
+		case message
 	}
     
 	public init(from decoder: Decoder) throws {

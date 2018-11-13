@@ -13,9 +13,9 @@ public struct SearchIssuesLabel : Codable {
 	public let url : String?
     
 	enum CodingKeys: String, CodingKey {
-		case color = "color"
-		case name = "name"
-		case url = "url"
+		case color
+		case name
+		case url
 	}
     
 	public init(from decoder: Decoder) throws {

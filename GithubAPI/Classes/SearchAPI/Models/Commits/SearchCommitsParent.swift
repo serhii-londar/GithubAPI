@@ -14,8 +14,8 @@ public struct SearchCommitsParent : Codable {
 
 	enum CodingKeys: String, CodingKey {
 		case htmlUrl = "html_url"
-		case sha = "sha"
-		case url = "url"
+		case sha
+		case url
 	}
 
     public init(from decoder: Decoder) throws {

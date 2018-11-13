@@ -17,13 +17,13 @@ public struct UpdateUser : Codable {
     public var name : String?
 
 	enum CodingKeys: String, CodingKey {
-		case bio = "bio"
-		case blog = "blog"
-		case company = "company"
-		case email = "email"
-		case hireable = "hireable"
-		case location = "location"
-		case name = "name"
+		case bio
+		case blog
+		case company
+		case email
+		case hireable
+		case location
+		case name
 	}
     
     public init() {

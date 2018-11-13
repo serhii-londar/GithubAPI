@@ -14,7 +14,7 @@ public struct SearchCommitsResponse : Codable {
 
 	enum CodingKeys: String, CodingKey {
 		case incompleteResults = "incomplete_results"
-		case items = "items"
+		case items
 		case totalCount = "total_count"
 	}
     

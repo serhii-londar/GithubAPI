@@ -19,9 +19,9 @@ public struct SearchCommitsCommit : Codable {
 		case author
 		case commentCount = "comment_count"
 		case committer
-		case message = "message"
+		case message
 		case tree
-		case url = "url"
+		case url
 	}
     
 	public init(from decoder: Decoder) throws {

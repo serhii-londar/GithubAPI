@@ -58,7 +58,7 @@ public class RepositoriesAPI: GithubAPI {
             parameters["visibility"] = visibility.rawValue
         }
         if let affiliation = affiliation {
-            if affiliation.count > 0 {
+            if !affiliation.isEmpty {
                 var affiliationValue = ""
                 for iterator in affiliation {
                     affiliationValue += iterator.rawValue + ","

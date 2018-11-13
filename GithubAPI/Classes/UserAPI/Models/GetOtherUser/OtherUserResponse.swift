@@ -42,24 +42,24 @@ public struct OtherUserResponse : Codable {
 
 	enum CodingKeys: String, CodingKey {
 		case avatarUrl = "avatar_url"
-		case bio = "bio"
-		case blog = "blog"
-		case company = "company"
+		case bio
+		case blog
+		case company
 		case createdAt = "created_at"
-		case email = "email"
+		case email
 		case eventsUrl = "events_url"
-		case followers = "followers"
+		case followers
 		case followersUrl = "followers_url"
-		case following = "following"
+		case following
 		case followingUrl = "following_url"
 		case gistsUrl = "gists_url"
 		case gravatarId = "gravatar_id"
-		case hireable = "hireable"
+		case hireable
 		case htmlUrl = "html_url"
-		case id = "id"
-		case location = "location"
-		case login = "login"
-		case name = "name"
+		case id
+		case location
+		case login
+		case name
 		case organizationsUrl = "organizations_url"
 		case publicGists = "public_gists"
 		case publicRepos = "public_repos"
@@ -68,9 +68,9 @@ public struct OtherUserResponse : Codable {
 		case siteAdmin = "site_admin"
 		case starredUrl = "starred_url"
 		case subscriptionsUrl = "subscriptions_url"
-		case type = "type"
+		case type
 		case updatedAt = "updated_at"
-		case url = "url"
+		case url
 	}
     
 	public init(from decoder: Decoder) throws {

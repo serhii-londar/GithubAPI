@@ -32,14 +32,14 @@ public struct GetIssueResponseMilestone : Codable {
 		case descriptionField = "description"
 		case dueOn = "due_on"
 		case htmlUrl = "html_url"
-		case id = "id"
+		case id
 		case labelsUrl = "labels_url"
-		case number = "number"
+		case number
 		case openIssues = "open_issues"
-		case state = "state"
-		case title = "title"
+		case state
+		case title
 		case updatedAt = "updated_at"
-		case url = "url"
+		case url
 	}
     
     public init(from decoder: Decoder) throws {

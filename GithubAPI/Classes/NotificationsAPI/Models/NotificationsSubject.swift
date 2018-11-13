@@ -15,9 +15,9 @@ public struct NotificationsSubject : Codable {
 
 	enum CodingKeys: String, CodingKey {
 		case latestCommentUrl = "latest_comment_url"
-		case title = "title"
-		case type = "type"
-		case url = "url"
+		case title
+		case type
+		case url
 	}
     
 	public init(from decoder: Decoder) throws {

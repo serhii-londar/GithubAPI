@@ -35,27 +35,27 @@ public struct GetIssueResponse : Codable {
 
 	enum CodingKeys: String, CodingKey {
 		case assignee
-		case assignees = "assignees"
-		case body = "body"
+		case assignees
+		case body
 		case closedAt = "closed_at"
-		case comments = "comments"
+		case comments
 		case commentsUrl = "comments_url"
 		case createdAt = "created_at"
 		case eventsUrl = "events_url"
 		case htmlUrl = "html_url"
-		case id = "id"
-		case labels = "labels"
+		case id
+		case labels
 		case labelsUrl = "labels_url"
-		case locked = "locked"
+		case locked
 		case milestone
-		case number = "number"
-		case pullRequest
+		case number
+		case pullRequest = "pull_request"
 		case repository
 		case repositoryUrl = "repository_url"
-		case state = "state"
-		case title = "title"
+		case state
+		case title
 		case updatedAt = "updated_at"
-		case url = "url"
+		case url
 		case user
 	}
     

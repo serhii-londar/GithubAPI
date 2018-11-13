@@ -13,9 +13,9 @@ public struct GetIssueResponsePermission : Codable {
 	public let push : Bool?
 
 	enum CodingKeys: String, CodingKey {
-		case admin = "admin"
-		case pull = "pull"
-		case push = "push"
+		case admin
+		case pull
+		case push
 	}
     
 	public init(from decoder: Decoder) throws {

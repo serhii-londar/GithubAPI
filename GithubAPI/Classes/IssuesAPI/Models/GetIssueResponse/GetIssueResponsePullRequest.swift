@@ -17,7 +17,7 @@ public struct GetIssueResponsePullRequest : Codable {
 		case diffUrl = "diff_url"
 		case htmlUrl = "html_url"
 		case patchUrl = "patch_url"
-		case url = "url"
+		case url
 	}
     
 	public init(from decoder: Decoder) throws {

@@ -15,11 +15,11 @@ public struct GetIssueResponseLabel : Codable {
 	public let url : String?
     
 	enum CodingKeys: String, CodingKey {
-		case color = "color"
+		case color
 		case defaultField = "default"
-		case id = "id"
-		case name = "name"
-		case url = "url"
+		case id
+		case name
+		case url
 	}
 	
     public init(from decoder: Decoder) throws {

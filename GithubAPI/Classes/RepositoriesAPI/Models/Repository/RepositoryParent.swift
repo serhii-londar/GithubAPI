@@ -104,7 +104,7 @@ public struct RepositoryParent : Codable {
 		case descriptionField = "description"
 		case downloadsUrl = "downloads_url"
 		case eventsUrl = "events_url"
-		case fork = "fork"
+		case fork
 		case forksCount = "forks_count"
 		case forksUrl = "forks_url"
 		case fullName = "full_name"
@@ -119,18 +119,18 @@ public struct RepositoryParent : Codable {
 		case homepage = "homepage"
 		case hooksUrl = "hooks_url"
 		case htmlUrl = "html_url"
-		case id = "id"
+		case id
 		case issueCommentUrl = "issue_comment_url"
 		case issueEventsUrl = "issue_events_url"
 		case issuesUrl = "issues_url"
 		case keysUrl = "keys_url"
 		case labelsUrl = "labels_url"
-		case language = "language"
+		case language
 		case languagesUrl = "languages_url"
 		case mergesUrl = "merges_url"
 		case milestonesUrl = "milestones_url"
 		case mirrorUrl = "mirror_url"
-		case name = "name"
+		case name
 		case networkCount = "network_count"
 		case notificationsUrl = "notifications_url"
 		case openIssuesCount = "open_issues_count"
@@ -140,7 +140,7 @@ public struct RepositoryParent : Codable {
 		case pullsUrl = "pulls_url"
 		case pushedAt = "pushed_at"
 		case releasesUrl = "releases_url"
-		case size = "size"
+		case size
 		case sshUrl = "ssh_url"
 		case stargazersCount = "stargazers_count"
 		case stargazersUrl = "stargazers_url"
@@ -151,10 +151,10 @@ public struct RepositoryParent : Codable {
 		case svnUrl = "svn_url"
 		case tagsUrl = "tags_url"
 		case teamsUrl = "teams_url"
-		case topics = "topics"
+		case topics
 		case treesUrl = "trees_url"
 		case updatedAt = "updated_at"
-		case url = "url"
+		case url
 		case watchersCount = "watchers_count"
 	}
     

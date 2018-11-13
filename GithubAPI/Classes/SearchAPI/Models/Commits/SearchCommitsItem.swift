@@ -25,11 +25,11 @@ public struct SearchCommitsItem : Codable {
 		case commit
 		case committer
 		case htmlUrl = "html_url"
-		case parents = "parents"
+		case parents
 		case repository
-		case score = "score"
-		case sha = "sha"
-		case url = "url"
+		case score
+		case sha
+		case url
 	}
     
 	public init(from decoder: Decoder) throws {

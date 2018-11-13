@@ -19,11 +19,11 @@ public struct SearchRepositoriesOwner : Codable {
 	enum CodingKeys: String, CodingKey {
 		case avatarUrl = "avatar_url"
 		case gravatarId = "gravatar_id"
-		case id = "id"
-		case login = "login"
+		case id
+		case login
 		case receivedEventsUrl = "received_events_url"
-		case type = "type"
-		case url = "url"
+		case type
+		case url
 	}
     
 	public init(from decoder: Decoder) throws {

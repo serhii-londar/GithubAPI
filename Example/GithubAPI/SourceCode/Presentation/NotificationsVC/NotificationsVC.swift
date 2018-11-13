@@ -49,7 +49,10 @@ class NotificationsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+		
+		EventsAPI().listOfPublicEvents { (_, _) in
+			
+		}
         
         self.tableView.delegate = self
         self.tableView.dataSource = self

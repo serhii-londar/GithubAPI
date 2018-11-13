@@ -50,7 +50,7 @@ class NotificationsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		EventsAPI().listOfPublicEvents { (response, error) in
+		EventsAPI().listOfPublicEvents { (_, _) in
 			
 		}
         

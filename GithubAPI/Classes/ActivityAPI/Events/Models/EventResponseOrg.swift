@@ -15,9 +15,9 @@ public struct EventResponseOrg : Codable {
 	enum CodingKeys: String, CodingKey {
 		case avatarUrl = "avatar_url"
 		case gravatarId = "gravatar_id"
-		case id = "id"
-		case login = "login"
-		case url = "url"
+		case id
+		case login
+		case url
 	}
 	
 	public init(from decoder: Decoder) throws {

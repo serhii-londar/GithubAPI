@@ -18,7 +18,7 @@ public class GithubAPI: BaseAPI {
         "Content-Type" : "application/json; charset=utf-8"
     ]
     
-    public init(authentication: Authentication) {
+    public init(authentication: Authentication? = nil) {
         self.authentication = authentication
         super.init()
     }

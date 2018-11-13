@@ -8,11 +8,21 @@
 import Foundation
 
 public class ActivityAPI {
-	var notifications: NotificationsAPI {
-		return NotificationsAPI()
+    var authentication: Authentication?
+    
+    public init(authentication: Authentication? = nil) {
+        self.authentication = authentication
+    }
+    
+	public var notifications: NotificationsAPI {
+        return NotificationsAPI(authentication: self.authentication)
 	}
     
-    var events: EventsAPI {
-        return EventsAPI()
+    public var events: EventsAPI {
+        return EventsAPI(authentication: self.authentication)
+    }
+    
+    public var feeds: FeedsAPI {
+        return FeedsAPI(authentication: self.authentication)
     }
 }

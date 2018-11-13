@@ -10,7 +10,7 @@ import Foundation
 import BaseAPI
 
 public class GithubAPI: BaseAPI {
-    var authentication: Authentication? = nil
+    var authentication: Authentication?
     
     var defaultHeaders = [
         "Accept" : "application/vnd.github.v3+json",
@@ -31,7 +31,7 @@ public class GithubAPI: BaseAPI {
     
     public func get<T:Decodable>(path: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, completion: @escaping (T?, Error?) -> Swift.Void) {
         let (newHeaders, newParameters) = self.addAuthenticationIfNeeded(headers, parameters: parameters)
-        self.get(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders) { (data, response, error) in
+        self.get(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders) { (data, _, error) in
             if let data = data {
                 do {
                     let model = try JSONDecoder().decode(T.self, from: data)
@@ -62,7 +62,7 @@ public class GithubAPI: BaseAPI {
     
     public func put<T:Decodable>(path: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, body: Data?, completion: @escaping (T?, Error?) -> Swift.Void) {
         let (newHeaders, newParameters) = self.addAuthenticationIfNeeded(headers, parameters: parameters)
-        self.put(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders, body: body) { (data, response, error) in
+        self.put(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders, body: body) { (data, _, error) in
             if let data = data {
                 do {
                     let model = try JSONDecoder().decode(T.self, from: data)
@@ -93,7 +93,7 @@ public class GithubAPI: BaseAPI {
     
     public func post<T:Decodable>(path: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, body: Data?, completion: @escaping (T?, Error?) -> Swift.Void) {
         let (newHeaders, newParameters) = self.addAuthenticationIfNeeded(headers, parameters: parameters)
-        self.post(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders, body: body) { (data, response, error) in
+        self.post(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders, body: body) { (data, _, error) in
             if let data = data {
                 do {
                     let model = try JSONDecoder().decode(T.self, from: data)
@@ -124,7 +124,7 @@ public class GithubAPI: BaseAPI {
     
     public func patch<T:Decodable>(path: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, body: Data?, completion: @escaping (T?, Error?) -> Swift.Void) {
         let (newHeaders, newParameters) = self.addAuthenticationIfNeeded(headers, parameters: parameters)
-        self.patch(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders, body: body) { (data, response, error) in
+        self.patch(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders, body: body) { (data, _, error) in
             if let data = data {
                 do {
                     let model = try JSONDecoder().decode(T.self, from: data)

@@ -10,20 +10,18 @@ public struct EventResponse : Codable {
 	public let createdAt : String?
 	public let id : String?
 	public let org : EventResponseOrg?
-	public let payload : EventResponsePayload?
 	public let publicField : Bool?
 	public let repo : EventResponseRepo?
 	public let type : String?
 	
 	enum CodingKeys: String, CodingKey {
-		case actor = "actor"
+		case actor
 		case createdAt = "created_at"
-		case id = "id"
-		case org = "org"
-		case payload = "payload"
+		case id
+		case org
 		case publicField = "public"
-		case repo = "repo"
-		case type = "type"
+		case repo
+		case type
 	}
 	
 	public init(from decoder: Decoder) throws {
@@ -32,8 +30,7 @@ public struct EventResponse : Codable {
 		createdAt = try values.decodeIfPresent(String.self, forKey: .createdAt)
 		id = try values.decodeIfPresent(String.self, forKey: .id)
 		org = try values.decodeIfPresent(EventResponseOrg.self, forKey: .org)
-		payload = try values.decodeIfPresent(EventResponsePayload.self, forKey: .payload)
-		publicField = try values.decodeIfPresent(Bool.self, forKey: .publicField)
+        publicField = try values.decodeIfPresent(Bool.self, forKey: .publicField)
 		repo = try values.decodeIfPresent(EventResponseRepo.self, forKey: .repo)
 		type = try values.decodeIfPresent(String.self, forKey: .type)
 	}

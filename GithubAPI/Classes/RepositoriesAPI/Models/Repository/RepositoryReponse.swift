@@ -92,7 +92,7 @@ public struct RepositoryResponse : Codable {
 		case allowRebaseMerge = "allow_rebase_merge"
 		case allowSquashMerge = "allow_squash_merge"
 		case archiveUrl = "archive_url"
-		case archived = "archived"
+		case archived
 		case assigneesUrl = "assignees_url"
 		case blobsUrl = "blobs_url"
 		case branchesUrl = "branches_url"
@@ -109,7 +109,7 @@ public struct RepositoryResponse : Codable {
 		case descriptionField = "description"
 		case downloadsUrl = "downloads_url"
 		case eventsUrl = "events_url"
-		case fork = "fork"
+		case fork
 		case forksCount = "forks_count"
 		case forksUrl = "forks_url"
 		case fullName = "full_name"
@@ -121,22 +121,22 @@ public struct RepositoryResponse : Codable {
 		case hasIssues = "has_issues"
 		case hasPages = "has_pages"
 		case hasWiki = "has_wiki"
-		case homepage = "homepage"
+		case homepage
 		case hooksUrl = "hooks_url"
 		case htmlUrl = "html_url"
-		case id = "id"
+		case id
 		case issueCommentUrl = "issue_comment_url"
 		case issueEventsUrl = "issue_events_url"
 		case issuesUrl = "issues_url"
 		case keysUrl = "keys_url"
 		case labelsUrl = "labels_url"
-		case language = "language"
+		case language
 		case languagesUrl = "languages_url"
 		case license
 		case mergesUrl = "merges_url"
 		case milestonesUrl = "milestones_url"
 		case mirrorUrl = "mirror_url"
-		case name = "name"
+		case name
 		case networkCount = "network_count"
 		case notificationsUrl = "notifications_url"
 		case openIssuesCount = "open_issues_count"
@@ -148,7 +148,7 @@ public struct RepositoryResponse : Codable {
 		case pullsUrl = "pulls_url"
 		case pushedAt = "pushed_at"
 		case releasesUrl = "releases_url"
-		case size = "size"
+		case size
 		case source
 		case sshUrl = "ssh_url"
 		case stargazersCount = "stargazers_count"
@@ -160,10 +160,10 @@ public struct RepositoryResponse : Codable {
 		case svnUrl = "svn_url"
 		case tagsUrl = "tags_url"
 		case teamsUrl = "teams_url"
-		case topics = "topics"
+		case topics
 		case treesUrl = "trees_url"
 		case updatedAt = "updated_at"
-		case url = "url"
+		case url
 		case watchersCount = "watchers_count"
 	}
     

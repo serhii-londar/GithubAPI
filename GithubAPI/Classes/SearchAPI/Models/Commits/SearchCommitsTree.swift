@@ -12,8 +12,8 @@ public struct SearchCommitsTree : Codable {
 	public let url : String?
 
 	enum CodingKeys: String, CodingKey {
-		case sha = "sha"
-		case url = "url"
+		case sha
+		case url
 	}
     
 	public init(from decoder: Decoder) throws {

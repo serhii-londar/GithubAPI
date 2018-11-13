@@ -35,24 +35,24 @@ public struct SearchRepositoriesItem : Codable {
 		case createdAt = "created_at"
 		case defaultBranch = "default_branch"
 		case descriptionField = "description"
-		case fork = "fork"
+		case fork
 		case forksCount = "forks_count"
 		case fullName = "full_name"
-		case homepage = "homepage"
+		case homepage
 		case htmlUrl = "html_url"
-		case id = "id"
-		case language = "language"
+		case id
+		case language
 		case masterBranch = "master_branch"
-		case name = "name"
+		case name
 		case openIssuesCount = "open_issues_count"
 		case owner
 		case privateField = "private"
 		case pushedAt = "pushed_at"
-		case score = "score"
-		case size = "size"
+		case score
+		case size
 		case stargazersCount = "stargazers_count"
 		case updatedAt = "updated_at"
-		case url = "url"
+		case url
 		case watchersCount = "watchers_count"
 	}
     

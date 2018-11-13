@@ -16,10 +16,10 @@ public struct RepositoryLicense : Codable {
 
 	enum CodingKeys: String, CodingKey {
 		case htmlUrl = "html_url"
-		case key = "key"
-		case name = "name"
+		case key
+		case name
 		case spdxId = "spdx_id"
-		case url = "url"
+		case url
 	}
     
 	public init(from decoder: Decoder) throws {

@@ -38,19 +38,19 @@ public struct SearchCommitsAuthor : Codable {
 		case gistsUrl = "gists_url"
 		case gravatarId = "gravatar_id"
 		case htmlUrl = "html_url"
-		case id = "id"
-		case login = "login"
+		case id
+		case login
 		case organizationsUrl = "organizations_url"
 		case receivedEventsUrl = "received_events_url"
 		case reposUrl = "repos_url"
 		case siteAdmin = "site_admin"
 		case starredUrl = "starred_url"
 		case subscriptionsUrl = "subscriptions_url"
-		case type = "type"
-		case url = "url"
-		case date = "date"
-		case email = "email"
-		case name = "name"
+		case type
+		case url
+		case date
+		case email
+		case name
 	}
 	public init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)

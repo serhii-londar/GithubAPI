@@ -14,10 +14,10 @@ public struct UserPlan : Codable {
 	public let space : Int?
     
 	enum CodingKeys: String, CodingKey {
-		case collaborators = "collaborators"
-		case name = "name"
+		case collaborators
+		case name
 		case privateRepos = "private_repos"
-		case space = "space"
+		case space
 	}
 	
     public init(from decoder: Decoder) throws {

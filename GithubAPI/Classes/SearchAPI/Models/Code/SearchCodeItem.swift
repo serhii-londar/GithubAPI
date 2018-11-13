@@ -20,12 +20,12 @@ public struct SearchCodeItem : Codable {
 	enum CodingKeys: String, CodingKey {
 		case gitUrl = "git_url"
 		case htmlUrl = "html_url"
-		case name = "name"
-		case path = "path"
+		case name
+		case path
 		case repository
-		case score = "score"
-		case sha = "sha"
-		case url = "url"
+		case score
+		case sha
+		case url
 	}
     
 	public init(from decoder: Decoder) throws {

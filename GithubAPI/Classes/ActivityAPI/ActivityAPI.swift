@@ -11,4 +11,8 @@ public class ActivityAPI {
 	var notifications: NotificationsAPI {
 		return NotificationsAPI()
 	}
+    
+    var events: EventsAPI {
+        return EventsAPI()
+    }
 }

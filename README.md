@@ -1,11 +1,11 @@
-# GithubAPI
+# GitHubAPI
 
 [![CI Status](http://img.shields.io/travis/serhii-londar/GithubAPI.svg?style=flat)](https://travis-ci.org/serhii-londar/GithubAPI)
 [![Version](https://img.shields.io/cocoapods/v/GithubAPI.svg?style=flat)](http://cocoapods.org/pods/GithubAPI)
 [![License](https://img.shields.io/cocoapods/l/GithubAPI.svg?style=flat)](http://cocoapods.org/pods/GithubAPI)
 [![Platform](https://img.shields.io/cocoapods/p/GithubAPI.svg?style=flat)](http://cocoapods.org/pods/GithubAPI)
 
-Swift implementation of Github REST api v3. Library support swift 4.2. Work is in progress. 
+Swift implementation of GitHub REST api v3. Library support Swift 4.2. Work is in progress. 
 
 Currently supported: 
 
@@ -135,7 +135,7 @@ SearchAPI().searchRepositories(q: "qwer", page: 1, per_page: 100) { (response, e
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first. 
 
-Example project contains example app with list of all user's github notification. 
+Example project contains example app with list of all user's GitHub notification. 
 
 
 <p align="center">
@@ -152,7 +152,7 @@ Example project contains example app with list of all user's github notification
 
 ## Installation
 
-GithubAPI is available through [CocoaPods](http://cocoapods.org). To install
+GitHubAPI is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
@@ -165,7 +165,4 @@ Serhii Londar, serhii.londar@gmail.com
 
 ## License
 
-GithubAPI is available under the MIT license. See the LICENSE file for more info.
-
-
-
+GitHubAPI is available under the MIT license. See the LICENSE file for more info.

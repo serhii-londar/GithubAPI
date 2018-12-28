@@ -44,13 +44,29 @@ public class GithubAPI: BaseAPI {
             }
         }
     }
+	
+	public func get<T:Decodable>(path: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, decoder: JSONDecoder, completion: @escaping (T?, Error?) -> Swift.Void) {
+		let (newHeaders, newParameters) = self.addAuthenticationIfNeeded(headers, parameters: parameters)
+		self.get(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders) { (data, _, error) in
+			if let data = data {
+				do {
+					let model = try decoder.decode(T.self, from: data)
+					completion(model, error)
+				} catch {
+					completion(nil, error)
+				}
+			} else {
+				completion(nil, error)
+			}
+		}
+	}
     
-    public func getSync<T:Decodable>(path: String, parameters: [String : String]? = nil, headers: [String: String]? = nil) -> (response: T?, error: Error?) {
+    public func getSync<T:Decodable>(path: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, decoder: JSONDecoder = JSONDecoder()) -> (response: T?, error: Error?) {
         let (newHeaders, newParameters) = self.addAuthenticationIfNeeded(headers, parameters: parameters)
         let response = self.get(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders)
         if let data = response.data {
             do {
-                let model = try JSONDecoder().decode(T.self, from: data)
+                let model = try decoder.decode(T.self, from: data)
                 return (model, response.error)
             } catch {
                 return (nil, error)

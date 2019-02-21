@@ -62,6 +62,14 @@ public class RepositoriesContentsAPI: GithubAPI {
 		self.get(path: path, parameters: parameters, completion: completion)
 	}
 	
+	/// The response will be an array of objects, one object for each item in the directory.
+	///
+	/// - Parameters:
+	///   - owner: Repository owner.
+	///   - repo: Repository name.
+	///   - path: Directory path in repository.
+	///   - ref: The name of the commit/branch/tag. Default: the repository’s default branch (usually master).
+	///   - completion: Repository dictionary content completion closure.
 	public func getDirectoryContents(owner: String, repo: String, path: String, ref: String? = nil, completion: @escaping([RepositoryContentsReponse]?, Error?) -> Void) {
 		let path = "/repos/\(owner)/\(repo)/contents/\(path)"
 		var parameters: [String : String]?
@@ -70,5 +78,58 @@ public class RepositoriesContentsAPI: GithubAPI {
 			parameters!["ref"] = ref
 		}
 		self.get(path: path, parameters: parameters, completion: completion)
+	}
+	
+	/// Creates a new file in a repository.
+	///
+	/// - Parameters:
+	///   - owner: Repository owner.
+	///   - repo: Repository name.
+	///   - path: File path in repository.
+	///   - message: The commit message.
+	///   - content: The new file content, using Base64 encoding.
+	///   - branch: The branch name. Default: the repository’s default branch (usually master).
+	///   - completion: Create file completion block.
+	public func createFile(owner: String, repo: String, path: String, message: String, content: String, branch: String = "master", completion: @escaping(FileResponse?, Error?) -> Void) {
+		let path = "/repos/\(owner)/\(repo)/contents/\(path)"
+		let request = FileRequest(message: message, branch: branch, sha: nil, committer: nil, content: content, author: nil)
+		let data = try? JSONEncoder().encode(request)
+		self.put(path: path, body: data, completion: completion)
+	}
+	
+	/// Updates a file in a repository.
+	///
+	/// - Parameters:
+	///   - owner: Repository owner.
+	///   - repo: Repository name.
+	///   - path: File path in repository.
+	///   - message: The commit message.
+	///   - content: The new file content, using Base64 encoding.
+	///   - sha: The blob SHA of the file being replaced.
+	///   - branch: The branch name. Default: the repository’s default branch (usually master).
+	///   - completion: Update file completion block.
+	public func updateFile(owner: String, repo: String, path: String, message: String, content: String, sha: String, branch: String = "master", completion: @escaping(FileResponse?, Error?) -> Void) {
+		let path = "/repos/\(owner)/\(repo)/contents/\(path)"
+		let request = FileRequest(message: message, branch: branch, sha: sha, committer: nil, content: content, author: nil)
+		let data = try? JSONEncoder().encode(request)
+		self.put(path: path, body: data, completion: completion)
+	}
+	
+	
+	/// <#Description#>
+	///
+	/// - Parameters:
+	///   - owner: <#owner description#>
+	///   - repo: <#repo description#>
+	///   - path: <#path description#>
+	///   - message: <#message description#>
+	///   - sha: <#sha description#>
+	///   - branch: <#branch description#>
+	///   - completion: <#completion description#>
+	public func deleteFile(owner: String, repo: String, path: String, message: String, sha: String, branch: String = "master", completion: @escaping(FileResponse?, Error?) -> Void) {
+		let path = "/repos/\(owner)/\(repo)/contents/\(path)"
+		let request = FileRequest(message: message, branch: branch, sha: sha, committer: nil, content: nil, author: nil)
+		let data = try? JSONEncoder().encode(request)
+		self.delete() (path: path, body: data, completion: completion)
 	}
 }

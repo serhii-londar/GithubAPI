@@ -116,10 +116,10 @@ public class RepositoriesContentsAPI: GithubAPI {
 	}
 	
 	
-	/// <#Description#>
+	/// Deletes a file in a repository.
 	///
 	/// - Parameters:
-	///   - owner: <#owner description#>
+	///   - owner: Repository owner.
 	///   - repo: <#repo description#>
 	///   - path: <#path description#>
 	///   - message: <#message description#>
@@ -130,6 +130,6 @@ public class RepositoriesContentsAPI: GithubAPI {
 		let path = "/repos/\(owner)/\(repo)/contents/\(path)"
 		let request = FileRequest(message: message, branch: branch, sha: sha, committer: nil, content: nil, author: nil)
 		let data = try? JSONEncoder().encode(request)
-		self.delete() (path: path, body: data, completion: completion)
+		self.delete(path: path, body: data, completion: completion)
 	}
 }

@@ -43,8 +43,10 @@ extension String {
 }
 
 class NotificationsVC: UIViewController {
-    var authentication: Credentials! = nil
+    var authentication: Credentials = Credentials.shared
+    
     @IBOutlet weak var tableView: UITableView! = nil
+    
     var notifications: [NotificationsResponse] = [NotificationsResponse]()
     
     override func viewDidLoad() {
@@ -58,10 +60,9 @@ class NotificationsVC: UIViewController {
         self.tableView.dataSource = self
         self.tableView.estimatedRowHeight = 40.0
         
-        let data = try? Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "credentials", ofType: "json")!))
-        self.authentication = try? JSONDecoder().decode(Credentials.self, from: data!)
+        guard let token = Credentials.shared.accessToken?.accessToken else { return }
         
-        let authentication = TokenAuthentication(token: (self.authentication.token?.token)!)
+        let authentication = TokenAuthentication(token: token)
         RepositoriesContentsAPI(authentication: authentication).getReadme(owner: "serhii-londar", repo: "open-source-mac-os-apps", ref: "new_apps") { (response, error) in
             if let response = response {
                 if let contentString = response.content?.fromBase64(options: Data.Base64DecodingOptions(rawValue: 1)) {

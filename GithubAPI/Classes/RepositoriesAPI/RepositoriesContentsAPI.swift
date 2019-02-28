@@ -120,12 +120,12 @@ public class RepositoriesContentsAPI: GithubAPI {
 	///
 	/// - Parameters:
 	///   - owner: Repository owner.
-	///   - repo: <#repo description#>
-	///   - path: <#path description#>
-	///   - message: <#message description#>
-	///   - sha: <#sha description#>
-	///   - branch: <#branch description#>
-	///   - completion: <#completion description#>
+	///   - repo: Repository name.
+	///   - path: File path in repository.
+	///   - message: The commit message.
+	///   - sha: The blob SHA of the file being replaced.
+	///   - branch: The branch name. Default: the repository’s default branch (usually master).
+	///   - completion: Delete file completion block.
 	public func deleteFile(owner: String, repo: String, path: String, message: String, sha: String, branch: String = "master", completion: @escaping(FileResponse?, Error?) -> Void) {
 		let path = "/repos/\(owner)/\(repo)/contents/\(path)"
 		let request = FileRequest(message: message, branch: branch, sha: sha, committer: nil, content: nil, author: nil)

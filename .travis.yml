@@ -10,5 +10,6 @@ before_install:
   - gem install cocoapods
   - cd Example
   - pod install
+  - pod update BaseAPI
 script:
   - set -o pipefail && xcodebuild -workspace GithubAPI.xcworkspace -scheme GithubAPI_Example -sdk iphonesimulator12.0 clean build | xcpretty

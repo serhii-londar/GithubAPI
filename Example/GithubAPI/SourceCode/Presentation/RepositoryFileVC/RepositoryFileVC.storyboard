@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Repository FileVC-->
+        <scene sceneID="erU-mX-X2s">
+            <objects>
+                <viewController storyboardIdentifier="RepositoryFileVC" id="A61-Ni-wwR" customClass="RepositoryFileVC" customModule="GithubAPI_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qwn-9k-wKf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PkK-NE-ROM">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PkK-NE-ROM" firstAttribute="top" secondItem="gt8-Aq-0hW" secondAttribute="top" id="9fc-UU-J0k"/>
+                            <constraint firstItem="gt8-Aq-0hW" firstAttribute="bottom" secondItem="PkK-NE-ROM" secondAttribute="bottom" id="Pzf-Pl-IjJ"/>
+                            <constraint firstItem="gt8-Aq-0hW" firstAttribute="trailing" secondItem="PkK-NE-ROM" secondAttribute="trailing" id="REu-YE-fHE"/>
+                            <constraint firstItem="PkK-NE-ROM" firstAttribute="leading" secondItem="gt8-Aq-0hW" secondAttribute="leading" id="z8u-2g-pgM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gt8-Aq-0hW"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="PkK-NE-ROM" id="O7O-X0-sRz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7L6-f6-cBX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="194" y="25"/>
+        </scene>
+    </scenes>
+</document>

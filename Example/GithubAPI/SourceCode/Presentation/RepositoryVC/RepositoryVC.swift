@@ -54,11 +54,18 @@ extension RepositoryVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let file = self.files[indexPath.row]
-        
-        guard let path = file.path else { return }
-        let storyboard = UIStoryboard(name: "RepositoryVC", bundle: nil)
-        let repositoryVC = storyboard.instantiateViewController(withIdentifier: "RepositoryVC") as! RepositoryVC
-        repositoryVC.path = path
-        self.navigationController?.pushViewController(repositoryVC, animated: true)
-    }
+		guard let path = file.path else { return }
+		
+		if file.type == "file" {
+			let storyboard = UIStoryboard(name: "RepositoryFileVC", bundle: nil)
+			let repositoryFileVC = storyboard.instantiateViewController(withIdentifier: "RepositoryFileVC") as! RepositoryFileVC
+			repositoryFileVC.path = path
+			self.navigationController?.pushViewController(repositoryFileVC, animated: true)
+		} else if file.type == "dir" {
+			let storyboard = UIStoryboard(name: "RepositoryVC", bundle: nil)
+			let repositoryVC = storyboard.instantiateViewController(withIdentifier: "RepositoryVC") as! RepositoryVC
+			repositoryVC.path = path
+			self.navigationController?.pushViewController(repositoryVC, animated: true)
+		}
+	}
 }

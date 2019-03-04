@@ -12,7 +12,7 @@ import GithubAPI
 class RepositoryVC: UIViewController {
     let token = (Credentials.shared.accessToken?.accessToken)!
     var repositoryOwner: String = "serhii-londar"
-    var repositoryName: String = "GithubAPI"
+    var repositoryName: String = "test1"
     
     var contentsAPI: RepositoriesContentsAPI!
     

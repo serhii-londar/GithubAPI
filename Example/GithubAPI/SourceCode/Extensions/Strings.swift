@@ -44,17 +44,7 @@ extension String {
 
 extension String {
 	func toGithubBase64() -> String? {
-		let normalLines = self.split(separator: "\n").map({ String($0) })
-		var lines = [String]()
-		normalLines.forEach { (line) in
-			lines.append(line.toBase64() ?? "")
-		}
-		var resultString = ""
-		lines.forEach { (line) in
-			resultString.append(line + "\n")
-		}
-		_ = resultString.removeLast()
-		return resultString
+		return self.toBase64()
 	}
 	
 	///  Convert github base64 string into normal string.
@@ -68,9 +58,8 @@ extension String {
 		}
 		var resultString = ""
 		normalLines.forEach { (line) in
-			resultString.append(line + "\n")
+			resultString.append(line)
 		}
-		_ = resultString.removeLast()
 		return resultString
 	}
 	

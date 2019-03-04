@@ -62,7 +62,7 @@ public class FileResponseCommit: Codable {
 }
 
 public class FileResponseAuthor: Codable {
-	public let date: Date?
+	public let date: String?
 	public let name: String?
 	public let email: String?
 	
@@ -72,7 +72,7 @@ public class FileResponseAuthor: Codable {
 		case email = "email"
 	}
 	
-	public init(date: Date?, name: String?, email: String?) {
+	public init(date: String?, name: String?, email: String?) {
 		self.date = date
 		self.name = name
 		self.email = email

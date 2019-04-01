@@ -49,6 +49,7 @@ extension RepositoryVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryFileCell") as! RepositoryFileCell
         let file = self.files[indexPath.row]
         cell.label.text = file.name
+        cell.delegate = self
         return cell
     }
     
@@ -68,4 +69,12 @@ extension RepositoryVC: UITableViewDelegate, UITableViewDataSource {
 			self.navigationController?.pushViewController(repositoryVC, animated: true)
 		}
 	}
+}
+
+extension RepositoryVC: RepositoryFileCellDelegate {
+    func deleteButtonPressed(_ cell: RepositoryFileCell) {
+        self.contentsAPI.deleteFile(owner: repositoryOwner, repo: repositoryName, path: "", message: "Remove file", sha: "") { (resposne, error) in
+            
+        }
+    }
 }

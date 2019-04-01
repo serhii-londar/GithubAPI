@@ -8,7 +8,17 @@
 
 import UIKit
 
+protocol RepositoryFileCellDelegate: class {
+    func deleteButtonPressed(_ cell: RepositoryFileCell)
+}
+
 class RepositoryFileCell: UITableViewCell {
+    weak var delegate: RepositoryFileCellDelegate? = nil
     @IBOutlet var icon: UIImageView!
     @IBOutlet var label: UILabel!
+    @IBOutlet var deleteButton: UIButton!
+    
+    @IBAction func deleteButtonPressed(_ sender: Any) {
+        delegate?.deleteButtonPressed(self)
+    }
 }

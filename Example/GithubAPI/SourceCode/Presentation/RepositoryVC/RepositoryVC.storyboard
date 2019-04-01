@@ -36,21 +36,30 @@
                                                         <constraint firstAttribute="width" constant="30" id="HNy-p6-QUg"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBB-vO-HQy">
-                                                    <rect key="frame" x="78" y="16" width="289" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBB-vO-HQy">
+                                                    <rect key="frame" x="78" y="8" width="223" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUh-DG-ICh">
+                                                    <rect key="frame" x="309" y="3.5" width="50" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="6Fd-tt-PQR"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Delete"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="tUh-DG-ICh" firstAttribute="leading" secondItem="eBB-vO-HQy" secondAttribute="trailing" constant="8" id="4vQ-ES-B23"/>
                                                 <constraint firstAttribute="bottom" secondItem="LQ3-3T-diE" secondAttribute="bottom" constant="16" id="AS4-18-KYv"/>
+                                                <constraint firstAttribute="trailing" secondItem="tUh-DG-ICh" secondAttribute="trailing" constant="16" id="Adw-Hs-26l"/>
                                                 <constraint firstItem="LQ3-3T-diE" firstAttribute="leading" secondItem="UG8-Ur-Tgr" secondAttribute="leading" constant="32" id="HH1-5B-EsO"/>
                                                 <constraint firstItem="eBB-vO-HQy" firstAttribute="leading" secondItem="LQ3-3T-diE" secondAttribute="trailing" constant="16" id="HjA-TV-Mlb"/>
-                                                <constraint firstAttribute="trailing" secondItem="eBB-vO-HQy" secondAttribute="trailing" constant="8" id="bYQ-rl-lBX"/>
                                                 <constraint firstItem="LQ3-3T-diE" firstAttribute="top" secondItem="UG8-Ur-Tgr" secondAttribute="top" constant="16" id="mGI-TD-6Ke"/>
-                                                <constraint firstItem="eBB-vO-HQy" firstAttribute="top" secondItem="UG8-Ur-Tgr" secondAttribute="top" constant="16" id="o3d-j4-41x"/>
-                                                <constraint firstAttribute="bottom" secondItem="eBB-vO-HQy" secondAttribute="bottom" constant="16" id="yyT-yg-uw7"/>
+                                                <constraint firstItem="eBB-vO-HQy" firstAttribute="top" secondItem="UG8-Ur-Tgr" secondAttribute="top" constant="8" id="o3d-j4-41x"/>
+                                                <constraint firstItem="tUh-DG-ICh" firstAttribute="centerY" secondItem="UG8-Ur-Tgr" secondAttribute="centerY" id="vv6-Aw-zuQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="eBB-vO-HQy" secondAttribute="bottom" constant="8" id="yyT-yg-uw7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

@@ -40,7 +40,9 @@ class RepositoryFileVC: UIViewController {
 		guard let content = self.textView.text.toGithubBase64() else { return }
 		guard let sha = self.sha else { return }
 		self.contentsAPI.updateFile(owner: repositoryOwner, repo: repositoryName, path: path, message: "test", content: content, sha: sha) { (response, error) in
-			
+            DispatchQueue.main.async {
+                self.navigationController?.popViewController(animated: true)
+            }
 		}
 	}
 }

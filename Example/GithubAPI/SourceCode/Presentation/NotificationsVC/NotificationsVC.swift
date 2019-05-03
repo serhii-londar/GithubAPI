@@ -104,19 +104,18 @@ class NotificationsVC: UIViewController {
             }
         }
         
-        StarringAPI(authentication: authentication).listRepositoriesBeingStarred(username: "serhii-londar") { (response, error) in
-            print(error?.localizedDescription ?? "")
-            if let response = response {
-                
-            }
-        }
+//        StarringAPI(authentication: authentication).listRepositoriesBeingStarred(username: "serhii-londar") { (response, error) in
+//            print(error?.localizedDescription ?? "")
+//            if let response = response {
+//
+//            }
+//        }
 //        StarringAPI(authentication: authentication).starRepository(owner: "serhii-londar", repo: "SteamLogin") { (response, error) in
 //
+//        }        
+//        StarringAPI(authentication: authentication).unstarRepository(owner: "serhii-londar", repo: "SteamLogin") { (response, error) in
+//
 //        }
-        
-        StarringAPI(authentication: authentication).unstarRepository(owner: "serhii-londar", repo: "SteamLogin") { (response, error) in
-            
-        }
     }
 }
 

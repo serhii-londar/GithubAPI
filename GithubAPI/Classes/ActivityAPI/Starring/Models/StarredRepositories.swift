@@ -15,7 +15,7 @@ public struct StarredRepository: Codable {
 	public let name: String?
 	public let fullName: String?
 	public let owner: StarredRepositoryOwner?
-	public let starredRepositoryPrivate: Bool?
+    public let `private`: Bool?
 	public let htmlURL: String?
 	public let description: String?
 	public let fork: Bool?
@@ -87,16 +87,16 @@ public struct StarredRepository: Codable {
 	public let networkCount: Int?
 	
 	enum CodingKeys: String, CodingKey {
-		case id = "id"
+		case id
 		case nodeID = "node_id"
-		case name = "name"
+		case name
 		case fullName = "full_name"
-		case owner = "owner"
-		case starredRepositoryPrivate = "private"
+		case owner
+        case `private`
 		case htmlURL = "html_url"
-		case description = "description"
-		case fork = "fork"
-		case url = "url"
+		case description
+		case fork
+		case url
 		case archiveURL = "archive_url"
 		case assigneesURL = "assignees_url"
 		case blobsURL = "blobs_url"
@@ -138,108 +138,30 @@ public struct StarredRepository: Codable {
 		case mirrorURL = "mirror_url"
 		case hooksURL = "hooks_url"
 		case svnURL = "svn_url"
-		case homepage = "homepage"
-		case language = "language"
+		case homepage
+		case language
 		case forksCount = "forks_count"
 		case stargazersCount = "stargazers_count"
 		case watchersCount = "watchers_count"
-		case size = "size"
+		case size
 		case defaultBranch = "default_branch"
 		case openIssuesCount = "open_issues_count"
-		case topics = "topics"
+		case topics
 		case hasIssues = "has_issues"
 		case hasProjects = "has_projects"
 		case hasWiki = "has_wiki"
 		case hasPages = "has_pages"
 		case hasDownloads = "has_downloads"
-		case archived = "archived"
+		case archived
 		case pushedAt = "pushed_at"
 		case createdAt = "created_at"
 		case updatedAt = "updated_at"
-		case permissions = "permissions"
+		case permissions
 		case allowRebaseMerge = "allow_rebase_merge"
 		case allowSquashMerge = "allow_squash_merge"
 		case allowMergeCommit = "allow_merge_commit"
 		case subscribersCount = "subscribers_count"
 		case networkCount = "network_count"
-	}
-	
-	public init(id: Int?, nodeID: String?, name: String?, fullName: String?, owner: StarredRepositoryOwner?, starredRepositoryPrivate: Bool?, htmlURL: String?, description: String?, fork: Bool?, url: String?, archiveURL: String?, assigneesURL: String?, blobsURL: String?, branchesURL: String?, collaboratorsURL: String?, commentsURL: String?, commitsURL: String?, compareURL: String?, contentsURL: String?, contributorsURL: String?, deploymentsURL: String?, downloadsURL: String?, eventsURL: String?, forksURL: String?, gitCommitsURL: String?, gitRefsURL: String?, gitTagsURL: String?, gitURL: String?, issueCommentURL: String?, issueEventsURL: String?, issuesURL: String?, keysURL: String?, labelsURL: String?, languagesURL: String?, mergesURL: String?, milestonesURL: String?, notificationsURL: String?, pullsURL: String?, releasesURL: String?, sshURL: String?, stargazersURL: String?, statusesURL: String?, subscribersURL: String?, subscriptionURL: String?, tagsURL: String?, teamsURL: String?, treesURL: String?, cloneURL: String?, mirrorURL: String?, hooksURL: String?, svnURL: String?, homepage: String?, language: String?, forksCount: Int?, stargazersCount: Int?, watchersCount: Int?, size: Int?, defaultBranch: String?, openIssuesCount: Int?, topics: [String]?, hasIssues: Bool?, hasProjects: Bool?, hasWiki: Bool?, hasPages: Bool?, hasDownloads: Bool?, archived: Bool?, pushedAt: Date?, createdAt: Date?, updatedAt: Date?, permissions: StarredRepositoryPermissions?, allowRebaseMerge: Bool?, allowSquashMerge: Bool?, allowMergeCommit: Bool?, subscribersCount: Int?, networkCount: Int?) {
-		self.id = id
-		self.nodeID = nodeID
-		self.name = name
-		self.fullName = fullName
-		self.owner = owner
-		self.starredRepositoryPrivate = starredRepositoryPrivate
-		self.htmlURL = htmlURL
-		self.description = description
-		self.fork = fork
-		self.url = url
-		self.archiveURL = archiveURL
-		self.assigneesURL = assigneesURL
-		self.blobsURL = blobsURL
-		self.branchesURL = branchesURL
-		self.collaboratorsURL = collaboratorsURL
-		self.commentsURL = commentsURL
-		self.commitsURL = commitsURL
-		self.compareURL = compareURL
-		self.contentsURL = contentsURL
-		self.contributorsURL = contributorsURL
-		self.deploymentsURL = deploymentsURL
-		self.downloadsURL = downloadsURL
-		self.eventsURL = eventsURL
-		self.forksURL = forksURL
-		self.gitCommitsURL = gitCommitsURL
-		self.gitRefsURL = gitRefsURL
-		self.gitTagsURL = gitTagsURL
-		self.gitURL = gitURL
-		self.issueCommentURL = issueCommentURL
-		self.issueEventsURL = issueEventsURL
-		self.issuesURL = issuesURL
-		self.keysURL = keysURL
-		self.labelsURL = labelsURL
-		self.languagesURL = languagesURL
-		self.mergesURL = mergesURL
-		self.milestonesURL = milestonesURL
-		self.notificationsURL = notificationsURL
-		self.pullsURL = pullsURL
-		self.releasesURL = releasesURL
-		self.sshURL = sshURL
-		self.stargazersURL = stargazersURL
-		self.statusesURL = statusesURL
-		self.subscribersURL = subscribersURL
-		self.subscriptionURL = subscriptionURL
-		self.tagsURL = tagsURL
-		self.teamsURL = teamsURL
-		self.treesURL = treesURL
-		self.cloneURL = cloneURL
-		self.mirrorURL = mirrorURL
-		self.hooksURL = hooksURL
-		self.svnURL = svnURL
-		self.homepage = homepage
-		self.language = language
-		self.forksCount = forksCount
-		self.stargazersCount = stargazersCount
-		self.watchersCount = watchersCount
-		self.size = size
-		self.defaultBranch = defaultBranch
-		self.openIssuesCount = openIssuesCount
-		self.topics = topics
-		self.hasIssues = hasIssues
-		self.hasProjects = hasProjects
-		self.hasWiki = hasWiki
-		self.hasPages = hasPages
-		self.hasDownloads = hasDownloads
-		self.archived = archived
-		self.pushedAt = pushedAt
-		self.createdAt = createdAt
-		self.updatedAt = updatedAt
-		self.permissions = permissions
-		self.allowRebaseMerge = allowRebaseMerge
-		self.allowSquashMerge = allowSquashMerge
-		self.allowMergeCommit = allowMergeCommit
-		self.subscribersCount = subscribersCount
-		self.networkCount = networkCount
 	}
 }
 
@@ -264,12 +186,12 @@ public struct StarredRepositoryOwner: Codable {
 	public let siteAdmin: Bool?
 	
 	enum CodingKeys: String, CodingKey {
-		case login = "login"
-		case id = "id"
+		case login
+		case id
 		case nodeID = "node_id"
 		case avatarURL = "avatar_url"
 		case gravatarID = "gravatar_id"
-		case url = "url"
+		case url
 		case htmlURL = "html_url"
 		case followersURL = "followers_url"
 		case followingURL = "following_url"
@@ -280,29 +202,8 @@ public struct StarredRepositoryOwner: Codable {
 		case reposURL = "repos_url"
 		case eventsURL = "events_url"
 		case receivedEventsURL = "received_events_url"
-		case type = "type"
+		case type
 		case siteAdmin = "site_admin"
-	}
-	
-	public init(login: String?, id: Int?, nodeID: String?, avatarURL: String?, gravatarID: String?, url: String?, htmlURL: String?, followersURL: String?, followingURL: String?, gistsURL: String?, starredURL: String?, subscriptionsURL: String?, organizationsURL: String?, reposURL: String?, eventsURL: String?, receivedEventsURL: String?, type: String?, siteAdmin: Bool?) {
-		self.login = login
-		self.id = id
-		self.nodeID = nodeID
-		self.avatarURL = avatarURL
-		self.gravatarID = gravatarID
-		self.url = url
-		self.htmlURL = htmlURL
-		self.followersURL = followersURL
-		self.followingURL = followingURL
-		self.gistsURL = gistsURL
-		self.starredURL = starredURL
-		self.subscriptionsURL = subscriptionsURL
-		self.organizationsURL = organizationsURL
-		self.reposURL = reposURL
-		self.eventsURL = eventsURL
-		self.receivedEventsURL = receivedEventsURL
-		self.type = type
-		self.siteAdmin = siteAdmin
 	}
 }
 
@@ -312,9 +213,9 @@ public struct StarredRepositoryPermissions: Codable {
 	public let pull: Bool?
 	
 	enum CodingKeys: String, CodingKey {
-		case admin = "admin"
-		case push = "push"
-		case pull = "pull"
+		case admin
+		case push
+		case pull
 	}
 	
 	public init(admin: Bool?, push: Bool?, pull: Bool?) {

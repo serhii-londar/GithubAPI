@@ -337,7 +337,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GithubAPI_Example/Pods-GithubAPI_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-GithubAPI_Example/Pods-GithubAPI_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BaseAPI/BaseAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/GithubAPI/GithubAPI.framework",
 			);
@@ -348,7 +348,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GithubAPI_Example/Pods-GithubAPI_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GithubAPI_Example/Pods-GithubAPI_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F17E9E53678085199B608F3D /* [CP] Check Pods Manifest.lock */ = {

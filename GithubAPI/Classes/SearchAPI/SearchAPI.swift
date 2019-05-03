@@ -54,7 +54,7 @@ public class SearchAPI: GithubAPI {
         parameters["page"] = "\(page)"
         parameters["per_page"] = "\(per_page)"
         
-        self.get(path: path, parameters: parameters, completion: completion)
+        self.gh_get(path: path, parameters: parameters, completion: completion)
     }
     
     public func searchCommits(q: String, page: Int = 1, per_page: Int = 100, sort: SearchCommitsSort? = nil, order: SearchOrder = .desc, completion: @escaping (SearchCommitsResponse?, Error?) -> Swift.Void) {
@@ -68,7 +68,7 @@ public class SearchAPI: GithubAPI {
         parameters["page"] = "\(page)"
         parameters["per_page"] = "\(per_page)"
         
-        self.get(path: path, parameters: parameters, completion: completion)
+        self.gh_get(path: path, parameters: parameters, completion: completion)
     }
     
     public func searchCode(q: String, page: Int = 1, per_page: Int = 100, sort: SearchCodeSort? = nil, order: SearchOrder = .desc, completion: @escaping (SearchCodeResponse?, Error?) -> Swift.Void) {
@@ -82,7 +82,7 @@ public class SearchAPI: GithubAPI {
         parameters["page"] = "\(page)"
         parameters["per_page"] = "\(per_page)"
         
-        self.get(path: path, parameters: parameters, completion: completion)
+        self.gh_get(path: path, parameters: parameters, completion: completion)
     }
     
     public func searchIssues(q: String, page: Int = 1, per_page: Int = 100, sort: SearchIssuesSort? = nil, order: SearchOrder = .desc, completion: @escaping (SearchIssuesResponse?, Error?) -> Swift.Void) {
@@ -96,7 +96,7 @@ public class SearchAPI: GithubAPI {
         parameters["page"] = "\(page)"
         parameters["per_page"] = "\(per_page)"
         
-        self.get(path: path, parameters: parameters, completion: completion)
+        self.gh_get(path: path, parameters: parameters, completion: completion)
     }
     
     public func searchUsers(q: String, page: Int = 1, per_page: Int = 100, sort: SearchUsersSort? = nil, order: SearchOrder = .desc, completion: @escaping (SearchUsersResponse?, Error?) -> Swift.Void) {
@@ -110,7 +110,7 @@ public class SearchAPI: GithubAPI {
         parameters["page"] = "\(page)"
         parameters["per_page"] = "\(per_page)"
         
-        self.get(path: path, parameters: parameters, completion: completion)
+        self.gh_get(path: path, parameters: parameters, completion: completion)
     }
     
 }

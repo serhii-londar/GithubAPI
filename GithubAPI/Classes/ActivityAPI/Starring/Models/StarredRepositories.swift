@@ -7,6 +7,8 @@
 
 import Foundation
 
+public typealias ListStargazersResponse = [StarredRepositoryOwner]
+
 public typealias StarredRepositoriesResponse = [StarredRepository]
 
 public struct StarredRepository: Codable {

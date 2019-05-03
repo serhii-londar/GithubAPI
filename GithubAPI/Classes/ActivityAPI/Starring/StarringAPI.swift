@@ -15,9 +15,9 @@ public class StarringAPI: GithubAPI {
     ///   - owner: Repository owner.
     ///   - repo: Repository name.
     ///   - completion: Completion response closure with list users who starred current repository.
-    public func listStargazers(owner: String, repo: String, completion: @escaping([ListStargazersResponse]?, Error?) -> Void) {
+    public func listStargazers(owner: String, repo: String, completion: @escaping(ListStargazersResponse?, Error?) -> Void) {
         let path = "/repos/\(owner)/\(repo)/stargazers"
-        self.get(path: path, completion: completion)
+        self.gh_get(path: path, completion: completion)
     }
 	
 	/// List repositories being starred by a user.
@@ -27,8 +27,53 @@ public class StarringAPI: GithubAPI {
 	///   - sort: One of created (when the repository was starred) or updated (when it was last pushed to). Default: created
 	///   - direction: One of asc (ascending) or desc (descending). Default: desc
 	///   - completion: Completion response closure with list of starred repositories.
-	func listRepositoriesBeingStarred(username: String, sort: String?, direction: String?, completion: @escaping([ListStargazersResponse]?, Error?) -> Void) {
+	public func listRepositoriesBeingStarred(username: String, sort: String? = nil, direction: String? = nil, completion: @escaping(StarredRepositoriesResponse?, Error?) -> Void) {
 		let path = "/users/\(username)/starred"
-		self.get(path: path, completion: completion)
+		self.gh_get(path: path, completion: completion)
 	}
+    
+    /// Star a repository
+    ///
+    /// - Parameters:
+    ///   - owner: Repository owner.
+    ///   - repo: Repository name.
+    ///   - completion: Completion response closure with request status.
+    public func starRepository(owner: String, repo: String, completion: @escaping(Bool, Error?) -> Void) {
+        let path = "/user/starred/\(owner)/\(repo)"
+        self.gh_put(path: path, parameters: nil, headers: [:], body: nil) { (_, response, error) in
+            guard error == nil else {
+                completion(false, error)
+                return
+            }
+            guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
+                completion(false, nil)
+                return
+            }
+            let success = statusCode == 204
+            completion(success, nil)
+        }
+    }
+    
+    
+    /// Untar a repository
+    ///
+    /// - Parameters:
+    ///   - owner: Repository owner.
+    ///   - repo: Repository name.
+    ///   - completion: Completion response closure with request status.
+    public func unstarRepository(owner: String, repo: String, completion: @escaping(Bool, Error?) -> Void) {
+        let path = "/user/starred/\(owner)/\(repo)"
+        self.delete(url: path, parameters: nil, headers: [:]) { (_, response, error) in
+            guard error == nil else {
+                completion(false, error)
+                return
+            }
+            guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
+                completion(false, nil)
+                return
+            }
+            let success = statusCode == 204
+            completion(success, nil)
+        }
+    }
 }

@@ -24,7 +24,7 @@ public class RepositoriesContentsAPI: GithubAPI {
             parameters = [String : String]()
             parameters!["ref"] = ref
         }
-        self.get(path: path, parameters: parameters, completion: completion)
+        self.gh_get(path: path, parameters: parameters, completion: completion)
     }
     
     /// Gets the preferred README for a repository synchroniusly.
@@ -41,7 +41,7 @@ public class RepositoriesContentsAPI: GithubAPI {
             parameters = [String : String]()
             parameters!["ref"] = ref
         }
-        return self.getSync(path: path, parameters: parameters, headers: nil)
+        return self.gh_getSync(path: path, parameters: parameters, headers: nil)
     }
 	
 	/// Gets the contents of a file in a repository. Specify the file path in :path.

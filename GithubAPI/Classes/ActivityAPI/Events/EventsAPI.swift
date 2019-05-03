@@ -21,7 +21,7 @@ public class EventsAPI: GithubAPI {
 		if let page = page {
 			parameters["page"] = String(page)
 		}
-		self.get(path: path, parameters: parameters, completion: completion)
+		self.gh_get(path: path, parameters: parameters, completion: completion)
 	}
 
 	/// List repository events
@@ -37,7 +37,7 @@ public class EventsAPI: GithubAPI {
 		if let page = page {
 			parameters["page"] = String(page)
 		}
-		self.get(path: path, parameters: parameters, completion: completion)
+		self.gh_get(path: path, parameters: parameters, completion: completion)
 	}
 	
 	/// List issue events for a repository
@@ -55,7 +55,7 @@ public class EventsAPI: GithubAPI {
 		if let page = page {
 			parameters["page"] = String(page)
 		}
-		self.get(path: path, parameters: parameters, completion: completion)
+		self.gh_get(path: path, parameters: parameters, completion: completion)
 	}
 	
 	/// List public events for a network of repositories
@@ -71,7 +71,7 @@ public class EventsAPI: GithubAPI {
 		if let page = page {
 			parameters["page"] = String(page)
 		}
-		self.get(path: path, parameters: parameters, completion: completion)
+		self.gh_get(path: path, parameters: parameters, completion: completion)
 	}
 	
 	/// List public events for an organization
@@ -86,7 +86,7 @@ public class EventsAPI: GithubAPI {
 		if let page = page {
 			parameters["page"] = String(page)
 		}
-		self.get(path: path, parameters: parameters, completion: completion)
+		self.gh_get(path: path, parameters: parameters, completion: completion)
 	}
 	
 	/// List events that a user has received
@@ -103,7 +103,7 @@ public class EventsAPI: GithubAPI {
 		if let page = page {
 			parameters["page"] = String(page)
 		}
-		self.get(path: path, parameters: parameters, completion: completion)
+		self.gh_get(path: path, parameters: parameters, completion: completion)
 	}
 
 	/// List public events that a user has received
@@ -118,7 +118,7 @@ public class EventsAPI: GithubAPI {
 		if let page = page {
 			parameters["page"] = String(page)
 		}
-		self.get(path: path, parameters: parameters, completion: completion)
+		self.gh_get(path: path, parameters: parameters, completion: completion)
 	}
 	
 	/// List events performed by a user
@@ -135,7 +135,7 @@ public class EventsAPI: GithubAPI {
 		if let page = page {
 			parameters["page"] = String(page)
 		}
-		self.get(path: path, parameters: parameters, completion: completion)
+		self.gh_get(path: path, parameters: parameters, completion: completion)
 	}
 	
 	/// List public events performed by a user
@@ -150,7 +150,7 @@ public class EventsAPI: GithubAPI {
 		if let page = page {
 			parameters["page"] = String(page)
 		}
-		self.get(path: path, parameters: parameters, completion: completion)
+		self.gh_get(path: path, parameters: parameters, completion: completion)
 	}
 	
 	/// List events for an organization
@@ -168,6 +168,6 @@ public class EventsAPI: GithubAPI {
 		if let page = page {
 			parameters["page"] = String(page)
 		}
-		self.get(path: path, parameters: parameters, completion: completion)
+		self.gh_get(path: path, parameters: parameters, completion: completion)
 	}
 }

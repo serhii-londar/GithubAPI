@@ -31,7 +31,7 @@ public class NotificationsAPI: GithubAPI {
         if let before = before {
             parameters["before"] = before
         }
-        self.get(path: path, parameters: parameters, completion: completion)
+        self.gh_get(path: path, parameters: parameters, completion: completion)
     }
     
     public func repositoryNotifications(owner: String, repository: String, all: Bool = false, participating: Bool = false, since: String? = nil, before: String? = nil, completion: @escaping([NotificationsResponse]?, Error?) -> Void) {
@@ -45,20 +45,20 @@ public class NotificationsAPI: GithubAPI {
         if let before = before {
             parameters["before"] = before
         }
-        self.get(path: path, parameters: parameters, completion: completion)
+        self.gh_get(path: path, parameters: parameters, completion: completion)
     }
     
     public func markAsRead(last_read_at: String, completion: @escaping(Bool?, Error?) -> Void) {
         let path = "/notifications"
         var parameters = [String : String]()
         parameters["last_read_at"] = last_read_at
-        self.put(path: path, parameters: parameters, headers: nil, body: nil, completion: completion)
+        self.gh_put(path: path, parameters: parameters, headers: nil, body: nil, completion: completion)
     }
     
     public func markAsRead(owner: String, repository: String, last_read_at: String, completion: @escaping(Bool?, Error?) -> Void) {
         let path = "/repos/\(owner)/\(repository)/notifications"
         var parameters = [String : String]()
         parameters["last_read_at"] = last_read_at
-        self.put(path: path, parameters: parameters, headers: nil, body: nil, completion: completion)
+        self.gh_put(path: path, parameters: parameters, headers: nil, body: nil, completion: completion)
     }
 }

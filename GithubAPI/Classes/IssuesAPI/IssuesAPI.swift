@@ -51,7 +51,7 @@ public class IssuesAPI: GithubAPI {
         }
         parameters["sort"] = sort.rawValue
         parameters["direction"] = direction.rawValue
-        self.get(path: path, parameters: parameters, completion: completion)
+        self.gh_get(path: path, parameters: parameters, completion: completion)
     }
     
     /// List all issues across owned and member repositories assigned to the authenticated user:
@@ -72,7 +72,7 @@ public class IssuesAPI: GithubAPI {
         }
         parameters["sort"] = sort.rawValue
         parameters["direction"] = direction.rawValue
-        self.get(path: path, parameters: parameters, completion: completion)
+        self.gh_get(path: path, parameters: parameters, completion: completion)
     }
     
     public func getUserIssues(organization: String, filter: IssueFilter = .assigned, state: IssueState = .open, labels: [String] = [], sort: IssueSort = .created, direction: IssueDirection = .desc,  completion: @escaping([GetIssueResponse]?, Error?) -> Void) {
@@ -90,7 +90,7 @@ public class IssuesAPI: GithubAPI {
         }
         parameters["sort"] = sort.rawValue
         parameters["direction"] = direction.rawValue
-        self.get(path: path, parameters: parameters, completion: completion)
+        self.gh_get(path: path, parameters: parameters, completion: completion)
     }
     
     public func getRepositoryIssues(owner: String, repository: String, milestone: String? = nil, state: IssueState = .open, assignee: String? = nil, creator: String? = nil, mentioned: String? = nil, labels: [String] = [], sort: IssueSort = .created, direction: IssueDirection = .desc,  completion: @escaping([GetIssueResponse]?, Error?) -> Void) {
@@ -119,21 +119,21 @@ public class IssuesAPI: GithubAPI {
         }
         parameters["sort"] = sort.rawValue
         parameters["direction"] = direction.rawValue
-        self.get(path: path, parameters: parameters, completion: completion)
+        self.gh_get(path: path, parameters: parameters, completion: completion)
     }
     
     public func getIssue(owner: String, repository: String, number: Int, completion: @escaping(GetIssueResponse?, Error?) -> Void) {
         let path = "/repos/\(owner)/\(repository)/issues/\(number)"
-        self.get(path: path, completion: completion)
+        self.gh_get(path: path, completion: completion)
     }
     
     public func createIssue(owner: String, repository: String, issue: Issue, completion: @escaping(GetIssueResponse?, Error?) -> Void) {
         let path = "/repos/\(owner)/\(repository)/issues"
-        self.post(path: path, body: try? JSONEncoder().encode(issue), completion: completion)
+        self.gh_post(path: path, body: try? JSONEncoder().encode(issue), completion: completion)
     }
     
     public func updateIssue(owner: String, repository: String, number: Int, issue: Issue, completion: @escaping(GetIssueResponse?, Error?) -> Void) {
         let path = "/repos/\(owner)/\(repository)/issues/\(number)"
-        self.patch(path: path, body: try? JSONEncoder().encode(issue), completion: completion)
+        self.gh_patch(path: path, body: try? JSONEncoder().encode(issue), completion: completion)
     }
 }

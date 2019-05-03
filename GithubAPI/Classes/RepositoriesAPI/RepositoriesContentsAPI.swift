@@ -59,7 +59,7 @@ public class RepositoriesContentsAPI: GithubAPI {
 			parameters = [String : String]()
 			parameters!["ref"] = ref
 		}
-		self.get(path: path, parameters: parameters, completion: completion)
+		self.gh_get(path: path, parameters: parameters, completion: completion)
 	}
 	
 	/// The response will be an array of objects, one object for each item in the directory.
@@ -77,7 +77,7 @@ public class RepositoriesContentsAPI: GithubAPI {
 			parameters = [String : String]()
 			parameters!["ref"] = ref
 		}
-		self.get(path: path, parameters: parameters, completion: completion)
+		self.gh_get(path: path, parameters: parameters, completion: completion)
 	}
 	
 	/// Creates a new file in a repository.
@@ -94,7 +94,7 @@ public class RepositoriesContentsAPI: GithubAPI {
 		let path = "/repos/\(owner)/\(repo)/contents/\(path)"
 		let request = FileRequest(message: message, branch: branch, sha: nil, committer: nil, content: content, author: nil)
 		let data = try? JSONEncoder().encode(request)
-		self.put(path: path, body: data, completion: completion)
+		self.gh_put(path: path, body: data, completion: completion)
 	}
 	
 	/// Updates a file in a repository.
@@ -112,7 +112,7 @@ public class RepositoriesContentsAPI: GithubAPI {
 		let path = "/repos/\(owner)/\(repo)/contents/\(path)"
 		let request = FileRequest(message: message, branch: branch, sha: sha, committer: nil, content: content, author: nil)
 		let data = try? JSONEncoder().encode(request)
-		self.put(path: path, body: data, completion: completion)
+		self.gh_put(path: path, body: data, completion: completion)
 	}
 	
 	
@@ -130,6 +130,6 @@ public class RepositoriesContentsAPI: GithubAPI {
 		let path = "/repos/\(owner)/\(repo)/contents/\(path)"
 		let request = FileRequest(message: message, branch: branch, sha: sha, committer: nil, content: nil, author: nil)
 		let data = try? JSONEncoder().encode(request)
-		self.delete(path: path, body: data, completion: completion)
+		self.gh_delete(path: path, body: data, completion: completion)
 	}
 }

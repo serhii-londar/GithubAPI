@@ -77,7 +77,7 @@ public class RepositoriesAPI: GithubAPI {
         if let direction = direction {
             parameters["direction"] = direction.rawValue
         }
-        self.get(path: path, parameters: parameters, completion: completion)
+        self.gh_get(path: path, parameters: parameters, completion: completion)
     }
     
     
@@ -94,7 +94,7 @@ public class RepositoriesAPI: GithubAPI {
             parameters["direction"] = direction.rawValue
         }
         
-        self.get(path: path, parameters: parameters, completion: completion)
+        self.gh_get(path: path, parameters: parameters, completion: completion)
     }
     
     public func repositories(organization: String, type: OrganizationRepositoriesType? = nil, completion: @escaping([RepositoryResponse]?, Error?) -> Void) {
@@ -103,18 +103,18 @@ public class RepositoriesAPI: GithubAPI {
         if let type = type {
             parameters["type"] = type.rawValue
         }        
-        self.get(path: path, parameters: parameters, completion: completion)
+        self.gh_get(path: path, parameters: parameters, completion: completion)
     }
     
     public func listRepositories(since: String, completion: @escaping([RepositoryResponse]?, Error?) -> Void) {
         let path = "/repositories"
         var parameters = [String : String]()
         parameters["since"] = since
-        self.get(path: path, parameters: parameters, completion: completion)
+        self.gh_get(path: path, parameters: parameters, completion: completion)
     }
     
     public func get(owner: String, repo: String, completion: @escaping(RepositoryResponse?, Error?) -> Void) {
         let path = "/repos/\(owner)/\(repo)"
-        self.get(path: path, completion: completion)
+        self.gh_get(path: path, completion: completion)
     }
 }

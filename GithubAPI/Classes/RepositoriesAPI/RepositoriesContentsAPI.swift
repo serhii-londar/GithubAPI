@@ -16,7 +16,7 @@ public class RepositoriesContentsAPI: GithubAPI {
             parameters = [String : String]()
             parameters!["ref"] = ref
         }
-        self.get(path: path, parameters: parameters, completion: completion)
+        self.gh_get(path: path, parameters: parameters, completion: completion)
     }
     
     public func getReadmeSync(owner: String, repo: String, ref: String? = nil) -> (response: RepositoryContentsReponse?, error: Error?) {
@@ -26,6 +26,6 @@ public class RepositoriesContentsAPI: GithubAPI {
             parameters = [String : String]()
             parameters!["ref"] = ref
         }
-        return self.getSync(path: path, parameters: parameters, headers: nil)
+        return self.gh_getSync(path: path, parameters: parameters, headers: nil)
     }
 }

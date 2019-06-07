@@ -9,73 +9,34 @@
 import UIKit
 import GithubAPI
 
-extension String {
-    func fromBase64(options: Data.Base64DecodingOptions) -> String? {
-        guard let data = Data(base64Encoded: self, options: options) else {
-            return nil
-        }
-        
-        return String(data: data as Data, encoding: String.Encoding.utf8)
-    }
-    func fromBase64() -> String? {
-        guard let data = Data(base64Encoded: self, options: Data.Base64DecodingOptions.ignoreUnknownCharacters) else {
-            return nil
-        }
-        
-        return String(data: data as Data, encoding: String.Encoding.utf8)
-    }
-    
-    func toBase64() -> String? {
-        guard let data = self.data(using: String.Encoding.utf8) else {
-            return nil
-        }
-        
-        return data.base64EncodedString()
-    }
-    
-    func toBase64(options: Data.Base64EncodingOptions) -> String? {
-        guard let data = self.data(using: String.Encoding.utf8) else {
-            return nil
-        }
-        
-        return data.base64EncodedString(options: options)
-    }
-}
-
 class NotificationsVC: UIViewController {
-    var authentication: Credentials! = nil
+    var accessToken: String? = nil
+    var loginVC: GithubLoginVC! = nil
+    
     @IBOutlet weak var tableView: UITableView! = nil
     var notifications: [NotificationsResponse] = [NotificationsResponse]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-		
-		EventsAPI().listOfPublicEvents { (_, _) in
-			
-		}
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.estimatedRowHeight = 40.0
         
-        let data = try? Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "credentials", ofType: "json")!))
-        self.authentication = try? JSONDecoder().decode(Credentials.self, from: data!)
-        
-        let authentication = TokenAuthentication(token: (self.authentication.token?.token)!)
-        RepositoriesContentsAPI(authentication: authentication).getReadme(owner: "serhii-londar", repo: "open-source-mac-os-apps", ref: "new_apps") { (response, error) in
-            if let response = response {
-                if let contentString = response.content?.fromBase64(options: Data.Base64DecodingOptions(rawValue: 1)) {
-                    
-                    let contentStringBase64 = contentString.toBase64(options: Data.Base64EncodingOptions(rawValue: 1))
-                    if contentStringBase64 == response.content {
-                        print("equal")
-                    }
-                    
-                }
-            } else {
-                print(error ?? "error")
-            }
-        }
+//        RepositoriesContentsAPI(authentication: authentication).getReadme(owner: "serhii-londar", repo: "open-source-mac-os-apps", ref: "new_apps") { (response, error) in
+//            if let response = response {
+//                if let contentString = response.content?.fromBase64(options: Data.Base64DecodingOptions(rawValue: 1)) {
+//
+//                    let contentStringBase64 = contentString.toBase64(options: Data.Base64EncodingOptions(rawValue: 1))
+//                    if contentStringBase64 == response.content {
+//                        print("equal")
+//                    }
+//
+//                }
+//            } else {
+//                print(error ?? "error")
+//            }
+//        }
         
         //        RepositoriesAPI(authentication: ).get(owner: "serhii-londar", repo: "open-source-mac-os-apps") { (response, error) in
         //            if let response = response {
@@ -93,7 +54,26 @@ class NotificationsVC: UIViewController {
         //            }
         //        }
         
-        NotificationsAPI(authentication: TokenAuthentication(token: (self.authentication.token?.token)!)).notifications(all: true) { (response, error) in
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.perform(#selector(showLogin), with: nil, afterDelay: 1)
+    }
+    
+    @objc func showLogin() {
+        self.loginVC =  GithubLoginVC(clientID: "07433363de7de028229f", clientSecret: "add7ac2abdc6e81fa7ee19c824907a55f0877bb9", redirectURL: "https://github.com/serhii-londar/GithubIssues")
+        self.loginVC.login(withScopes: [Scopes.notifications], allowSignup: true, completion: { accessToken in 
+            self.accessToken = accessToken
+            self.reloadNotifications()
+        }, error: { error in
+            print(error.localizedDescription)
+        })
+    }
+    
+    func reloadNotifications() {
+        guard let accessToken = accessToken else { return }
+        NotificationsAPI(authentication: TokenAuthentication(token: accessToken)).notifications(all: true) { (response, error) in
             if let response = response {
                 self.notifications = response
                 DispatchQueue.main.async {

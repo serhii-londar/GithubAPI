@@ -16,9 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let storyboard = UIStoryboard(name: "RepositoryVC", bundle: nil)
-        let repositoryVC = storyboard.instantiateViewController(withIdentifier: "RepositoryVC")
-        let repositoryNC = UINavigationController(rootViewController: repositoryVC)
+        let repositoryNC = UINavigationController(rootViewController: RepositoryVC.instantiateVC(with: "serhii-londar", repositoryName: "test1"))
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = repositoryNC

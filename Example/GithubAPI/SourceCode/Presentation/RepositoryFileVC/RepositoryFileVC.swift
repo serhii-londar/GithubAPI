@@ -13,7 +13,7 @@ class RepositoryFileVC: UIViewController {
 	var path: String! = nil
 	var repositoryOwner: String = "serhii-londar"
 	var repositoryName: String = "test1"
-	let token = (Credentials.shared.accessToken?.accessToken)!
+    var token: String! = nil
 	var contentsAPI: RepositoriesContentsAPI!
 	var sha: String? = nil
 	

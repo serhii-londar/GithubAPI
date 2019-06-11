@@ -10,10 +10,11 @@ import UIKit
 import GithubAPI
 
 class RepositoryVC: UIViewController {
-    let token = (Credentials.shared.accessToken?.accessToken)!
+    var token: String! = nil
     var repositoryOwner: String = "serhii-londar"
-    var repositoryName: String = "test1"
+    var repositoryName: String = "GithubIssues"
     
+    var loginVC: GithubLoginVC?
     var contentsAPI: RepositoriesContentsAPI!
     
     var files: [RepositoryContentsReponse] = []
@@ -28,15 +29,50 @@ class RepositoryVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if token == nil {
+            self.login()
+        } else {
+            self.getContent()
+        }
+    }
+    
+    func login() {
+        self.loginVC =  GithubLoginVC(clientID: "07433363de7de028229f", clientSecret: "add7ac2abdc6e81fa7ee19c824907a55f0877bb9", redirectURL: "https://github.com/serhii-londar/GithubIssues")
+        self.loginVC?.login(withScopes: [Scopes.notifications], allowSignup: true, completion: { accessToken in
+            self.token = accessToken
+            self.getContent()
+        }, error: { error in
+            print(error.localizedDescription)
+        })
+    }
+    
+    func getContent() {
         let tokenAuthentication = TokenAuthentication(token: token)
         self.contentsAPI = RepositoriesContentsAPI(authentication: tokenAuthentication)
-        
         self.contentsAPI.getDirectoryContents(owner: repositoryOwner, repo: repositoryName, path: path) { (response, error) in
             self.files = response ?? []
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    static func instantiateVC(with repositoryOwner: String, repositoryName: String) -> RepositoryVC {
+        let storyboard = UIStoryboard(name: "RepositoryVC", bundle: nil)
+        let repositoryVC = storyboard.instantiateViewController(withIdentifier: "RepositoryVC") as! RepositoryVC
+        repositoryVC.repositoryOwner = repositoryOwner
+        repositoryVC.repositoryName = repositoryName
+        return repositoryVC
+    }
+    
+    static func instantiateVC(with token: String, repositoryOwner: String, repositoryName: String) -> RepositoryVC {
+        let storyboard = UIStoryboard(name: "RepositoryVC", bundle: nil)
+        let repositoryVC = storyboard.instantiateViewController(withIdentifier: "RepositoryVC") as! RepositoryVC
+        repositoryVC.token = token
+        repositoryVC.repositoryOwner = repositoryOwner
+        repositoryVC.repositoryName = repositoryName
+        return repositoryVC
     }
 }
 
@@ -61,11 +97,13 @@ extension RepositoryVC: UITableViewDelegate, UITableViewDataSource {
 			let storyboard = UIStoryboard(name: "RepositoryFileVC", bundle: nil)
 			let repositoryFileVC = storyboard.instantiateViewController(withIdentifier: "RepositoryFileVC") as! RepositoryFileVC
 			repositoryFileVC.path = path
+            repositoryFileVC.token = token
 			self.navigationController?.pushViewController(repositoryFileVC, animated: true)
 		} else if file.type == "dir" {
 			let storyboard = UIStoryboard(name: "RepositoryVC", bundle: nil)
 			let repositoryVC = storyboard.instantiateViewController(withIdentifier: "RepositoryVC") as! RepositoryVC
 			repositoryVC.path = path
+            repositoryVC.token = token
 			self.navigationController?.pushViewController(repositoryVC, animated: true)
 		}
 	}

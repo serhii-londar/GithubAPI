@@ -40,3 +40,26 @@ extension String {
         return data.base64EncodedString(options: options)
     }
 }
+
+extension String {
+    func toGithubBase64() -> String? {
+        return self.toBase64()
+    }
+    
+    ///  Convert github base64 string into normal string.
+    ///
+    /// - Returns: Normal string from github base64 string.
+    func fromGithubBase64() -> String? {
+        let lines = self.split(separator: "\n").map({ String($0) })
+        var normalLines = [String]()
+        lines.forEach { (line) in
+            normalLines.append(line.fromBase64() ?? "")
+        }
+        var resultString = ""
+        normalLines.forEach { (line) in
+            resultString.append(line)
+        }
+        return resultString
+    }
+    
+}

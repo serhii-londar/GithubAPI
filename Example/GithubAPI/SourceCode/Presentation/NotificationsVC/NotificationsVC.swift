@@ -10,7 +10,8 @@ import UIKit
 import GithubAPI
 
 class NotificationsVC: UIViewController {
-    var authentication: Credentials = Credentials.shared
+    var accessToken: String?
+    var loginVC: GithubLoginVC! = nil
     
     @IBOutlet weak var tableView: UITableView! = nil
     
@@ -18,10 +19,6 @@ class NotificationsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-		
-		EventsAPI().listOfPublicEvents { (response, error) in
-			
-		}
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -44,24 +41,26 @@ class NotificationsVC: UIViewController {
                 print(error ?? "error")
             }
         }
-        
-        //        RepositoriesAPI(authentication: ).get(owner: "serhii-londar", repo: "open-source-mac-os-apps") { (response, error) in
-        //            if let response = response {
-        //
-        //            } else {
-        //                print(error)
-        //            }
-        //        }
-        
-        //        SearchAPI(authentication: TokenAuthentication(token: (self.authentication.token?.token)!)).searchRepositories(q: "macOS app language:Swift") { (response, error) in
-        //            if let response = response {
-        //
-        //            } else {
-        //                print(error)
-        //            }
-        //        }
-        
-        NotificationsAPI(authentication: TokenAuthentication(token: (self.authentication.token?.token)!)).notifications(all: true) { (response, error) in
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.perform(#selector(showLogin), with: nil, afterDelay: 1)
+    }
+    
+    @objc func showLogin() {
+        self.loginVC =  GithubLoginVC(clientID: "07433363de7de028229f", clientSecret: "add7ac2abdc6e81fa7ee19c824907a55f0877bb9", redirectURL: "https://github.com/serhii-londar/GithubIssues")
+        self.loginVC.login(withScopes: [Scopes.notifications], allowSignup: true, completion: { accessToken in 
+            self.accessToken = accessToken
+            self.reloadNotifications()
+        }, error: { error in
+            print(error.localizedDescription)
+        })
+    }
+    
+    func reloadNotifications() {
+        guard let accessToken = accessToken else { return }
+        NotificationsAPI(authentication: TokenAuthentication(token: accessToken)).notifications(all: true) { (response, error) in
             if let response = response {
                 self.notifications = response
                 DispatchQueue.main.async {

@@ -28,6 +28,8 @@
 		C84CC790222998FA0026EA92 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84CC78F222998FA0026EA92 /* Strings.swift */; };
 		C84CC79422299C7C0026EA92 /* HashKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84CC79322299C7C0026EA92 /* HashKit.swift */; };
 		C88ADBA7215E6DE400108E9C /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = C88ADBA6215E6DE400108E9C /* credentials.json */; };
+		92D2CA7C22AAAA5500698A25 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D2CA7B22AAAA5500698A25 /* String.swift */; };
+		954A656EF99DF6EBCAFE53C9 /* Pods_GithubAPI_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EC39DB6F04B0CBA4B60D81 /* Pods_GithubAPI_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		C84CC78F222998FA0026EA92 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		C84CC79322299C7C0026EA92 /* HashKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashKit.swift; sourceTree = "<group>"; };
 		C88ADBA6215E6DE400108E9C /* credentials.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = credentials.json; sourceTree = "<group>"; };
+		92D2CA7B22AAAA5500698A25 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		AA5887F7D8A1497CE1C2CFCF /* Pods-GithubAPI_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubAPI_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GithubAPI_Tests/Pods-GithubAPI_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFBC700F3C2CFAF2E8904B8C /* Pods_GithubAPI_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubAPI_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42944C8630025ECE1680EC7 /* Pods-GithubAPI_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubAPI_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GithubAPI_Tests/Pods-GithubAPI_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F62F3EA53AC0D03DDD14CB2C /* GithubAPI.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GithubAPI.podspec; path = ../GithubAPI.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -134,7 +138,6 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
-				C88ADBA6215E6DE400108E9C /* credentials.json */,
 			);
 			name = "Example for GithubAPI";
 			path = GithubAPI;
@@ -178,7 +181,6 @@
 		92582630200520FE0081FE6B /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
-				C84CC79122299C690026EA92 /* Frameworks */,
 				C84CC78E222998DF0026EA92 /* Extensions */,
 				9258263C2005288B0081FE6B /* Presentation */,
 				92582631200520FE0081FE6B /* Authentification */,
@@ -224,6 +226,12 @@
 				92D44DA82228826E002235BA /* RepositoryVC.storyboard */,
 			);
 			path = RepositoryVC;
+		92D2CA7A22AAAA4A00698A25 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				92D2CA7B22AAAA5500698A25 /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		AEFACF7A657771AA29EB84C7 /* Pods */ = {
@@ -338,6 +346,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -360,7 +369,6 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				92D44DA92228826E002235BA /* RepositoryVC.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				C88ADBA7215E6DE400108E9C /* credentials.json in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				C84CC78D222995D40026EA92 /* RepositoryFileVC.storyboard in Resources */,
 			);
@@ -450,6 +458,7 @@
 				C84CC79422299C7C0026EA92 /* HashKit.swift in Sources */,
 				9258263F200528EE0081FE6B /* NotificationsVC.swift in Sources */,
 				92D44DA72228824E002235BA /* RepositoryVC.swift in Sources */,
+				92D2CA7C22AAAA5500698A25 /* String.swift in Sources */,
 				92582636200520FE0081FE6B /* AccessToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

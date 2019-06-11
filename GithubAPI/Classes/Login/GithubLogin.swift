@@ -41,7 +41,7 @@ public class GithubLoginVC: UIViewController {
     private var clientSecret: String
     private let clientID: String
     
-    private var window: UIWindow? = nil
+    private var window: UIWindow?
     private var webView: UIWebView! = nil {
         didSet {
             webView.delegate = self

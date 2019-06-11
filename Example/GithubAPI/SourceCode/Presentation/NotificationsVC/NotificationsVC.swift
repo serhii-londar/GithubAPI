@@ -10,7 +10,7 @@ import UIKit
 import GithubAPI
 
 class NotificationsVC: UIViewController {
-    var accessToken: String? = nil
+    var accessToken: String?
     var loginVC: GithubLoginVC! = nil
     
     @IBOutlet weak var tableView: UITableView! = nil

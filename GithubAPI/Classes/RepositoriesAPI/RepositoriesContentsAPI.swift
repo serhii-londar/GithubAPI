@@ -132,4 +132,25 @@ public class RepositoriesContentsAPI: GithubAPI {
 		let data = try? JSONEncoder().encode(request)
 		self.gh_delete(path: path, body: data, completion: completion)
 	}
+	
+	/// Gets a redirect URL to download an archive for a repository.    Please make sure your HTTP framework is configured to follow redirects or you will need to use the Location header to make a second GET request.
+	/// - Parameter owner: Repository owner
+	/// - Parameter repo: Repository name
+	/// - Parameter archiveFormat: The archiveFormat can be either tarball or zipball.
+	/// - Parameter ref: The ref must be a valid Git reference. If you omit :ref, the repository’s default branch (usually master) will be used.
+	/// - Parameter completion:
+	public func getArchiveLink(owner: String, repo: String, archiveFormat: String, ref: String? = nil, completion: @escaping(Data?, Error?) -> Void) {
+		let path = "/repos/\(owner)/\(repo)/\(archiveFormat)/\(ref ?? "")"
+		self.gh_get(path: path, parameters: nil, headers: nil) { (data, response, error) in
+			guard let data = data, let response = response as? HTTPURLResponse else {
+				completion(nil, error)
+				return
+			}
+			guard response.statusCode != 302 else {
+				completion(nil, error)
+				return
+			}
+			completion(data, nil)
+		}
+	}
 }

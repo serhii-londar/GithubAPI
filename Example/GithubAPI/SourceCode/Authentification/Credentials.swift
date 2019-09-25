@@ -24,4 +24,9 @@ struct Credentials : Codable {
 		basic = try values.decodeIfPresent(Basic.self, forKey: .basic)
 		token = try values.decodeIfPresent(Token.self, forKey: .token)
 	}
+    
+    static var shared: Credentials {
+        let data = try! Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "credentials", ofType: "json")!))
+        return try! JSONDecoder().decode(Credentials.self, from: data)
+    }
 }

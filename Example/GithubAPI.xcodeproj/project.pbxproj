@@ -19,7 +19,12 @@
 		92582639200520FE0081FE6B /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92582635200520FE0081FE6B /* Token.swift */; };
 		9258263F200528EE0081FE6B /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9258263E200528EE0081FE6B /* NotificationsVC.swift */; };
 		925826412005292D0081FE6B /* NotificationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925826402005292D0081FE6B /* NotificationsCell.swift */; };
-		92D2CA7C22AAAA5500698A25 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D2CA7B22AAAA5500698A25 /* String.swift */; };
+		92CBC4EB22AFBB84006CAA64 /* RepositoryVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92CBC4E522AFBB83006CAA64 /* RepositoryVC.storyboard */; };
+		92CBC4EC22AFBB84006CAA64 /* RepositoryFileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBC4E622AFBB83006CAA64 /* RepositoryFileCell.swift */; };
+		92CBC4ED22AFBB84006CAA64 /* RepositoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBC4E722AFBB83006CAA64 /* RepositoryVC.swift */; };
+		92CBC4EE22AFBB84006CAA64 /* RepositoryFileVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92CBC4E922AFBB83006CAA64 /* RepositoryFileVC.storyboard */; };
+		92CBC4EF22AFBB84006CAA64 /* RepositoryFileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBC4EA22AFBB83006CAA64 /* RepositoryFileVC.swift */; };
+		92CBC4F222AFBBA0006CAA64 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBC4F022AFBBA0006CAA64 /* String.swift */; };
 		954A656EF99DF6EBCAFE53C9 /* Pods_GithubAPI_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EC39DB6F04B0CBA4B60D81 /* Pods_GithubAPI_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +59,12 @@
 		92582635200520FE0081FE6B /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		9258263E200528EE0081FE6B /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
 		925826402005292D0081FE6B /* NotificationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsCell.swift; sourceTree = "<group>"; };
-		92D2CA7B22AAAA5500698A25 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		92CBC4E522AFBB83006CAA64 /* RepositoryVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RepositoryVC.storyboard; sourceTree = "<group>"; };
+		92CBC4E622AFBB83006CAA64 /* RepositoryFileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryFileCell.swift; sourceTree = "<group>"; };
+		92CBC4E722AFBB83006CAA64 /* RepositoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryVC.swift; sourceTree = "<group>"; };
+		92CBC4E922AFBB83006CAA64 /* RepositoryFileVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RepositoryFileVC.storyboard; sourceTree = "<group>"; };
+		92CBC4EA22AFBB83006CAA64 /* RepositoryFileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryFileVC.swift; sourceTree = "<group>"; };
+		92CBC4F022AFBBA0006CAA64 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		AA5887F7D8A1497CE1C2CFCF /* Pods-GithubAPI_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubAPI_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GithubAPI_Tests/Pods-GithubAPI_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFBC700F3C2CFAF2E8904B8C /* Pods_GithubAPI_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubAPI_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42944C8630025ECE1680EC7 /* Pods-GithubAPI_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubAPI_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GithubAPI_Tests/Pods-GithubAPI_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +194,8 @@
 		9258263C2005288B0081FE6B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				92CBC4E822AFBB83006CAA64 /* RepositoryFileVC */,
+				92CBC4E422AFBB83006CAA64 /* RepositoryVC */,
 				9258263D200528E20081FE6B /* NotificationsVC */,
 			);
 			path = Presentation;
@@ -198,10 +210,29 @@
 			path = NotificationsVC;
 			sourceTree = "<group>";
 		};
+		92CBC4E422AFBB83006CAA64 /* RepositoryVC */ = {
+			isa = PBXGroup;
+			children = (
+				92CBC4E522AFBB83006CAA64 /* RepositoryVC.storyboard */,
+				92CBC4E622AFBB83006CAA64 /* RepositoryFileCell.swift */,
+				92CBC4E722AFBB83006CAA64 /* RepositoryVC.swift */,
+			);
+			path = RepositoryVC;
+			sourceTree = "<group>";
+		};
+		92CBC4E822AFBB83006CAA64 /* RepositoryFileVC */ = {
+			isa = PBXGroup;
+			children = (
+				92CBC4E922AFBB83006CAA64 /* RepositoryFileVC.storyboard */,
+				92CBC4EA22AFBB83006CAA64 /* RepositoryFileVC.swift */,
+			);
+			path = RepositoryFileVC;
+			sourceTree = "<group>";
+		};
 		92D2CA7A22AAAA4A00698A25 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				92D2CA7B22AAAA5500698A25 /* String.swift */,
+				92CBC4F022AFBBA0006CAA64 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -308,6 +339,8 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				92CBC4EB22AFBB84006CAA64 /* RepositoryVC.storyboard in Resources */,
+				92CBC4EE22AFBB84006CAA64 /* RepositoryFileVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,9 +422,12 @@
 				92582639200520FE0081FE6B /* Token.swift in Sources */,
 				925826412005292D0081FE6B /* NotificationsCell.swift in Sources */,
 				92582638200520FE0081FE6B /* Basic.swift in Sources */,
+				92CBC4EC22AFBB84006CAA64 /* RepositoryFileCell.swift in Sources */,
+				92CBC4F222AFBBA0006CAA64 /* String.swift in Sources */,
+				92CBC4ED22AFBB84006CAA64 /* RepositoryVC.swift in Sources */,
 				9258263F200528EE0081FE6B /* NotificationsVC.swift in Sources */,
-				92D2CA7C22AAAA5500698A25 /* String.swift in Sources */,
 				92582636200520FE0081FE6B /* AccessToken.swift in Sources */,
+				92CBC4EF22AFBB84006CAA64 /* RepositoryFileVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

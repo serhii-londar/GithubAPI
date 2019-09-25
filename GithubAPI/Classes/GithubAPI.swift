@@ -173,7 +173,38 @@ public class GithubAPI: BaseAPI {
             return (nil, response.error)
         }
     }
-    
+	
+	public func delete<T:Decodable>(path: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, body: Data?, completion: @escaping (T?, Error?) -> Swift.Void) {
+		let (newHeaders, newParameters) = self.addAuthenticationIfNeeded(headers, parameters: parameters)
+		self.patch(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders, body: body) { (data, _, error) in
+			if let data = data {
+				do {
+					let model = try JSONDecoder().decode(T.self, from: data)
+					let error = try JSONDecoder().decode(OtherUserError.self, from: data)
+					completion(model, error)
+				} catch {
+					completion(nil, error)
+				}
+			} else {
+				completion(nil, error)
+			}
+		}
+	}
+	
+	public func deleteSync<T:Decodable>(path: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, body: Data?) -> (response: T?, error: Error?) {
+		let (newHeaders, newParameters) = self.addAuthenticationIfNeeded(headers, parameters: parameters)
+		let response = self.patch(url: self.baseUrl + path, parameters: newParameters, headers: newHeaders, body: body)
+		if let data = response.data {
+			do {
+				let model = try JSONDecoder().decode(T.self, from: data)
+				return (model, response.error)
+			} catch {
+				return (nil, error)
+			}
+		} else {
+			return (nil, response.error)
+		}
+	}
     
     public func gh_delete<T:Decodable>(path: String, parameters: [String : String]? = nil, headers: [String: String]? = nil, body: Data?, completion: @escaping (T?, Error?) -> Swift.Void) {
         let (newHeaders, newParameters) = self.addAuthenticationIfNeeded(headers, parameters: parameters)

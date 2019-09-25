@@ -17,11 +17,10 @@ struct Basic : Codable {
 		case password = "password"
 		case username = "username"
 	}
+    
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		password = try values.decodeIfPresent(String.self, forKey: .password)
 		username = try values.decodeIfPresent(String.self, forKey: .username)
 	}
-
-
 }

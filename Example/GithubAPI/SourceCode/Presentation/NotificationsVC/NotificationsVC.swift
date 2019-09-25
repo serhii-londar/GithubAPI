@@ -14,6 +14,7 @@ class NotificationsVC: UIViewController {
     var loginVC: GithubLoginVC! = nil
     
     @IBOutlet weak var tableView: UITableView! = nil
+    
     var notifications: [NotificationsResponse] = [NotificationsResponse]()
     
     override func viewDidLoad() {
@@ -23,37 +24,23 @@ class NotificationsVC: UIViewController {
         self.tableView.dataSource = self
         self.tableView.estimatedRowHeight = 40.0
         
-//        RepositoriesContentsAPI(authentication: authentication).getReadme(owner: "serhii-londar", repo: "open-source-mac-os-apps", ref: "new_apps") { (response, error) in
-//            if let response = response {
-//                if let contentString = response.content?.fromBase64(options: Data.Base64DecodingOptions(rawValue: 1)) {
-//
-//                    let contentStringBase64 = contentString.toBase64(options: Data.Base64EncodingOptions(rawValue: 1))
-//                    if contentStringBase64 == response.content {
-//                        print("equal")
-//                    }
-//
-//                }
-//            } else {
-//                print(error ?? "error")
-//            }
-//        }
+        guard let token = Credentials.shared.accessToken?.accessToken else { return }
         
-        //        RepositoriesAPI(authentication: ).get(owner: "serhii-londar", repo: "open-source-mac-os-apps") { (response, error) in
-        //            if let response = response {
-        //
-        //            } else {
-        //                print(error)
-        //            }
-        //        }
-        
-        //        SearchAPI(authentication: TokenAuthentication(token: (self.authentication.token?.token)!)).searchRepositories(q: "macOS app language:Swift") { (response, error) in
-        //            if let response = response {
-        //
-        //            } else {
-        //                print(error)
-        //            }
-        //        }
-        
+        let authentication = TokenAuthentication(token: token)
+        RepositoriesContentsAPI(authentication: authentication).getReadme(owner: "serhii-londar", repo: "open-source-mac-os-apps", ref: "new_apps") { (response, error) in
+            if let response = response {
+                if let contentString = response.content?.fromBase64(options: Data.Base64DecodingOptions(rawValue: 1)) {
+                    
+                    let contentStringBase64 = contentString.toBase64(options: Data.Base64EncodingOptions(rawValue: 1))
+                    if contentStringBase64 == response.content {
+                        print("equal")
+                    }
+                    
+                }
+            } else {
+                print(error ?? "error")
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

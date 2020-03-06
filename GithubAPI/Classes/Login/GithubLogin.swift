@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 public enum Scopes : String {
     case user = "user"

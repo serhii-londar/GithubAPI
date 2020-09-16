@@ -6,7 +6,9 @@
 //
 
 import Foundation
+#if os(iOS)
 import UIKit
+#endif
 
 public enum Scopes : String {
     case user = "user"
@@ -34,6 +36,7 @@ public enum Scopes : String {
     case adminGPGKey = "admin:gpg_key"
 }
 
+#if os(iOS)
 public class GithubLoginVC: UIViewController {
     private var completion: ((String) -> Void)! = nil
     private var error: ((Error) -> Void)! = nil
@@ -136,3 +139,4 @@ extension GithubLoginVC: UIWebViewDelegate {
         }
     }
 }
+#endif

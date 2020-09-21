@@ -8,6 +8,10 @@
 import Foundation
 import BaseAPI
 
+#if swift(>=5.1) && os(Linux)
+   import FoundationNetworking
+#endif
+
 /// These API endpoints let you create, modify, and delete Base64 encoded content in a repository. See media types for requesting the raw format or rendered HTML (when supported).
 public class RepositoriesContentsAPI: GithubAPI {
     /// Gets the preferred README for a repository.

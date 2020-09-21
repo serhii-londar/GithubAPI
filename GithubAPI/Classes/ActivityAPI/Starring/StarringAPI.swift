@@ -7,6 +7,10 @@
 
 import Foundation
 
+#if swift(>=5.1) && os(Linux)
+   import FoundationNetworking
+#endif
+
 /// Repository Starring is a feature that lets users bookmark repositories. Stars are shown next to repositories to show an approximate level of interest. Stars have no effect on notifications or the activity feed. For that, see Repository Watching.
 public class StarringAPI: GithubAPI {
     /// List of users starred repository.

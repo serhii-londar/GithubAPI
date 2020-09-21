@@ -9,6 +9,10 @@
 import Foundation
 import BaseAPI
 
+#if swift(>=5.1) && os(Linux)
+   import FoundationNetworking
+#endif
+
 public class GithubAPI: BaseAPI {
     var authentication: Authentication?
     

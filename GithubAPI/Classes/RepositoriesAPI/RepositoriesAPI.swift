@@ -117,4 +117,9 @@ public class RepositoriesAPI: GithubAPI {
         let path = "/repos/\(owner)/\(repo)"
         self.gh_get(path: path, completion: completion)
     }
+    
+    public func getSync(owner: String, repo: String) -> (RepositoryResponse?, Error?) {
+        let path = "/repos/\(owner)/\(repo)"
+        return self.gh_getSync(path: path)
+    }
 }

@@ -29,7 +29,8 @@ Swift implementation of Github REST api v3. Library support swift 4.0. Work is i
   s.social_media_url = 'https://twitter.com/serhii_londar'
 
   s.ios.deployment_target = '9.0'
-
+  s.swift_version = "5.0"
+  
   s.source_files = 'GithubAPI/Classes/**/*'
 
   s.frameworks = 'Foundation'
